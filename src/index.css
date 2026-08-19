@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Editorial Typography */
+.font-serif-editorial {
+  font-family: 'Newsreader', Georgia, serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Markdown typography article styles */
+.prose-editorial {
+  color: #334155;
+  line-height: 1.75;
+  font-size: 1.0625rem;
+}
+
+.prose-editorial h2 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.prose-editorial h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-editorial p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-editorial ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-editorial ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-editorial li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-editorial strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.prose-editorial blockquote {
+  border-left: 4px solid #10b981;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #475569;
+  font-style: italic;
+  background-color: #f8fafc;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.prose-editorial hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 2rem 0;
+}

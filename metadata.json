@@ -1,0 +1,6 @@
+{
+  "name": "SmartPick Guide",
+  "description": "Independent product research, comparisons, and buying guides to help shoppers make smart purchasing decisions with Amazon affiliate recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,80 @@
+import { StorageService } from './storage';
+import { Product } from '../types';
+
+/**
+ * Builds compliant Amazon affiliate links with proper tag attachment.
+ */
+export function buildAmazonAffiliateUrl(product: Partial<Product>, customTag?: string): string {
+  const settings = StorageService.getSettings();
+  const tag = customTag || settings.amazonAssociateTag || 'smartpick-20';
+  const marketplace = settings.amazonMarketplace || 'amazon.com';
+
+  // If explicit affiliateUrl is already configured by admin, return it or append tag if missing
+  if (product.affiliateUrl && product.affiliateUrl.trim() !== '') {
+    try {
+      const url = new URL(product.affiliateUrl);
+      if (!url.searchParams.has('tag') && tag) {
+        url.searchParams.set('tag', tag);
+      }
+      return url.toString();
+    } catch {
+      return product.affiliateUrl;
+    }
+  }
+
+  // If ASIN is provided, build direct ASIN referral URL
+  if (product.asin && product.asin.trim() !== '') {
+    const cleanAsin = product.asin.trim().toUpperCase();
+    return `https://www.${marketplace}/dp/${cleanAsin}?tag=${encodeURIComponent(tag)}&linkCode=ll1`;
+  }
+
+  // If amazonUrl is provided, ensure tag is attached
+  if (product.amazonUrl && product.amazonUrl.trim() !== '') {
+    try {
+      const url = new URL(product.amazonUrl);
+      if (!url.searchParams.has('tag') && tag) {
+        url.searchParams.set('tag', tag);
+      }
+      return url.toString();
+    } catch {
+      return product.amazonUrl;
+    }
+  }
+
+  // Fallback search link by product name
+  if (product.name) {
+    return `https://www.${marketplace}/s?k=${encodeURIComponent(product.name)}&tag=${encodeURIComponent(tag)}`;
+  }
+
+  return `https://www.${marketplace}/?tag=${encodeURIComponent(tag)}`;
+}
+
+/**
+ * Validates Amazon ASIN format (10 alphanumeric characters).
+ */
+export function isValidAsin(asin: string): boolean {
+  if (!asin) return false;
+  return /^[A-Z0-9]{10}$/i.test(asin.trim());
+}
+
+/**
+ * Extract ASIN from an Amazon URL if possible.
+ */
+export function extractAsinFromUrl(urlStr: string): string | null {
+  if (!urlStr) return null;
+  try {
+    const match = urlStr.match(/(?:\/dp\/|\/gp\/product\/|\/ASIN\/)([A-Z0-9]{10})/i);
+    return match ? match[1].toUpperCase() : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Standard Amazon Associates Disclosure Text
+ */
+export const AMAZON_STANDARD_DISCLOSURE =
+  'As an Amazon Associate I earn from qualifying purchases.';
+
+export const AMAZON_COMPREHENSIVE_DISCLOSURE =
+  'SmartPick Guide is an independent product review and recommendation publication. When you click our affiliate links and make a purchase on Amazon, we may earn an affiliate commission at no additional cost to you. Product prices, ratings, and availability are accurate as of the date indicated and are subject to change. Check Amazon for real-time pricing.';
