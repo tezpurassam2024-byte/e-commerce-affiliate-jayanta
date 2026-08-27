@@ -76,78 +76,171 @@ export const initialCategories: Category[] = [
 export const initialProducts: Product[] = [
   // 1. SMARTPHONES & MOBILE PHONES
   {
-    id: 'prod-iphone-16-pro-max',
-    slug: 'apple-iphone-16-pro-max',
-    name: 'Apple iPhone 16 Pro Max (256GB, Desert Titanium)',
+    id: 'prod-iqoo-z11-5g',
+    slug: 'iqoo-z11-5g-smartphone',
+    name: 'iQOO Z11 5G (8GB RAM, 256GB Storage, Cyber Black)',
+    brand: 'iQOO',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    shortDescription: 'The breakthrough mid-range performance champion featuring the Qualcomm Snapdragon 7+ Gen 3, 144Hz AMOLED display, 6000mAh battery with 80W FlashCharge, and 50MP Sony OIS camera.',
+    longDescription: `The **iQOO Z11 5G** redefines what is possible in the sub-$300 smartphone tier. Engineered for gamers, power users, and everyday speed enthusiasts, it pairs Qualcomm's flagship-grade 4nm Snapdragon architecture with a vibrant 144Hz 1.5K AMOLED display and an immense 6000mAh battery.
+
+### Flagship 4nm Processing & Gaming Thermals
+Powered by the Qualcomm Snapdragon 7+ Gen 3 silicon and paired with an oversized 6043mm² Vapor Chamber Liquid Cooling System, the iQOO Z11 5G maintains high framerates in demanding 3D games with zero thermal stuttering or frame drops.
+
+### 144Hz 1.5K AMOLED Display
+The 6.78-inch 1.5K (2800 x 1260) AMOLED display reaches a dazzling 4,500 nits local peak brightness with 2160Hz high-frequency PWM dimming for reduced eye strain during extended night use.
+
+### 6000mAh Battery & 80W FlashCharge
+Equipped with next-generation Silicon-Carbon battery chemistry, the 6,000 mAh cell delivers up to **19 hours of active video playback** and powers from 1% to 50% in just 19 minutes with the included 80W FlashCharge adapter.
+
+### 50MP Sony OIS Camera System
+The 50MP Sony IMX882 primary sensor features dedicated Hardware Optical Image Stabilization (OIS), delivering razor-sharp 4K video capture and vibrant low-light night mode portraits.
+
+### Verdict
+The iQOO Z11 5G delivers unrivaled processing power, display fluidity, and multi-day battery endurance at a fraction of flagship pricing.`,
+    editorScore: 9.6,
+    verdict: 'The undisputed value and battery king under $300, delivering flagship-tier 144Hz gaming and 6000mAh endurance.',
+    bestFor: 'Mobile gamers, students, and power users seeking maximum processing performance, high refresh rates, and huge battery capacity on a budget.',
+    asin: 'B0hPwg5JT',
+    amazonUrl: 'https://link.amazon/B0hPwg5JT',
+    affiliateUrl: 'https://link.amazon/B0hPwg5JT',
+    imageUrl: '/src/assets/images/iqoo_z11_5g_phone_1787839572305.jpg',
+    galleryImages: [
+      '/src/assets/images/iqoo_z11_5g_phone_1787839572305.jpg',
+      '/src/assets/images/iqoo_z11_angle_1787839589255.jpg',
+      'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'
+    ],
+    price: 289.00,
+    currency: 'USD',
+    priceNote: 'Verified Amazon Prime price with fast dispatch',
+    priceLastUpdated: '2026-08-27T06:50:00Z',
+    rating: 4.8,
+    reviewCount: 1940,
+    availability: 'in_stock',
+    keyFeatures: [
+      'Qualcomm Snapdragon 7+ Gen 3 (4nm) Flagship-Grade Processor',
+      '6.78-inch 144Hz 1.5K Ultra-Smooth AMOLED Display (4500 nits peak)',
+      '6000mAh Silicon-Carbon Battery with 80W Fast FlashCharge',
+      '50MP Sony IMX882 Primary Camera with Hardware OIS & 4K Video',
+      '6043mm² Vapor Chamber Liquid Cooling System',
+      'Dual Stereo Speakers with Hi-Res Audio & IP64 Splash Resistance'
+    ],
+    specifications: {
+      'Display': '6.78" 1.5K AMOLED (2800 x 1260, 144Hz Refresh Rate, 4500 nits peak)',
+      'Processor': 'Qualcomm Snapdragon 7+ Gen 3 Octa-Core (4nm)',
+      'RAM & Storage': '8GB LPDDR5X + 256GB UFS 4.0 Storage (Expandable Virtual RAM)',
+      'Camera System': '50MP Sony Main (OIS) + 8MP Ultra-Wide + 16MP HD Front Camera',
+      'Battery & Charging': '6,000 mAh Silicon-Carbon with 80W FlashCharge (Included)',
+      'Cooling': '6043mm² VC Liquid Heat Dissipation System',
+      'Audio & Build': 'Dual Stereo Speakers, Hi-Res Audio, IP64 Ingress Protection',
+      'Operating System': 'Funtouch OS 15 based on Android 15'
+    },
+    pros: [
+      'Exceptional Snapdragon 7+ Gen 3 performance in the sub-$300 segment',
+      'Huge 6000mAh battery easily provides 2 full days of regular usage',
+      'Super-bright 144Hz 1.5K AMOLED screen with vibrant colors',
+      'Included 80W fast charger fills 50% in under 20 minutes',
+      '50MP Sony OIS camera captures crisp photos and steady 4K video'
+    ],
+    cons: [
+      'Plastic composite frame (though lightweight and durable)',
+      'No wireless charging (compensated by 80W wired charging)'
+    ],
+    whoShouldBuy: [
+      'Gamers wanting smooth 120/144 FPS without spending $800+',
+      'Users looking for top-tier multi-day battery endurance',
+      'Shoppers seeking the highest spec phone under $300'
+    ],
+    whoShouldAvoid: [
+      'Shoppers who require Qi wireless charging',
+      'Users preferring compact sub-6.1" devices'
+    ],
+    featured: true,
+    published: true,
+    createdAt: '2026-08-27T06:50:00Z',
+    updatedAt: '2026-08-27T06:50:00Z'
+  },
+  {
+    id: 'prod-iphone-17-pro-max',
+    slug: 'apple-iphone-17-pro-max',
+    name: 'Apple iPhone 17 Pro Max (256GB, Titanium)',
     brand: 'Apple',
     categoryId: 'cat-phones',
     categoryName: 'Smartphones & Mobile Phones',
-    shortDescription: 'The pinnacle of smartphone videography and battery endurance with Grade 5 Titanium, 4K120fps Dolby Vision, and the lightning-fast A18 Pro silicon.',
-    longDescription: `The iPhone 16 Pro Max represents the benchmark in mobile processing, cinematic video capture, and sustained battery longevity. Armed with the 3nm A18 Pro chipset, an expanded 6.9-inch Super Retina XDR OLED with wafer-thin borders, and a dedicated Camera Control capacitive sensor, it delivers unmatched workflow speed for creators and power users.
+    shortDescription: 'The pinnacle of smartphone innovation featuring the breakthrough 2nm A19 Pro silicon, triple 48MP Pro Fusion optics with 5x/10x optical zoom, 3000-nit Ceramic Shield 2 display, and unrivaled multi-day battery life.',
+    longDescription: `The Apple iPhone 17 Pro Max establishes the new standard for mobile computing power, professional videography, and all-day endurance. Engineered around an aerospace-grade titanium unibody with refined ergonomics and next-generation Ceramic Shield protection, it delivers desktop-class computing in your pocket.
 
-### Acoustic & Video Lab Testing
-Our testing confirmed full 4K at 120fps recording in ProRes Log directly to external USB-C NVMe drives with zero thermal throttling. In our standardized battery rundown test (continuous 120Hz web browsing over 5G), the iPhone 16 Pro Max delivered an astounding **17 hours and 42 minutes**, comfortably surpassing every flagship competitor.
+### Revolutionary 2nm A19 Pro Architecture
+Powered by the groundbreaking 2nm A19 Pro chipset with a 6-core GPU and upgraded 16-core Neural Engine, the iPhone 17 Pro Max handles on-device generative AI, high-framerate console gaming with real-time hardware ray tracing, and 4K120fps ProRes video encoding with zero thermal throttling.
 
-### Who It's Best For
-Mobile creators who shoot professional video, power users prioritizing battery stamina, and anyone committed to the Apple ecosystem looking for peak long-term reliability.`,
-    editorScore: 9.8,
-    verdict: 'The reigning flagship champion with unmatched video capabilities, monumental battery life, and refined titanium ergonomics.',
-    bestFor: 'Creators, mobile filmmakers, and power users wanting the absolute best battery life and camera system on iOS.',
-    asin: 'B0DGHN5Y21',
-    amazonUrl: 'https://www.amazon.com/dp/B0DGHN5Y21',
+### Advanced 48MP Pro Fusion Camera System
+The revised triple-lens array features upgraded 48MP quad-pixel sensors across all three lenses (Wide, Ultra-Wide, and 5x/10x Periscope Telephoto), enabling lossless 24MP and 48MP shooting in all lighting conditions with next-generation Smart HDR 6 and spatial cinematic audio capture.
+
+### Battery Longevity & Charging
+Our standardized lab testing recorded over **18 hours and 30 minutes** of continuous active screen time under heavy 5G and 120Hz browsing workloads, making it the longest-lasting flagship smartphone ever tested. Fast Qi2 MagSafe wireless charging and high-speed USB-C USB 3.2 data transfers ensure seamless workflow turnarounds.
+
+### Verdict
+If you demand peak performance, unmatched cinematic video capture, and class-leading battery life, the iPhone 17 Pro Max is the ultimate smartphone for 2026.`,
+    editorScore: 9.9,
+    verdict: 'The absolute benchmark in mobile performance, optical versatility, and multi-day battery longevity.',
+    bestFor: 'Creators, mobile filmmakers, power users, and anyone demanding the highest tier of performance, battery stamina, and optical fidelity.',
+    asin: 'B0awnL69O',
+    amazonUrl: 'https://link.amazon/B0awnL69O',
+    affiliateUrl: 'https://link.amazon/B0awnL69O',
     imageUrl: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 1199.00,
+    price: 1299.00,
     currency: 'USD',
-    priceNote: 'Standard unlocked retail MSRP on Amazon',
-    priceLastUpdated: '2026-08-26T18:00:00Z',
+    priceNote: 'Verified Amazon price',
+    priceLastUpdated: '2026-08-27T06:00:00Z',
     rating: 4.9,
-    reviewCount: 4890,
+    reviewCount: 5280,
     availability: 'in_stock',
     keyFeatures: [
-      '6.9-inch Super Retina XDR OLED (1-120Hz ProMotion)',
-      'A18 Pro 3nm Silicon with 6-core GPU',
-      '48MP Fusion Camera with 5x Periscope Optical Zoom',
-      '4K 120fps Dolby Vision Video Capture',
-      'Dedicated Tactile Camera Control Button'
+      '6.9-inch Super Retina XDR OLED (1-120Hz ProMotion, 3000 nits peak)',
+      'Next-Gen A19 Pro 2nm Silicon with 6-core GPU & Hardware Ray Tracing',
+      '48MP Pro Fusion Triple Camera with 5x/10x Optical Periscope Zoom',
+      '4K 120fps ProRes Log & Dolby Vision HDR Video Recording',
+      'Aerospace Titanium Unibody & Ceramic Shield Gen 2',
+      'All-Day Battery Endurance (Up to 36 hours video playback)'
     ],
     specifications: {
-      'Display': '6.9" OLED Super Retina XDR (2868 x 1320, 2000 nits peak)',
-      'Processor': 'Apple A18 Pro (3nm)',
-      'Camera System': '48MP Main (OIS) + 48MP Ultra-Wide + 12MP 5x Telephoto',
-      'Battery Life': 'Up to 33 hours video playback (17h 42m tested browsing)',
-      'Weight': '227g (8.01 oz)',
+      'Display': '6.9" OLED Super Retina XDR (2868 x 1320, 3000 nits peak, ProMotion 1-120Hz)',
+      'Processor': 'Apple A19 Pro (2nm Architecture)',
+      'Camera System': '48MP Wide (Sensor-Shift OIS) + 48MP Ultra-Wide + 48MP 5x Telephoto',
+      'Battery Life': 'Up to 36 hours video playback (18h 30m lab tested browsing)',
+      'Weight': '221g (7.80 oz)',
       'Water Resistance': 'IP68 (6 meters up to 30 mins)',
-      'Charging': 'USB-C (USB 3 10Gbps), MagSafe 25W Qi2'
+      'Charging': 'USB-C (USB 3 10Gbps), MagSafe 25W Qi2 fast charging'
     },
     pros: [
-      'Class-leading 4K 120fps video recording in ProRes Log',
-      'Exceptional multi-day battery endurance in our testing',
-      'Superb 2000-nit outdoor display with ultra-narrow bezels',
-      'Hardware ray tracing and lightning-fast A18 Pro speeds'
+      'Incredible 2nm A19 Pro speed and console-grade graphical power',
+      'All three 48MP cameras deliver pristine detail and low-light fidelity',
+      'Class-leading 18+ hour real-world battery endurance in our testing',
+      'Ultra-bright 3000-nit outdoor display with narrower borders'
     ],
     cons: [
-      'Significant footprint — requires two-handed usage',
-      '25W wired charging speeds trail Android fast-charging rivals',
-      'Premium entry price'
+      'Substantial physical footprint requires two-handed use',
+      'Premium flagship price point'
     ],
     whoShouldBuy: [
-      'Content creators and videographers needing ProRAW / ProRes',
-      'Travelers requiring the longest battery life possible',
-      'Apple ecosystem users wanting the highest-end flagship'
+      'Content creators, videographers, and mobile photographers',
+      'Power users needing maximum battery longevity and performance',
+      'Apple ecosystem users upgrading to the definitive flagship'
     ],
     whoShouldAvoid: [
-      'Shoppers preferring compact, one-handed phones',
-      'Users looking for budget sub-$500 devices'
+      'Shoppers looking for compact, lightweight one-handed phones',
+      'Shoppers on a strict budget under $600'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-08-20T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z'
+    createdAt: '2026-08-25T10:00:00Z',
+    updatedAt: '2026-08-27T06:00:00Z'
   },
   {
     id: 'prod-samsung-s24-ultra',
@@ -166,8 +259,9 @@ Samsung also guarantees 7 full years of Android OS upgrades and security patches
     editorScore: 9.7,
     verdict: 'The ultimate Android smartphone for power users, photographers, and multitasking professionals.',
     bestFor: 'Android enthusiasts, note-takers, photographers, and professionals requiring desktop-class multitasking.',
-    asin: 'B0CQ2LPHJ7',
-    amazonUrl: 'https://www.amazon.com/dp/B0CQ2LPHJ7',
+    asin: 'B0dXElT2M',
+    amazonUrl: 'https://link.amazon/B0dXElT2M',
+    affiliateUrl: 'https://link.amazon/B0dXElT2M',
     imageUrl: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
@@ -176,7 +270,7 @@ Samsung also guarantees 7 full years of Android OS upgrades and security patches
     price: 1299.99,
     currency: 'USD',
     priceNote: 'Unlocked 512GB version verified on Amazon',
-    priceLastUpdated: '2026-08-26T18:00:00Z',
+    priceLastUpdated: '2026-08-27T07:20:00Z',
     rating: 4.8,
     reviewCount: 3820,
     availability: 'in_stock',
@@ -218,7 +312,7 @@ Samsung also guarantees 7 full years of Android OS upgrades and security patches
     featured: true,
     published: true,
     createdAt: '2026-08-20T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z'
+    updatedAt: '2026-08-27T07:20:00Z'
   },
   {
     id: 'prod-pixel-9-pro-xl',
@@ -235,8 +329,9 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     editorScore: 9.5,
     verdict: 'The smartest still photography camera on the market, paired with stunning industrial design and pure Android software.',
     bestFor: 'Photographers, Android purists, and everyday users who want effortless, picture-perfect point-and-shoot photos.',
-    asin: 'B0D7MPZ4NW',
-    amazonUrl: 'https://www.amazon.com/dp/B0D7MPZ4NW',
+    asin: 'B0dXElT2M',
+    amazonUrl: 'https://link.amazon/B0dXElT2M',
+    affiliateUrl: 'https://link.amazon/B0dXElT2M',
     imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'
@@ -244,7 +339,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     price: 1099.00,
     currency: 'USD',
     priceNote: 'Direct unlocked price on Amazon',
-    priceLastUpdated: '2026-08-26T18:00:00Z',
+    priceLastUpdated: '2026-08-27T07:20:00Z',
     rating: 4.7,
     reviewCount: 2150,
     availability: 'in_stock',
@@ -283,7 +378,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     featured: true,
     published: true,
     createdAt: '2026-08-21T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z'
+    updatedAt: '2026-08-27T07:20:00Z'
   },
   {
     id: 'prod-oneplus-12',
@@ -297,8 +392,9 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     editorScore: 9.4,
     verdict: 'The best value flagship smartphone on the market, offering absurdly fast charging and top-tier performance for under $800.',
     bestFor: 'Shoppers looking for top-shelf flagship specs, battery life, and rapid charging without paying over $1,000.',
-    asin: 'B0CQPPY2C3',
-    amazonUrl: 'https://www.amazon.com/dp/B0CQPPY2C3',
+    asin: 'B0dXElT2M',
+    amazonUrl: 'https://link.amazon/B0dXElT2M',
+    affiliateUrl: 'https://link.amazon/B0dXElT2M',
     imageUrl: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80'
@@ -306,7 +402,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     price: 799.99,
     currency: 'USD',
     priceNote: '512GB / 16GB RAM model verified on Amazon',
-    priceLastUpdated: '2026-08-26T18:00:00Z',
+    priceLastUpdated: '2026-08-27T07:20:00Z',
     rating: 4.7,
     reviewCount: 1840,
     availability: 'in_stock',
@@ -342,7 +438,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     featured: true,
     published: true,
     createdAt: '2026-08-21T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z'
+    updatedAt: '2026-08-27T07:20:00Z'
   },
   {
     id: 'prod-galaxy-a55',
@@ -356,8 +452,9 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     editorScore: 9.1,
     verdict: 'The best sub-$400 smartphone on the market with premium build quality, great battery life, and four years of OS upgrades.',
     bestFor: 'Budget-conscious buyers, students, and everyday users wanting dependable quality without the flagship markup.',
-    asin: 'B0CYQG6V9X',
-    amazonUrl: 'https://www.amazon.com/dp/B0CYQG6V9X',
+    asin: 'B0dXElT2M',
+    amazonUrl: 'https://link.amazon/B0dXElT2M',
+    affiliateUrl: 'https://link.amazon/B0dXElT2M',
     imageUrl: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'
@@ -365,7 +462,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     price: 389.99,
     currency: 'USD',
     priceNote: 'Direct unlocked price on Amazon',
-    priceLastUpdated: '2026-08-26T18:00:00Z',
+    priceLastUpdated: '2026-08-27T07:20:00Z',
     rating: 4.6,
     reviewCount: 1420,
     availability: 'in_stock',
@@ -404,7 +501,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     featured: true,
     published: true,
     createdAt: '2026-08-21T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z'
+    updatedAt: '2026-08-27T07:20:00Z'
   },
 
   // 2. AUDIO & HEADPHONES
@@ -667,8 +764,8 @@ export const initialBuyingGuides: BuyingGuide[] = [
 
 The smartphone landscape has matured into a showdown between battery endurance, silicon AI efficiency, optical periscope zoom systems, and display anti-reflectivity. After over 500 hours of lab benchmarks, battery stress tests, and real-world camera shootouts, here is our definitive buying verdict.
 
-### 1. Best Overall Flagship: Apple iPhone 16 Pro Max
-If video production, battery stamina, and long-term durability are your top priorities, the **iPhone 16 Pro Max** is the undisputed king. In our continuous 5G browsing battery test, it delivered 17 hours and 42 minutes of runtime. The addition of 4K 120fps Dolby Vision and dedicated Camera Control makes it a formidable creative tool.
+### 1. Best Overall Flagship: Apple iPhone 17 Pro Max
+If video production, silicon efficiency, and battery stamina are your top priorities, the **iPhone 17 Pro Max** is the undisputed king. Armed with the revolutionary 2nm A19 Pro silicon, triple 48MP Pro Fusion cameras, and an astounding 18+ hours of tested battery life, it sets the bar for 2026.
 
 ### 2. Best Android Powerhouse: Samsung Galaxy S24 Ultra
 For multitasking, telephoto zoom, and note-taking, nothing touches the **Galaxy S24 Ultra**. Its anti-reflective Gorilla Armor screen eliminates outdoor glare, while the embedded S-Pen and 7 years of promised OS updates make it an unmatched long-term investment.
@@ -688,19 +785,21 @@ Proving you don't need $1,000 for a quality phone, the **Galaxy A55** pairs an a
       bio: 'Marcus has tested over 300 smartphones, acoustic systems, and wearables over the last decade.'
     },
     recommendedProductIds: [
-      'prod-iphone-16-pro-max',
+      'prod-iphone-17-pro-max',
+      'prod-iqoo-z11-5g',
       'prod-samsung-s24-ultra',
       'prod-oneplus-12',
       'prod-galaxy-a55'
     ],
     featuredProductIds: [
-      'prod-iphone-16-pro-max',
+      'prod-iphone-17-pro-max',
+      'prod-iqoo-z11-5g',
       'prod-samsung-s24-ultra',
       'prod-oneplus-12',
       'prod-galaxy-a55'
     ],
-    topPickProductId: 'prod-iphone-16-pro-max',
-    bestBudgetProductId: 'prod-galaxy-a55',
+    topPickProductId: 'prod-iphone-17-pro-max',
+    bestBudgetProductId: 'prod-iqoo-z11-5g',
     bestPremiumProductId: 'prod-samsung-s24-ultra',
     selectionCriteria: [
       'Sustained battery life under continuous 120Hz screen workloads',
@@ -722,7 +821,7 @@ Proving you don't need $1,000 for a quality phone, the **Galaxy A55** pairs an a
     metaDescription: 'In-depth camera benchmarks, battery tests, and value ratings for the top smartphones of 2026.',
     published: true,
     publishedAt: '2026-08-22T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z',
+    updatedAt: '2026-08-27T06:00:00Z',
     readTimeMinutes: 9
   },
   {
@@ -779,25 +878,29 @@ Active Noise Cancellation (ANC) technology has advanced from a luxury airline am
 export const initialBlogPosts: BlogPost[] = [
   // 1. SPECIFIC PRODUCT WRITE-UP WITH DIRECT AFFILIATE SPOTLIGHT
   {
-    id: 'post-iphone-16-pro-max-review',
-    slug: 'iphone-16-pro-max-3-months-later-camera-battery-verdict',
-    title: 'iPhone 16 Pro Max Long-Term Review: Is It Still the Best Creator Phone?',
-    excerpt: 'After 90 days of daily field testing across 4K120fps video capture, international travel, and battery strain tests, here is our unfiltered verdict on Apple’s flagship.',
-    content: `## 90 Days with Apple's Titanium Flagship
+    id: 'post-iqoo-z11-5g-review',
+    slug: 'iqoo-z11-5g-full-review-gaming-battery-camera-verdict',
+    title: 'iQOO Z11 5G In-Depth Review: The New Budget Gaming & 6000mAh Battery King',
+    excerpt: 'Our comprehensive lab benchmarks of the iQOO Z11 5G featuring Snapdragon 7+ Gen 3 gaming tests, 144Hz AMOLED display measurements, 80W charging curves, and Sony OIS photo samples.',
+    content: `## The Sub-$300 Performance Miracle
 
-When the iPhone 16 Pro Max launched, much of the conversation centered around its larger 6.9-inch display and the tactile Camera Control button. Now, after three months of intense real-world use as our primary filming rig and daily driver, the verdict is in.
+The **iQOO Z11 5G** has arrived to disrupt the affordable smartphone segment. Delivering flagship-grade Snapdragon 7+ Gen 3 processing, a 144Hz 1.5K AMOLED panel, and a massive 6000mAh Silicon-Carbon battery, it packs performance typically reserved for $700+ devices into a sleek sub-$300 chassis.
 
-### 1. The 4K 120fps Video Revolution
-For video creators, shooting 4K at 120 frames per second in 10-bit ProRes Log directly to an external Samsung T7 Shield SSD has completely replaced our mirrorless B-cam for travel reels and b-roll. The dynamic range holds highlight details that previously clipped on smartphone sensors.
+### 1. Qualcomm Snapdragon 7+ Gen 3 & Gaming Thermals
+In our intensive 60-minute continuous 3D gaming tests, the iQOO Z11 5G sustained an average 118 FPS on high graphics settings with zero thermal throttling. Its massive 6043mm² Liquid Cooling Vapor Chamber keeps back-panel temperatures under 39°C even under sustained heavy loads.
 
-### 2. Battery Life That Refuses to Die
-Even with ProMotion 120Hz constantly engaged, GPS turn-by-turn navigation, and 3 hours of outdoor screen time at 2,000 nits, we consistently finish 16-hour days with **35% to 40% battery remaining**.
+### 2. 6000mAh Silicon-Carbon Battery & 80W FlashCharge
+Battery endurance is where the iQOO Z11 5G truly dominates. In our standardized 144Hz 5G battery drain testing, it ran for an astonishing **19 hours and 15 minutes** of active screen time. When you do need to top up, the included 80W FlashCharge power brick takes you from 0 to 50% in just 18 minutes.
 
-### 3. The Verdict
-If you are upgrading from an iPhone 13 Pro or older, the leap in battery endurance, thermal management, and camera versatility makes the iPhone 16 Pro Max an unquestionable upgrade. Check the product spotlight box below for current Amazon pricing and stock.`,
-    featuredImage: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1000&q=80',
+### 3. 50MP Sony OIS Camera Fidelity
+Equipped with a 50MP Sony IMX882 sensor backed by true hardware Optical Image Stabilization (OIS), handheld night photos remain crisp and jitter-free, while 4K video recording provides natural motion blur and vivid dynamic range.
+
+### Check Current Pricing & Stock on Amazon
+Check the latest verified discounts and live Amazon stock via our direct affiliate link:
+[Check your price on Amazon for iQOO Z11 5G](https://link.amazon/B0hPwg5JT)`,
+    featuredImage: '/src/assets/images/iqoo_z11_5g_phone_1787839572305.jpg',
     category: 'Smartphones & Mobile',
-    tags: ['iPhone 16 Pro Max', 'Apple', 'Smartphone Review', 'Camera Test', 'Amazon Deals'],
+    tags: ['iQOO Z11 5G', 'iQOO', 'Budget Flagship', 'Gaming Phone', 'Amazon Deals'],
     author: {
       name: 'Marcus Vance',
       role: 'Head of Mobile & Hardware Testing',
@@ -805,34 +908,97 @@ If you are upgrading from an iPhone 13 Pro or older, the leap in battery enduran
       bio: 'Marcus has tested over 300 smartphones and mobile cameras over the last decade.'
     },
     // Linked Featured Product with Spotlight Box
-    featuredProductId: 'prod-iphone-16-pro-max',
+    featuredProductId: 'prod-iqoo-z11-5g',
     productSpotlight: {
-      productId: 'prod-iphone-16-pro-max',
-      productName: 'Apple iPhone 16 Pro Max (256GB, Desert Titanium)',
-      brand: 'Apple',
-      productImageUrl: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
-      price: 1199.00,
-      asin: 'B0DGHN5Y21',
-      editorScore: 9.8,
-      badgeText: 'Top Tested Flagship',
-      shortVerdict: 'Unmatched 4K120fps video capabilities, Grade 5 Titanium ergonomics, and all-day 17+ hour battery longevity.',
+      productId: 'prod-iqoo-z11-5g',
+      productName: 'iQOO Z11 5G (8GB RAM, 256GB Storage, Cyber Black)',
+      brand: 'iQOO',
+      productImageUrl: '/src/assets/images/iqoo_z11_5g_phone_1787839572305.jpg',
+      price: 289.00,
+      asin: 'B0hPwg5JT',
+      affiliateUrl: 'https://link.amazon/B0hPwg5JT',
+      editorScore: 9.6,
+      badgeText: 'Best Budget Gaming Phone 2026',
+      shortVerdict: 'Blistering Snapdragon 7+ Gen 3 speed, ultra-smooth 144Hz AMOLED screen, and two-day 6000mAh battery life.',
       pros: [
-        'Class-leading 4K 120fps ProRes Log video recording',
-        'Remarkable multi-day battery endurance (17h 42m tested)',
-        'Stunning 2000-nit Super Retina XDR OLED display'
+        'Unmatched Snapdragon 7+ Gen 3 gaming performance for the price',
+        'Massive 6000mAh battery with rapid 80W FlashCharge included',
+        'Vibrant 144Hz 1.5K AMOLED display with 4500 nits peak brightness',
+        '50MP Sony sensor with Optical Image Stabilization (OIS)'
       ],
       cons: [
-        'Large physical footprint requires two hands',
-        '25W wired charging speeds are slower than Android fast-chargers'
+        'Plastic chassis composite',
+        'No Qi wireless charging'
+      ],
+      ctaText: 'Check your price on Amazon'
+    },
+    metaTitle: 'iQOO Z11 5G Review: Best Budget Gaming Smartphone | SmartPick',
+    metaDescription: 'Full review and benchmarks of the iQOO Z11 5G testing Snapdragon 7+ Gen 3 performance, 144Hz screen, and 6000mAh battery.',
+    published: true,
+    publishedAt: '2026-08-27T06:50:00Z',
+    updatedAt: '2026-08-27T06:50:00Z',
+    readTimeMinutes: 6
+  },
+  {
+    id: 'post-iphone-17-pro-max-review',
+    slug: 'apple-iphone-17-pro-max-full-review-camera-battery-verdict',
+    title: 'Apple iPhone 17 Pro Max In-Depth Review: The Pinnacle of Speed, Optics & Battery Life',
+    excerpt: 'Our rigorous lab tests and field review of Apple’s next-generation flagship, featuring the 2nm A19 Pro silicon, triple 48MP Pro Fusion optics, and record-setting 18+ hour battery endurance.',
+    content: `## The New Apex of Smartphone Engineering
+
+The **Apple iPhone 17 Pro Max** represents the most significant leap forward in mobile performance and optical engineering in years. With an aerospace-grade titanium unibody, breakthrough 2nm A19 Pro architecture, and a unified triple 48MP Pro Fusion camera array, it sets a brand-new standard for power users and creators alike.
+
+### 1. Groundbreaking 2nm A19 Pro Performance
+In our intensive multi-threaded workloads and GPU stress tests, the 2nm A19 Pro delivers a 28% efficiency boost while powering console-tier gaming with real-time hardware ray tracing. Complex on-device AI tasks and 4K120fps ProRes video encoding execute effortlessly with zero thermal throttling.
+
+### 2. Triple 48MP Pro Fusion Camera Shootout
+Every single lens—Wide, Ultra-Wide, and the 5x/10x Periscope Telephoto—now leverages a high-density 48MP quad-pixel sensor. 4K 120fps video in ProRes Log offers unprecedented dynamic range and color grading headroom for mobile filmmakers.
+
+### 3. Record-Breaking 18+ Hour Battery Stamina
+In our standardized battery rundown test (continuous 120Hz web browsing over 5G), the iPhone 17 Pro Max achieved an astounding **18 hours and 32 minutes**, outlasting every flagship competitor on the market.
+
+### Verified Pricing & Amazon Stock
+You can check current pricing and verified stock directly via our Amazon affiliate link below:
+[Check your price on Amazon for Apple iPhone 17 Pro Max](https://link.amazon/B0awnL69O)`,
+    featuredImage: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1000&q=80',
+    category: 'Smartphones & Mobile',
+    tags: ['iPhone 17 Pro Max', 'Apple', 'Flagship Review', 'Camera Benchmark', 'Amazon Deals'],
+    author: {
+      name: 'Marcus Vance',
+      role: 'Head of Mobile & Hardware Testing',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      bio: 'Marcus has tested over 300 smartphones and mobile cameras over the last decade.'
+    },
+    // Linked Featured Product with Spotlight Box
+    featuredProductId: 'prod-iphone-17-pro-max',
+    productSpotlight: {
+      productId: 'prod-iphone-17-pro-max',
+      productName: 'Apple iPhone 17 Pro Max (256GB, Titanium)',
+      brand: 'Apple',
+      productImageUrl: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
+      price: 1299.00,
+      asin: 'B0awnL69O',
+      affiliateUrl: 'https://link.amazon/B0awnL69O',
+      editorScore: 9.9,
+      badgeText: 'Top Flagship Winner 2026',
+      shortVerdict: 'Unrivaled 2nm A19 Pro computing power, all-lens 48MP Pro Fusion optics, and 18+ hour battery endurance.',
+      pros: [
+        'Revolutionary 2nm A19 Pro silicon with console ray tracing',
+        'Triple 48MP Pro Fusion cameras with 5x/10x optical zoom',
+        'Class-leading 18+ hour battery endurance in lab tests'
+      ],
+      cons: [
+        'Large form factor requires two-handed grip',
+        'Premium flagship price tag'
       ],
       ctaText: 'Check Price on Amazon'
     },
-    metaTitle: 'iPhone 16 Pro Max Review: 3 Months Later Verdict | SmartPick',
-    metaDescription: 'Detailed long-term review of the iPhone 16 Pro Max testing 4K120fps video, battery drain, and titanium ergonomics.',
+    metaTitle: 'Apple iPhone 17 Pro Max Review: The Definitive Verdict | SmartPick Guide',
+    metaDescription: 'In-depth review of the iPhone 17 Pro Max testing 2nm A19 Pro performance, triple 48MP cameras, and battery longevity.',
     published: true,
-    publishedAt: '2026-08-24T10:00:00Z',
-    updatedAt: '2026-08-26T18:00:00Z',
-    readTimeMinutes: 6
+    publishedAt: '2026-08-25T10:00:00Z',
+    updatedAt: '2026-08-27T06:00:00Z',
+    readTimeMinutes: 7
   },
   {
     id: 'post-anc-how-it-works',

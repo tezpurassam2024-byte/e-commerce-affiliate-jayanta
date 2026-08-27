@@ -9,35 +9,57 @@ export function buildAmazonAffiliateUrl(product: Partial<Product>, customTag?: s
   const tag = customTag || settings.amazonAssociateTag || 'smartpick-20';
   const marketplace = settings.amazonMarketplace || 'amazon.com';
 
-  // If explicit affiliateUrl is already configured by admin, return it or append tag if missing
+  // If explicit affiliateUrl is already configured by admin/author, return it directly
   if (product.affiliateUrl && product.affiliateUrl.trim() !== '') {
+    const rawUrl = product.affiliateUrl.trim();
+    // For custom short links (e.g. link.amazon, amzn.to, a.co), return immediately without altering
+    if (
+      rawUrl.includes('link.amazon') ||
+      rawUrl.includes('amzn.to') ||
+      rawUrl.includes('a.co') ||
+      rawUrl.startsWith('https://link.amazon') ||
+      rawUrl.startsWith('http://link.amazon')
+    ) {
+      return rawUrl;
+    }
     try {
-      const url = new URL(product.affiliateUrl);
-      if (!url.searchParams.has('tag') && tag) {
+      const url = new URL(rawUrl);
+      if (!url.searchParams.has('tag') && tag && url.hostname.includes('amazon')) {
         url.searchParams.set('tag', tag);
       }
       return url.toString();
     } catch {
-      return product.affiliateUrl;
+      return rawUrl;
     }
   }
 
   // If ASIN is provided, build direct ASIN referral URL
   if (product.asin && product.asin.trim() !== '') {
-    const cleanAsin = product.asin.trim().toUpperCase();
+    const cleanAsin = product.asin.trim();
+    if (cleanAsin.startsWith('http://') || cleanAsin.startsWith('https://')) {
+      return cleanAsin;
+    }
     return `https://www.${marketplace}/dp/${cleanAsin}?tag=${encodeURIComponent(tag)}&linkCode=ll1`;
   }
 
   // If amazonUrl is provided, ensure tag is attached
   if (product.amazonUrl && product.amazonUrl.trim() !== '') {
+    const rawAmazonUrl = product.amazonUrl.trim();
+    if (
+      rawAmazonUrl.includes('link.amazon') ||
+      rawAmazonUrl.includes('amzn.to') ||
+      rawAmazonUrl.includes('a.co')
+    ) {
+      return rawAmazonUrl;
+    }
     try {
-      const url = new URL(product.amazonUrl);
-      if (!url.searchParams.has('tag') && tag) {
+      const url = new URL(rawAmazonUrl);
+      if (!url.searchParams.has('tag') && tag && url.hostname.includes('amazon')) {
         url.searchParams.set('tag', tag);
       }
       return url.toString();
     } catch {
-      return product.amazonUrl;
+      return rawAmazonUrl;
     }
   }
 

@@ -41,11 +41,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     };
   }, [product.id]);
 
+  const affiliateUrl = buildAmazonAffiliateUrl(product);
+
   const handleAffiliateClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     trackAffiliateClick(product, placement);
-    const url = buildAmazonAffiliateUrl(product);
-    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const handleToggleCompare = (e: React.MouseEvent) => {
@@ -144,14 +144,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         {/* Action Footer */}
         <div className="pt-3 border-t border-slate-100 space-y-2">
           {/* Primary Affiliate Button */}
-          <button
+          <a
             id={`buy-button-${product.id}`}
+            href={affiliateUrl}
+            target="_blank"
+            rel="nofollow noopener noreferrer"
             onClick={handleAffiliateClick}
-            className="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-sm hover:shadow-emerald-600/20 active:scale-[0.98]"
+            className="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-sm hover:shadow-emerald-600/20 active:scale-[0.98] cursor-pointer text-center"
           >
             <span>{ctaText}</span>
             <ExternalLink className="w-3.5 h-3.5 text-emerald-100" />
-          </button>
+          </a>
 
           {/* Amazon price note */}
           <p className="text-[10px] text-center text-slate-400">

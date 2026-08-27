@@ -380,9 +380,24 @@ export const BlogDetailPage: React.FC<BlogDetailPageProps> = ({
                   >
                     <ShoppingBag className="w-4 h-4" />
                     <span>{spotlight.ctaText || settings.defaultCtaText || 'Check Price on Amazon'}</span>
-                    <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                    <ExternalLink className="w-3 h-3 opacity-80" />
                   </a>
                 </div>
+              </div>
+
+              {/* Direct Affiliate Hyperlink */}
+              <div className="pt-2 border-t border-slate-700/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 text-[11px] text-slate-400">
+                <span>Direct Amazon Link:</span>
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="nofollow sponsored noopener noreferrer"
+                  onClick={handleAffiliateClick}
+                  className="text-amber-400 hover:text-amber-300 font-mono font-bold hover:underline inline-flex items-center gap-1 break-all"
+                >
+                  <span>{affiliateUrl}</span>
+                  <ExternalLink className="w-3 h-3 shrink-0" />
+                </a>
               </div>
             </div>
           </div>

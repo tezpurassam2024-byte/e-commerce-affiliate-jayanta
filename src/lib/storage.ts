@@ -49,10 +49,16 @@ function initializeLocalStorage() {
   } else {
     try {
       const existing: Product[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.PRODUCTS) || '[]');
-      const missing = initialProducts.filter((ip) => !existing.some((e) => e.id === ip.id));
-      if (missing.length > 0) {
-        localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify([...existing, ...missing]));
-      }
+      const filteredExisting = existing.filter(
+        (p) => p.id !== 'prod-iphone-16-pro-max' && p.slug !== 'apple-iphone-16-pro-max'
+      );
+      const updated = filteredExisting.map((p) => {
+        const init = initialProducts.find((ip) => ip.id === p.id);
+        return init ? { ...p, ...init } : p;
+      });
+      const missing = initialProducts.filter((ip) => !updated.some((e) => e.id === ip.id));
+      const combined = [...missing, ...updated];
+      localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(combined));
     } catch {
       localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(initialProducts));
     }
@@ -64,10 +70,13 @@ function initializeLocalStorage() {
   } else {
     try {
       const existing: BuyingGuide[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.GUIDES) || '[]');
-      const missing = initialBuyingGuides.filter((ig) => !existing.some((e) => e.id === ig.id));
-      if (missing.length > 0) {
-        localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify([...existing, ...missing]));
-      }
+      const updated = existing.map((g) => {
+        const init = initialBuyingGuides.find((ig) => ig.id === g.id);
+        return init ? { ...g, ...init } : g;
+      });
+      const missing = initialBuyingGuides.filter((ig) => !updated.some((e) => e.id === ig.id));
+      const combined = [...missing, ...updated];
+      localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(combined));
     } catch {
       localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(initialBuyingGuides));
     }
@@ -79,10 +88,16 @@ function initializeLocalStorage() {
   } else {
     try {
       const existing: BlogPost[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.POSTS) || '[]');
-      const missing = initialBlogPosts.filter((ip) => !existing.some((e) => e.id === ip.id));
-      if (missing.length > 0) {
-        localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify([...existing, ...missing]));
-      }
+      const filteredExisting = existing.filter(
+        (p) => p.id !== 'post-iphone-16-pro-max-review' && p.slug !== 'iphone-16-pro-max-3-months-later-camera-battery-verdict'
+      );
+      const updated = filteredExisting.map((post) => {
+        const init = initialBlogPosts.find((ip) => ip.id === post.id);
+        return init ? { ...post, ...init } : post;
+      });
+      const missing = initialBlogPosts.filter((ip) => !updated.some((e) => e.id === ip.id));
+      const combined = [...missing, ...updated];
+      localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(combined));
     } catch {
       localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(initialBlogPosts));
     }

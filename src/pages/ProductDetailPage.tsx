@@ -203,15 +203,36 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               </div>
             </div>
 
-            {/* Big CTA Button */}
-            <button
+            {/* Big CTA Hyperlink Button */}
+            <a
               id="product-detail-amazon-button"
-              onClick={handleCtaClick}
-              className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold text-base rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-700/20 transition-all"
+              href={affiliateUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              onClick={() => trackAffiliateClick(product, 'product_detail_hero_cta')}
+              className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold text-base rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-emerald-700/20 transition-all cursor-pointer text-center"
             >
               <span>{settings.defaultCtaText || 'Check Price on Amazon'}</span>
               <ExternalLink className="w-5 h-5 text-emerald-100" />
-            </button>
+            </a>
+
+            {/* Direct Affiliate Hyperlink Under Banner */}
+            <div className="pt-2.5 pb-1 px-2.5 bg-emerald-100/50 rounded-xl border border-emerald-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 text-xs">
+              <span className="text-slate-700 font-semibold flex items-center gap-1">
+                <span>Check your price on Amazon:</span>
+              </span>
+              <a
+                id="product-detail-direct-link"
+                href={affiliateUrl}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                onClick={() => trackAffiliateClick(product, 'product_detail_direct_link')}
+                className="text-emerald-800 hover:text-emerald-950 font-bold hover:underline font-mono text-[11px] sm:text-xs flex items-center gap-1 break-all bg-white px-2 py-0.5 rounded border border-emerald-300 shadow-2xs"
+              >
+                <span>{affiliateUrl}</span>
+                <ExternalLink className="w-3 h-3 shrink-0 text-emerald-600" />
+              </a>
+            </div>
 
             {/* Amazon Associates Compliance & Price Date Note */}
             <div className="text-[11px] text-slate-500 leading-normal flex items-start gap-1.5 pt-1">
@@ -335,13 +356,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {product.priceNote || 'Direct merchant stock on Amazon'}
                 </p>
               </div>
-              <button
-                onClick={handleCtaClick}
-                className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 shrink-0 transition-all"
+              <a
+                href={affiliateUrl}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                onClick={() => trackAffiliateClick(product, 'product_detail_article_inline_cta')}
+                className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 shrink-0 transition-all cursor-pointer"
               >
                 <span>{settings.defaultCtaText || 'Check Price on Amazon'}</span>
                 <ExternalLink className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
         );

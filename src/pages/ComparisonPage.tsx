@@ -185,13 +185,16 @@ export const ComparisonPage: React.FC<ComparisonPageProps> = ({ onNavigate }) =>
                             <span className="text-xs text-slate-400 font-normal ml-1">*</span>
                           </div>
 
-                          <button
+                          <a
+                            href={buildAmazonAffiliateUrl(p)}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
                             onClick={() => handleAffiliateClick(p)}
-                            className="w-full py-2 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-sm transition-all"
+                            className="w-full py-2 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-sm transition-all cursor-pointer text-center"
                           >
                             <span>Check on Amazon</span>
                             <ExternalLink className="w-3 h-3" />
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </th>
