@@ -7,7 +7,25 @@ import {
   Home,
   Watch,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Smartphone,
+  Tablet,
+  Camera,
+  Tv,
+  Speaker,
+  Gamepad,
+  Monitor,
+  Wifi,
+  Coffee,
+  Briefcase,
+  Cpu,
+  Zap,
+  Sparkles,
+  Package,
+  Folder,
+  Grid,
+  Tag,
+  ShoppingBag
 } from 'lucide-react';
 import { Category } from '../types';
 
@@ -17,7 +35,7 @@ interface CategoryCardProps {
   onNavigate: (page: string, params?: Record<string, any>) => void;
 }
 
-const iconMap: Record<string, React.ElementType> = {
+export const iconMap: Record<string, React.ElementType> = {
   Headphones,
   Armchair,
   Laptop,
@@ -25,6 +43,25 @@ const iconMap: Record<string, React.ElementType> = {
   Home,
   Watch,
   Layers,
+  Smartphone,
+  Phone: Smartphone,
+  Tablet,
+  Camera,
+  Tv,
+  Speaker,
+  Gamepad,
+  Monitor,
+  Wifi,
+  Coffee,
+  Briefcase,
+  Cpu,
+  Zap,
+  Sparkles,
+  Package,
+  Folder,
+  Grid,
+  Tag,
+  ShoppingBag,
 };
 
 export const CategoryCard: React.FC<CategoryCardProps> = ({

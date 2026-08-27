@@ -24,22 +24,70 @@ const STORAGE_KEYS = {
   ADMIN_AUTH: 'smartpick_admin_session_v1',
 };
 
-// Initialize Local Storage if empty
+// Initialize Local Storage with smart merging
 function initializeLocalStorage() {
   if (typeof window === 'undefined') return;
 
-  if (!localStorage.getItem(STORAGE_KEYS.PRODUCTS)) {
-    localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(initialProducts));
-  }
+  // Categories
   if (!localStorage.getItem(STORAGE_KEYS.CATEGORIES)) {
     localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify(initialCategories));
+  } else {
+    try {
+      const existing: Category[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.CATEGORIES) || '[]');
+      const missing = initialCategories.filter((ic) => !existing.some((e) => e.id === ic.id));
+      if (missing.length > 0) {
+        localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify([...existing, ...missing]));
+      }
+    } catch {
+      localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify(initialCategories));
+    }
   }
+
+  // Products
+  if (!localStorage.getItem(STORAGE_KEYS.PRODUCTS)) {
+    localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(initialProducts));
+  } else {
+    try {
+      const existing: Product[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.PRODUCTS) || '[]');
+      const missing = initialProducts.filter((ip) => !existing.some((e) => e.id === ip.id));
+      if (missing.length > 0) {
+        localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify([...existing, ...missing]));
+      }
+    } catch {
+      localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(initialProducts));
+    }
+  }
+
+  // Guides
   if (!localStorage.getItem(STORAGE_KEYS.GUIDES)) {
     localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(initialBuyingGuides));
+  } else {
+    try {
+      const existing: BuyingGuide[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.GUIDES) || '[]');
+      const missing = initialBuyingGuides.filter((ig) => !existing.some((e) => e.id === ig.id));
+      if (missing.length > 0) {
+        localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify([...existing, ...missing]));
+      }
+    } catch {
+      localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(initialBuyingGuides));
+    }
   }
+
+  // Posts
   if (!localStorage.getItem(STORAGE_KEYS.POSTS)) {
     localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(initialBlogPosts));
+  } else {
+    try {
+      const existing: BlogPost[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.POSTS) || '[]');
+      const missing = initialBlogPosts.filter((ip) => !existing.some((e) => e.id === ip.id));
+      if (missing.length > 0) {
+        localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify([...existing, ...missing]));
+      }
+    } catch {
+      localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(initialBlogPosts));
+    }
   }
+
   if (!localStorage.getItem(STORAGE_KEYS.SETTINGS)) {
     localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(initialSiteSettings));
   }

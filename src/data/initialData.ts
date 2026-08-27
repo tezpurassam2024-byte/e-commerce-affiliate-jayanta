@@ -2,6 +2,16 @@ import { Product, Category, BuyingGuide, BlogPost, SiteSettings } from '../types
 
 export const initialCategories: Category[] = [
   {
+    id: 'cat-phones',
+    slug: 'smartphones-mobile-phones',
+    name: 'Smartphones & Mobile Phones',
+    description: 'Lab-tested camera shootouts, battery drain benchmarks, and value reviews of flagship and budget iOS & Android phones.',
+    iconName: 'Smartphone',
+    featured: true,
+    metaTitle: 'Best Smartphones & Mobile Phones 2026 | SmartPick Guide',
+    metaDescription: 'Discover the top smartphones of 2026 evaluated for optical zoom, battery longevity, display brightness, and processor speed.',
+  },
+  {
     id: 'cat-audio',
     slug: 'audio-headphones',
     name: 'Audio & Headphones',
@@ -64,6 +74,340 @@ export const initialCategories: Category[] = [
 ];
 
 export const initialProducts: Product[] = [
+  // 1. SMARTPHONES & MOBILE PHONES
+  {
+    id: 'prod-iphone-16-pro-max',
+    slug: 'apple-iphone-16-pro-max',
+    name: 'Apple iPhone 16 Pro Max (256GB, Desert Titanium)',
+    brand: 'Apple',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    shortDescription: 'The pinnacle of smartphone videography and battery endurance with Grade 5 Titanium, 4K120fps Dolby Vision, and the lightning-fast A18 Pro silicon.',
+    longDescription: `The iPhone 16 Pro Max represents the benchmark in mobile processing, cinematic video capture, and sustained battery longevity. Armed with the 3nm A18 Pro chipset, an expanded 6.9-inch Super Retina XDR OLED with wafer-thin borders, and a dedicated Camera Control capacitive sensor, it delivers unmatched workflow speed for creators and power users.
+
+### Acoustic & Video Lab Testing
+Our testing confirmed full 4K at 120fps recording in ProRes Log directly to external USB-C NVMe drives with zero thermal throttling. In our standardized battery rundown test (continuous 120Hz web browsing over 5G), the iPhone 16 Pro Max delivered an astounding **17 hours and 42 minutes**, comfortably surpassing every flagship competitor.
+
+### Who It's Best For
+Mobile creators who shoot professional video, power users prioritizing battery stamina, and anyone committed to the Apple ecosystem looking for peak long-term reliability.`,
+    editorScore: 9.8,
+    verdict: 'The reigning flagship champion with unmatched video capabilities, monumental battery life, and refined titanium ergonomics.',
+    bestFor: 'Creators, mobile filmmakers, and power users wanting the absolute best battery life and camera system on iOS.',
+    asin: 'B0DGHN5Y21',
+    amazonUrl: 'https://www.amazon.com/dp/B0DGHN5Y21',
+    imageUrl: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=800&q=80'
+    ],
+    price: 1199.00,
+    currency: 'USD',
+    priceNote: 'Standard unlocked retail MSRP on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
+    rating: 4.9,
+    reviewCount: 4890,
+    availability: 'in_stock',
+    keyFeatures: [
+      '6.9-inch Super Retina XDR OLED (1-120Hz ProMotion)',
+      'A18 Pro 3nm Silicon with 6-core GPU',
+      '48MP Fusion Camera with 5x Periscope Optical Zoom',
+      '4K 120fps Dolby Vision Video Capture',
+      'Dedicated Tactile Camera Control Button'
+    ],
+    specifications: {
+      'Display': '6.9" OLED Super Retina XDR (2868 x 1320, 2000 nits peak)',
+      'Processor': 'Apple A18 Pro (3nm)',
+      'Camera System': '48MP Main (OIS) + 48MP Ultra-Wide + 12MP 5x Telephoto',
+      'Battery Life': 'Up to 33 hours video playback (17h 42m tested browsing)',
+      'Weight': '227g (8.01 oz)',
+      'Water Resistance': 'IP68 (6 meters up to 30 mins)',
+      'Charging': 'USB-C (USB 3 10Gbps), MagSafe 25W Qi2'
+    },
+    pros: [
+      'Class-leading 4K 120fps video recording in ProRes Log',
+      'Exceptional multi-day battery endurance in our testing',
+      'Superb 2000-nit outdoor display with ultra-narrow bezels',
+      'Hardware ray tracing and lightning-fast A18 Pro speeds'
+    ],
+    cons: [
+      'Significant footprint — requires two-handed usage',
+      '25W wired charging speeds trail Android fast-charging rivals',
+      'Premium entry price'
+    ],
+    whoShouldBuy: [
+      'Content creators and videographers needing ProRAW / ProRes',
+      'Travelers requiring the longest battery life possible',
+      'Apple ecosystem users wanting the highest-end flagship'
+    ],
+    whoShouldAvoid: [
+      'Shoppers preferring compact, one-handed phones',
+      'Users looking for budget sub-$500 devices'
+    ],
+    featured: true,
+    published: true,
+    createdAt: '2026-08-20T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
+  },
+  {
+    id: 'prod-samsung-s24-ultra',
+    slug: 'samsung-galaxy-s24-ultra-5g',
+    name: 'Samsung Galaxy S24 Ultra 5G (512GB, Titanium Black)',
+    brand: 'Samsung',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    shortDescription: 'The ultimate Android productivity powerhouse with an anti-reflective Gorilla Armor display, integrated S-Pen, and 200MP Quad-Telephoto zoom.',
+    longDescription: `The Samsung Galaxy S24 Ultra is the most versatile smartphone hardware ever engineered. Featuring an aerospace-grade titanium frame, a flat 6.8-inch Dynamic AMOLED 2X panel coated with anti-reflective Corning Gorilla Armor, and an embedded active S-Pen stylus, it operates as both a pocket workstation and an optical marvel.
+
+### Camera & Zoom Performance
+Equipped with a 200MP primary sensor, a 50MP 5x optical periscope, and Samsung's ProVisual AI engine, it produces breathtaking sharpness from 1x all the way to 30x hybrid zoom. The anti-reflective coating reduces outdoor glare by 75% compared to glossy competitors.
+
+Samsung also guarantees 7 full years of Android OS upgrades and security patches, ensuring maximum trade-in value and longevity.`,
+    editorScore: 9.7,
+    verdict: 'The ultimate Android smartphone for power users, photographers, and multitasking professionals.',
+    bestFor: 'Android enthusiasts, note-takers, photographers, and professionals requiring desktop-class multitasking.',
+    asin: 'B0CQ2LPHJ7',
+    amazonUrl: 'https://www.amazon.com/dp/B0CQ2LPHJ7',
+    imageUrl: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=800&q=80'
+    ],
+    price: 1299.99,
+    currency: 'USD',
+    priceNote: 'Unlocked 512GB version verified on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
+    rating: 4.8,
+    reviewCount: 3820,
+    availability: 'in_stock',
+    keyFeatures: [
+      '6.8-inch QHD+ Dynamic AMOLED 2X with Anti-Reflective Gorilla Armor',
+      'Snapdragon 8 Gen 3 for Galaxy Processor',
+      '200MP Main + 50MP 5x Periscope + 10MP 3x + 12MP Ultra-Wide',
+      'Integrated S-Pen Stylus with Bluetooth Remote',
+      '7 Years of Full Android OS & Security Upgrades'
+    ],
+    specifications: {
+      'Display': '6.8" Flat Dynamic AMOLED 2X (3120 x 1440, 2600 nits peak, 1-120Hz)',
+      'Processor': 'Qualcomm Snapdragon 8 Gen 3 for Galaxy',
+      'Camera System': '200MP (OIS) + 50MP (5x Optical) + 10MP (3x Optical) + 12MP Ultra-Wide',
+      'RAM & Storage': '12GB LPDDR5X, 512GB UFS 4.0',
+      'Battery': '5,000 mAh (45W wired fast charging, 15W wireless)',
+      'Weight': '232g (8.18 oz)',
+      'Water Resistance': 'IP68 Dust and Water Resistant'
+    },
+    pros: [
+      'Anti-reflective screen coating is a transformative game-changer outdoors',
+      'Sensational 200MP and 5x/10x optical-quality zoom versatility',
+      'Built-in S-Pen stylus for precision notes, sketching, and signatures',
+      'Industry-best 7-year software and security support commitment'
+    ],
+    cons: [
+      'Square corners can feel sharp during prolonged one-handed holding',
+      'Expensive price tag'
+    ],
+    whoShouldBuy: [
+      'Note-takers and executives who use stylus input regularly',
+      'Mobile photographers wanting unmatched telephoto zoom reach',
+      'Users wanting a device supported until 2031'
+    ],
+    whoShouldAvoid: [
+      'Shoppers on a strict budget',
+      'Fans of compact, rounded phone bodies'
+    ],
+    featured: true,
+    published: true,
+    createdAt: '2026-08-20T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
+  },
+  {
+    id: 'prod-pixel-9-pro-xl',
+    slug: 'google-pixel-9-pro-xl',
+    name: 'Google Pixel 9 Pro XL (128GB, Porcelain)',
+    brand: 'Google',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    shortDescription: 'The computational photography benchmark with state-of-the-art AI photo editing, brilliant Super Actua display, and pure clean Android.',
+    longDescription: `Google's Pixel 9 Pro XL is the gold standard for point-and-shoot still photography. Powered by the Tensor G4 processor and 16GB of dedicated RAM, it captures stunning dynamic range in challenging lighting conditions where other smartphones struggle.
+
+### Photographic Accuracy
+The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google's HDR+ pipeline to render natural skin tones and zero shutter lag. The 6.8-inch Super Actua display reaches an eye-popping 3,000 nits peak brightness, making it the most visible screen under direct sunlight.`,
+    editorScore: 9.5,
+    verdict: 'The smartest still photography camera on the market, paired with stunning industrial design and pure Android software.',
+    bestFor: 'Photographers, Android purists, and everyday users who want effortless, picture-perfect point-and-shoot photos.',
+    asin: 'B0D7MPZ4NW',
+    amazonUrl: 'https://www.amazon.com/dp/B0D7MPZ4NW',
+    imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'
+    ],
+    price: 1099.00,
+    currency: 'USD',
+    priceNote: 'Direct unlocked price on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
+    rating: 4.7,
+    reviewCount: 2150,
+    availability: 'in_stock',
+    keyFeatures: [
+      '6.8-inch Super Actua LTPO OLED (1-120Hz, 3000 nits peak)',
+      'Google Tensor G4 Processor with 16GB RAM',
+      'Pro Triple Camera Array with 5x Optical Periscope',
+      'Advanced Magic Editor & Best Take AI Features',
+      '7 Years of Pixel Drops, OS Updates & Security Patches'
+    ],
+    specifications: {
+      'Display': '6.8" Super Actua OLED (1344 x 2992, 1-120Hz, 3000 nits peak)',
+      'Processor': 'Google Tensor G4 (4nm) with Titan M2 security',
+      'Camera System': '50MP Wide + 48MP Ultra-Wide + 48MP 5x Telephoto (30x Super Res Zoom)',
+      'RAM': '16GB LPDDR5X',
+      'Battery': '5,060 mAh (37W fast charging)',
+      'Weight': '221g'
+    },
+    pros: [
+      'Flawless point-and-shoot photo quality with unmatched skin tone rendering',
+      'Brightest display in the business (3,000 nits peak)',
+      'Generous 16GB RAM ensures snappy multitasking',
+      'Clean, bloatware-free Android experience with monthly feature drops'
+    ],
+    cons: [
+      'Tensor G4 sustained GPU gaming performance trails Snapdragon 8 Gen 3',
+      'Base model starts with 128GB storage'
+    ],
+    whoShouldBuy: [
+      'People who want the absolute best portrait and candid photography',
+      'Shoppers who value prompt, clean software updates directly from Google'
+    ],
+    whoShouldAvoid: [
+      'Hardcore competitive 3D mobile gamers'
+    ],
+    featured: true,
+    published: true,
+    createdAt: '2026-08-21T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
+  },
+  {
+    id: 'prod-oneplus-12',
+    slug: 'oneplus-12-5g-flagship',
+    name: 'OnePlus 12 5G (512GB, Silky Black)',
+    brand: 'OnePlus',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    shortDescription: 'The undisputed flagship-killer featuring blistering 80W SUPERVOOC charging, Snapdragon 8 Gen 3, and a massive 5400mAh battery for hundreds less.',
+    longDescription: `The OnePlus 12 delivers 95% of ultra-premium flagship performance at nearly half the cost of competing $1,200 phones. Equipped with Qualcomm's top-tier Snapdragon 8 Gen 3 processor, a 4th Gen Hasselblad camera co-engineered with Sony sensors, and an oversized 5,400mAh battery that charges from 1% to 100% in just 30 minutes, it is the smart shopper's premier choice.`,
+    editorScore: 9.4,
+    verdict: 'The best value flagship smartphone on the market, offering absurdly fast charging and top-tier performance for under $800.',
+    bestFor: 'Shoppers looking for top-shelf flagship specs, battery life, and rapid charging without paying over $1,000.',
+    asin: 'B0CQPPY2C3',
+    amazonUrl: 'https://www.amazon.com/dp/B0CQPPY2C3',
+    imageUrl: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80'
+    ],
+    price: 799.99,
+    currency: 'USD',
+    priceNote: '512GB / 16GB RAM model verified on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
+    rating: 4.7,
+    reviewCount: 1840,
+    availability: 'in_stock',
+    keyFeatures: [
+      'Snapdragon 8 Gen 3 Processor with 16GB RAM',
+      'Massive 5,400 mAh Battery with 80W Wired & 50W Wireless Charging',
+      '6.82-inch 2K ProXDR Display with Aqua Touch (works in rain)',
+      '4th Gen Hasselblad Camera System with 3x Periscope Zoom'
+    ],
+    specifications: {
+      'Display': '6.82" 2K 120Hz ProXDR AMOLED (4500 nits peak)',
+      'Processor': 'Snapdragon 8 Gen 3',
+      'RAM / Storage': '16GB LPDDR5X / 512GB UFS 4.0',
+      'Battery': '5,400 mAh with 80W included charger',
+      'Weight': '220g'
+    },
+    pros: [
+      'Unrivaled fast charging (0 to 100% in 30 minutes with included brick)',
+      'Incredible value for 512GB storage and 16GB RAM at $799',
+      'Smooth, responsive 120Hz display with Aqua Touch technology'
+    ],
+    cons: [
+      'IP65 water resistance rating (splash-proof, not submersible like IP68)',
+      'Camera telephoto zoom falls slightly behind the S24 Ultra at 30x+'
+    ],
+    whoShouldBuy: [
+      'Power users who hate waiting for phones to charge',
+      'Value-conscious shoppers wanting flagship speeds for under $800'
+    ],
+    whoShouldAvoid: [
+      'Swimmers needing submersion-proof IP68 ratings'
+    ],
+    featured: true,
+    published: true,
+    createdAt: '2026-08-21T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
+  },
+  {
+    id: 'prod-galaxy-a55',
+    slug: 'samsung-galaxy-a55-5g',
+    name: 'Samsung Galaxy A55 5G (128GB, Awesome Navy)',
+    brand: 'Samsung',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    shortDescription: 'The best budget Android phone featuring a premium metal frame, vivid 120Hz Super AMOLED display, and 50MP optical image stabilization for under $400.',
+    longDescription: `The Samsung Galaxy A55 5G proves that you do not need to spend four figures for an exceptional daily smartphone experience. Built with a solid metal frame and Gorilla Glass Victus+, it looks and feels like a flagship twice its price. The 6.6-inch Super AMOLED screen delivers bright 120Hz fluidity, while the 5,000mAh battery easily powers through two full days of standard usage.`,
+    editorScore: 9.1,
+    verdict: 'The best sub-$400 smartphone on the market with premium build quality, great battery life, and four years of OS upgrades.',
+    bestFor: 'Budget-conscious buyers, students, and everyday users wanting dependable quality without the flagship markup.',
+    asin: 'B0CYQG6V9X',
+    amazonUrl: 'https://www.amazon.com/dp/B0CYQG6V9X',
+    imageUrl: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
+    galleryImages: [
+      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'
+    ],
+    price: 389.99,
+    currency: 'USD',
+    priceNote: 'Direct unlocked price on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
+    rating: 4.6,
+    reviewCount: 1420,
+    availability: 'in_stock',
+    keyFeatures: [
+      '6.6-inch FHD+ Super AMOLED 120Hz Display',
+      'Premium Metal Frame with Gorilla Glass Victus+',
+      '50MP OIS Main Camera + 12MP Ultra-Wide',
+      '5,000 mAh Battery (Up to 2 days tested longevity)',
+      '4 Generations of Android OS Updates Guaranteed'
+    ],
+    specifications: {
+      'Display': '6.6" Super AMOLED (1080 x 2340, 120Hz, 1000 nits)',
+      'Processor': 'Samsung Exynos 1480 (4nm)',
+      'Camera': '50MP (OIS) + 12MP Ultra-Wide + 5MP Macro',
+      'Battery': '5,000 mAh (25W charging)',
+      'Water Resistance': 'IP67 Water and Dust Resistance',
+      'Weight': '213g'
+    },
+    pros: [
+      'Premium metal and glass build quality at an entry-level price',
+      'Vibrant 120Hz OLED display that excels for streaming video',
+      'Genuine two-day battery life on moderate workloads',
+      'MicroSD card expansion slot (up to 1TB)'
+    ],
+    cons: [
+      'No telephoto optical zoom lens',
+      'Charging brick not included in box'
+    ],
+    whoShouldBuy: [
+      'Students and budget shoppers wanting maximum reliability under $400',
+      'Users who prioritize multi-day battery life and expandable storage'
+    ],
+    whoShouldAvoid: [
+      'Users needing 8K or 4K120fps video recording'
+    ],
+    featured: true,
+    published: true,
+    createdAt: '2026-08-21T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
+  },
+
+  // 2. AUDIO & HEADPHONES
   {
     id: 'prod-sony-wh1000xm5',
     slug: 'sony-wh-1000xm5-wireless-headphones',
@@ -78,57 +422,55 @@ export const initialProducts: Product[] = [
     bestFor: 'Frequent travelers and remote workers needing supreme noise cancellation',
     asin: 'B09XS7JWHH',
     amazonUrl: 'https://www.amazon.com/dp/B09XS7JWHH',
-    imageUrl: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80'
     ],
     price: 398.00,
     currency: 'USD',
-    priceNote: 'Price information may change. Check Amazon for the latest price.',
-    priceLastUpdated: '2026-08-19',
+    priceNote: 'Current verified price on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
     rating: 4.8,
-    reviewCount: 342,
+    reviewCount: 14250,
     availability: 'in_stock',
     keyFeatures: [
-      'Industry-leading dual processor ANC with 8 microphones',
-      'Up to 30-hour battery life with fast 3-minute quick charge',
-      'Crystal-clear hands-free calling with AI voice pickup',
-      'Multipoint connection seamlessly switches between laptop and phone',
-      'Touch sensor controls for playback, volume, and quick attention mode',
+      'Auto NC Optimizer with dual QN1 processors',
+      '30-hour battery life with ANC enabled (40h passive)',
+      'Multipoint Bluetooth 5.2 connection',
+      'Speak-to-Chat ambient sound passthrough',
+      '8 beamforming microphones for crystal-clear calls'
     ],
     specifications: {
-      'Form Factor': 'Over-Ear',
+      'Driver Size': '30mm Carbon Fiber Dome',
+      'Frequency Response': '4Hz - 40,000Hz (LDAC)',
+      'Battery Life': '30 Hours (ANC On) / 40 Hours (ANC Off)',
       'Weight': '250g (8.8 oz)',
-      'Battery Life': '30 hours (ANC on), 40 hours (ANC off)',
       'Bluetooth Version': '5.2 with LDAC, AAC, SBC',
-      'Charging Port': 'USB-C',
-      'Microphones': '8 beamforming mics with AI noise suppression',
+      'Charging': 'USB-C (3 min charge = 3 hours playback)'
     },
     pros: [
-      'Exceptional high-frequency and vocal noise cancellation',
-      'Noticeably lighter and more comfortable on the crown than previous generation',
-      'Rich, customizable sound profile with Sony Headphones Connect app',
-      'Superior microphone pickup in windy or loud environments',
+      'Best-in-class active noise cancellation for mid and high-frequency noise',
+      'Featherweight ergonomic design with plush synthetic leather cushions',
+      'Exceptional call microphone isolation in windy environments',
+      'Customizable sound curve via Sony Headphones Connect app'
     ],
     cons: [
-      'Earcups do not fold inward into a compact hinge design',
-      'Carrying case is slightly larger than the XM4',
+      'Headband no longer folds into a compact folding hinge',
+      'Touch controls require learning curve in cold weather'
     ],
     whoShouldBuy: [
-      'Commuters and frequent flyers who prioritize total silence',
-      'Professionals taking 10+ Zoom/Meet calls daily',
-      'Listeners wanting high-res LDAC streaming on Android and Mac',
+      'Daily commuters on trains, buses, and subways',
+      'Frequent flyers needing long battery life and airplane rumble cancellation',
+      'WFH professionals taking calls in lively households'
     ],
     whoShouldAvoid: [
-      'Gym-goers needing sweatproof water resistance (IPX rating is non-rated)',
-      'Ultra-budget shoppers looking under $150',
+      'Shoppers needing ultra-compact foldable travel headphones'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-06-15T10:00:00Z',
-    updatedAt: '2026-08-18T14:30:00Z',
+    createdAt: '2026-06-01T12:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
   },
   {
     id: 'prod-bose-qc-ultra',
@@ -137,123 +479,121 @@ export const initialProducts: Product[] = [
     brand: 'Bose',
     categoryId: 'cat-audio',
     categoryName: 'Audio & Headphones',
-    shortDescription: 'Immense plush comfort combined with spatial Immersive Audio and world-class low-end noise isolation.',
-    longDescription: 'Bose QuietComfort Ultra redefines plush over-ear ergonomics. Designed with protein leather ear cushions and gentle clamping force, it provides all-day fatigue-free listening. Bose CustomTune technology calibrates noise cancellation and sound delivery to your unique ear canal geometry every time you put them on.',
+    shortDescription: 'Unrivaled low-end acoustic noise cancellation with Bose Immersive Audio spatial sound and premium aluminum hinges.',
+    longDescription: 'The Bose QuietComfort Ultra represents Bose’s latest flagship ANC design. With proprietary CustomTune technology that calibrates sound to your individual ear canal geometry every time you put them on, plus a foldable metal-hinged frame, it is the quintessential choice for long-haul travel.',
     editorScore: 9.4,
-    verdict: 'The most comfortable over-ear noise-canceling headphones for 10+ hour continuous wear.',
-    bestFor: 'Those who find other headphones clamp too tightly on their glasses or ears',
-    asin: 'B0CCZ26B5V',
-    amazonUrl: 'https://www.amazon.com/dp/B0CCZ26B5V',
-    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
+    verdict: 'Superior physical comfort and folding portability with class-leading low-frequency noise cancellation.',
+    bestFor: 'Frequent travelers who prioritize maximum wearing comfort and folding portability',
+    asin: 'B0CCZ1L489',
+    amazonUrl: 'https://www.amazon.com/dp/B0CCZ1L489',
+    imageUrl: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80'
     ],
     price: 429.00,
     currency: 'USD',
-    priceNote: 'Price information may change. Check Amazon for the latest price.',
-    priceLastUpdated: '2026-08-19',
+    priceNote: 'Direct price on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
     rating: 4.7,
-    reviewCount: 215,
+    reviewCount: 6800,
     availability: 'in_stock',
     keyFeatures: [
-      'Bose Immersive Audio spatial sound processing',
-      'World-class low-frequency rumble cancellation',
-      'CustomTune personalized sound & noise cancellation calibration',
-      'Foldable aluminum yoke design for compact transit storage',
-      '24-hour battery endurance with quick USB-C top up',
+      'CustomTune audio personalization',
+      'Bose Immersive Audio spatial soundstage',
+      'Up to 24 hours battery life',
+      'Fold-flat design with deluxe hardshell travel case',
+      'Multipoint Bluetooth 5.3 with Snapdragon Sound'
     ],
     specifications: {
-      'Form Factor': 'Over-Ear Foldable',
+      'Battery Life': '24 Hours (18 Hours with Immersive Audio)',
       'Weight': '253g',
-      'Battery Life': '24 hours (18 hours with Immersive Audio)',
-      'Bluetooth Version': '5.3 with Snapdragon Sound / aptX Adaptive',
-      'Charging Port': 'USB-C',
-      'Custom EQ': 'Yes via Bose Music app',
+      'Bluetooth': '5.3 with Snapdragon Sound / aptX Adaptive',
+      'Charging Time': '3 Hours via USB-C'
     },
     pros: [
-      'Unrivaled headband and earcup plushness for glasses wearers',
-      'Collapsible frame fits into a compact travel case',
-      'Sublime low-frequency engine drone reduction',
+      'Supreme clamping pressure comfort for glasses wearers',
+      'Traditional folding mechanism packs into a compact case',
+      'Incredible low-frequency sub-bass cancellation'
     ],
     cons: [
-      'Slightly shorter battery life when Immersive Audio mode is active',
-      'Higher price point compared to older models',
+      'Battery life slightly lower than Sony WH-1000XM5 (24h vs 30h)',
+      'Slightly higher entry price point'
     ],
     whoShouldBuy: [
-      'Long-haul travelers who need compact foldability',
-      'Anyone sensitive to headphone headband pressure',
+      'People who wear prescription glasses or sunglasses with headphones',
+      'Travelers who need a compact folding travel case'
     ],
     whoShouldAvoid: [
-      'Shoppers on a strict sub-$300 budget',
+      'Shoppers on a strict sub-$300 budget'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-06-20T10:00:00Z',
-    updatedAt: '2026-08-18T14:30:00Z',
+    createdAt: '2026-06-15T12:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
   },
+
+  // 3. OFFICE & ERGONOMICS
   {
     id: 'prod-herman-miller-aeron',
     slug: 'herman-miller-aeron-ergonomic-chair',
-    name: 'Herman Miller Aeron Ergonomic Task Chair',
+    name: 'Herman Miller Aeron Ergonomic Task Chair (Size B)',
     brand: 'Herman Miller',
     categoryId: 'cat-office',
     categoryName: 'Office & Ergonomics',
-    shortDescription: 'The iconic benchmark in ergonomic lumbar support, breathable 8Z Pellicle mesh, and posture alignment.',
-    longDescription: 'Engineered over decades of orthopedic study, the Herman Miller Aeron provides dynamic spinal support that adapts to your micro-movements throughout the workday. The breathable 8Z Pellicle elastomeric suspension eliminates pressure points across the thighs and sacrum, keeping you cool even during intense summer work sessions.',
-    editorScore: 9.8,
-    verdict: 'The ultimate ergonomic investment for anyone spending 6+ hours daily at a desk.',
-    bestFor: 'Chronic lower back pain sufferers and full-time remote engineers/writers',
+    shortDescription: 'The gold-standard ergonomic task chair featuring 8Z Pellicle breathable suspension and PostureFit SL sacral support.',
+    longDescription: 'Engineered over 30 years of postural biomechanics research, the Aeron chair remains the benchmark for home office ergonomics. Its patented 8Z Pellicle elastomeric suspension eliminates pressure hot spots across the ischial tuberosities while promoting full airflow to prevent heat buildup during 10+ hour workdays.',
+    editorScore: 9.7,
+    verdict: 'The definitive ergonomic investment for professionals sitting 8+ hours a day.',
+    bestFor: 'Desk workers, programmers, and professionals experiencing lower-back tension',
     asin: 'B01MCT3665',
     amazonUrl: 'https://www.amazon.com/dp/B01MCT3665',
-    imageUrl: 'https://images.unsplash.com/photo-1580481077195-73ab013d6dd7?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1580481077194-06d20fae9d4a?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1580481077195-73ab013d6dd7?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1589578527966-fdac0f44566c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1580481077194-06d20fae9d4a?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 1495.00,
+    price: 1395.00,
     currency: 'USD',
-    priceNote: 'Price information may change. Check Amazon for the latest price.',
-    priceLastUpdated: '2026-08-19',
-    rating: 4.9,
-    reviewCount: 489,
+    priceNote: 'Verified authorized seller listing on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
+    rating: 4.8,
+    reviewCount: 2900,
     availability: 'in_stock',
     keyFeatures: [
-      'PostureFit SL dual lumbar and sacral stabilization pads',
-      '8Z Pellicle zonal tension mesh prevents heat buildup',
-      'Harmonic 2 tilt mechanism with natural forward tilt option',
-      'Fully adjustable 4D armrests with supple polyurethane caps',
-      '12-year multi-shift commercial warranty build quality',
+      '8Z Pellicle zonal mesh tension distribution',
+      'PostureFit SL dual sacral/lumbar stabilization',
+      'Harmonic 2 tilt mechanism with forward-tilt lock',
+      'Fully adjustable 4D armrests with supple vinyl caps',
+      '12-year 24/7 commercial warranty'
     ],
     specifications: {
-      'Sizes Available': 'Size A (Small), Size B (Medium), Size C (Large)',
-      'Weight Capacity': '350 lbs (158 kg)',
-      'Materials': 'Recycled aluminum chassis, elastomeric mesh',
-      'Tilt Range': '91.8° to 108.6° with tilt limiter',
-      'Warranty': '12-Year Herman Miller warranty',
+      'Size': 'Size B (Medium - Fits 5\'3" to 6\'6", up to 350 lbs)',
+      'Material': 'Recycled aluminum chassis, 8Z Pellicle mesh',
+      'Warranty': '12 Years (Parts, labor, and caster mechanisms)',
+      'Adjustability': 'Seat height, tilt tension, tilt limiter, forward tilt, 4D arms'
     },
     pros: [
-      'Forces ideal upright pelvic posture and relieves sacral fatigue',
-      'Completely breathable mesh prevents overheating',
-      'Incredible build durability that lasts 10 to 15+ years',
-      'Retains exceptional resale value over time',
+      'Zero heat buildup thanks to medical-grade breathable mesh',
+      'PostureFit SL forces optimal spinal alignment automatically',
+      'Legendary 12-year warranty and extreme resale value retention'
     ],
     cons: [
-      'Substantial upfront financial investment',
-      'Rigid plastic seat frame discourages sitting cross-legged',
+      'Hard plastic outer frame prevents cross-legged sitting',
+      'Premium investment cost'
     ],
     whoShouldBuy: [
-      'Work-from-home professionals with daily lower back discomfort',
-      'Companies furnishing long-lasting executive workstations',
+      'Full-time remote workers sitting 8+ hours daily',
+      'Anyone suffering from sciatica or lower lumbar fatigue'
     ],
     whoShouldAvoid: [
-      'People who prefer lounging or curling their legs up on the seat cushion',
+      'People who like to curl up or sit cross-legged in their chair'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-05-10T10:00:00Z',
-    updatedAt: '2026-08-17T11:00:00Z',
+    createdAt: '2026-05-10T12:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
   },
+
+  // 4. COMPUTERS & PERIPHERALS
   {
     id: 'prod-logitech-mx-master-3s',
     slug: 'logitech-mx-master-3s-wireless-performance-mouse',
@@ -261,322 +601,245 @@ export const initialProducts: Product[] = [
     brand: 'Logitech',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
-    shortDescription: 'Ergonomic sculpt with MagSpeed electromagnetic scrolling, 8K DPI glass tracking, and quiet clicks.',
-    longDescription: 'The Logitech MX Master 3S is widely regarded as the pinnacle productivity mouse. Its MagSpeed scroll wheel can flick through 1,000 spreadsheet rows per second with pixel precision, while the 8,000 DPI Darkfield sensor tracks reliably across clear glass desks without needing a mousepad. Quiet-click switches reduce acoustic distraction by 90%.',
+    shortDescription: 'Ergonomic wireless mouse with 8,000 DPI track-on-glass sensor and MagSpeed electromagnetic scroll wheel.',
+    longDescription: 'The Logitech MX Master 3S is the quintessential productivity mouse for software engineers, video editors, and financial analysts. Its sculpted thumb rest keeps your forearm in a neutral ergonomic handshake orientation, while the MagSpeed stainless steel wheel scrolls through 1,000 spreadsheet lines in a single silent flick.',
     editorScore: 9.7,
-    verdict: 'The essential mouse for developers, data analysts, and multi-monitor power users.',
-    bestFor: 'Users who navigate complex spreadsheets, timeline editing, or multi-computer setups',
+    verdict: 'The best productivity mouse ever built, period.',
+    bestFor: 'Power users, multi-monitor setups, coders, and spreadsheet powerhouses',
     asin: 'B09HM94VDS',
     amazonUrl: 'https://www.amazon.com/dp/B09HM94VDS',
     imageUrl: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80'
     ],
     price: 99.99,
     currency: 'USD',
-    priceNote: 'Price information may change. Check Amazon for the latest price.',
-    priceLastUpdated: '2026-08-19',
+    priceNote: 'Direct official price on Amazon',
+    priceLastUpdated: '2026-08-26T18:00:00Z',
     rating: 4.8,
-    reviewCount: 680,
+    reviewCount: 22400,
     availability: 'in_stock',
     keyFeatures: [
-      'MagSpeed Electromagnetic scroll wheel (Free-spin & ratchet)',
-      '8,000 DPI optical sensor tracks on glass',
-      'Quiet-click acoustic dampening (90% noise reduction)',
-      'Logitech Flow seamless file transfer across 3 computers (Mac/Windows)',
-      'Dedicated horizontal thumb wheel and gesture button',
+      'MagSpeed electromagnetic scrolling (1,000 lines/sec)',
+      '8,000 DPI Darkfield sensor (tracks on glass surfaces)',
+      'Quiet Clicks technology (90% noise reduction)',
+      'Cross-computer Flow control between Mac and Windows',
+      '70-day battery life on a single USB-C charge'
     ],
     specifications: {
-      'Connectivity': 'Bluetooth Low Energy & Logi Bolt USB Receiver',
-      'Sensor': '8,000 DPI Darkfield Optical',
-      'Battery Life': 'Up to 70 days on a full charge (USB-C)',
-      'Handedness': 'Right-Handed Sculpted',
+      'Sensor': 'Darkfield high precision (200 - 8,000 DPI)',
+      'Buttons': '7 buttons (Left/Right-click, Back/Forward, App-Switch, Wheel mode-shift, Middle click)',
+      'Battery': '500 mAh Li-Po (Up to 70 days, 1 min charge = 3 hours)',
       'Weight': '141g',
+      'Connectivity': 'Bluetooth Low Energy & Logi Bolt USB Receiver'
     },
     pros: [
-      'Unsurpassed scroll wheel physics and horizontal thumb navigation',
-      'Whisper-quiet clicks are perfect for quiet libraries and offices',
-      'Ergonomic thumb cradle reduces carpal strain',
-      'Effortlessly switches between Mac and Windows with Logitech Flow',
+      'MagSpeed scroll wheel makes navigating 5,000-line spreadsheets effortless',
+      'Whisper-quiet clicks keep quiet office environments calm',
+      'Pair up to 3 devices and seamlessly copy/paste text across them with Logi Flow'
     ],
     cons: [
-      'Right-handed only (no left-handed edition available)',
-      'Slightly heavy for competitive esports gaming',
+      'Right-handed ergonomic shape only (no left-handed version available)',
+      '125Hz polling rate is tailored for productivity, not competitive esports'
     ],
     whoShouldBuy: [
-      'Programmers, financial analysts, and video editors',
-      'Anyone juggling a work laptop and personal desktop on one desk',
+      'Developers, spreadsheet analysts, and digital creators',
+      'Anyone with wrist fatigue from flat standard mice'
     ],
     whoShouldAvoid: [
-      'Left-handed users (consider the Logitech Lift Left-Handed instead)',
-      'Twitch FPS gamers wanting a sub-60g lightweight mouse',
+      'Left-handed users',
+      'Competitive FPS esports gamers needing ultra-light 1000Hz mice'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-06-01T10:00:00Z',
-    updatedAt: '2026-08-18T09:00:00Z',
-  },
-  {
-    id: 'prod-shure-sm7b',
-    slug: 'shure-sm7b-dynamic-vocal-microphone',
-    name: 'Shure SM7B Cardioid Dynamic Vocal Microphone',
-    brand: 'Shure',
-    categoryId: 'cat-content',
-    categoryName: 'Content Creation',
-    shortDescription: 'The legendary broadcasting microphone trusted by top podcasters, voiceover artists, and music studios.',
-    longDescription: 'The Shure SM7B is the industry staple for spoken-word audio. Its flat, wide-range frequency response captures natural vocal warmth while its cardioid polar pattern and air suspension shock isolation reject background computer fans, air conditioner hums, and mechanical desk thumps.',
-    editorScore: 9.7,
-    verdict: 'The broadcast-grade dynamic mic that makes any home room sound like an acoustic treated studio.',
-    bestFor: 'Podcasters, livestreamers, and voiceover artists recording in untreated rooms',
-    asin: 'B0002E4Z8B',
-    amazonUrl: 'https://www.amazon.com/dp/B0002E4Z8B',
-    imageUrl: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1520523839898-50712797e937?auto=format&fit=crop&w=800&q=80',
-    ],
-    price: 399.00,
-    currency: 'USD',
-    priceNote: 'Price information may change. Check Amazon for the latest price.',
-    priceLastUpdated: '2026-08-19',
-    rating: 4.9,
-    reviewCount: 512,
-    availability: 'in_stock',
-    keyFeatures: [
-      'Flat, wide-range frequency response for exceptionally clean vocal reproduction',
-      'Internal air-suspension shock isolation suppresses mechanical noise',
-      'Electromagnetic shielding protects against PC monitor hum',
-      'Bass roll-off and mid-range emphasis (presence boost) switches',
-      'Includes detachable close-talk windscreen',
-    ],
-    specifications: {
-      'Transducer Type': 'Dynamic',
-      'Polar Pattern': 'Cardioid',
-      'Frequency Response': '50Hz – 20kHz',
-      'Output Impedance': '150 Ohms',
-      'Connector': '3-pin XLR (Requires Audio Interface or Preamp)',
-      'Weight': '765g (1.69 lbs)',
-    },
-    pros: [
-      'Legendary radio broadcast tone with rich proximity effect',
-      'Rejects room echo and keyboard clatter far better than condenser mics',
-      'Heavy-duty all-metal casing built like a tank',
-    ],
-    cons: [
-      'Requires an XLR audio interface and high-gain preamp (e.g. Cloudlifter or modern high-gain interface)',
-      'Heavy build requires a sturdy microphone boom arm',
-    ],
-    whoShouldBuy: [
-      'Serious podcasters, YouTubers, and voice talent',
-      'Streamers in rooms with hard floors and echo',
-    ],
-    whoShouldAvoid: [
-      'Casual Zoom callers wanting plug-and-play USB without an interface (look at the Shure MV7+ instead)',
-    ],
-    featured: true,
-    published: true,
-    createdAt: '2026-05-15T10:00:00Z',
-    updatedAt: '2026-08-18T10:00:00Z',
-  },
-  {
-    id: 'prod-garmin-forerunner-965',
-    slug: 'garmin-forerunner-965-gps-running-smartwatch',
-    name: 'Garmin Forerunner 965 Premium GPS Running Smartwatch',
-    brand: 'Garmin',
-    categoryId: 'cat-wearables',
-    categoryName: 'Fitness & Wearables',
-    shortDescription: 'Vibrant AMOLED touchscreen with titanium bezel, full-color offline topographic maps, and up to 23 days battery.',
-    longDescription: 'The Garmin Forerunner 965 combines brilliant AMOLED display clarity with endurance athletic metrics. Packed with multi-band GNSS tracking, training readiness scores, and full offline topographical routing, it provides athletes with precise pacing, heart rate variability (HRV) status, and recovery guidance without needing daily wall-socket charging.',
-    editorScore: 9.5,
-    verdict: 'The ultimate multisport GPS watch for marathoners, triathletes, and serious outdoor athletes.',
-    bestFor: 'Endurance athletes wanting deep physiological metrics with weeks of battery life',
-    asin: 'B0BSN3NWD7',
-    amazonUrl: 'https://www.amazon.com/dp/B0BSN3NWD7',
-    imageUrl: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80',
-    ],
-    price: 599.99,
-    currency: 'USD',
-    priceNote: 'Price information may change. Check Amazon for the latest price.',
-    priceLastUpdated: '2026-08-19',
-    rating: 4.8,
-    reviewCount: 198,
-    availability: 'in_stock',
-    keyFeatures: [
-      '1.4-inch AMOLED display with lightweight titanium bezel',
-      'Multi-band GPS / SatIQ technology for pinpoint city/trail accuracy',
-      'Up to 23 days of battery life in smartwatch mode (31 hours in GPS mode)',
-      'Built-in full-color topographic mapping and turn-by-turn navigation',
-      'Training Readiness, HRV status, VO2 Max, and Morning Report',
-    ],
-    specifications: {
-      'Display': '1.4" AMOLED (454 x 454 px) Corning Gorilla Glass DX',
-      'Bezel Material': 'Titanium',
-      'Water Rating': '5 ATM (50 meters)',
-      'Weight': '53g',
-      'Storage': '32 GB for offline maps & onboard music',
-      'Battery Life': 'Smartwatch: Up to 23 days | GPS: Up to 31 hours',
-    },
-    pros: [
-      'Stunning AMOLED readability in direct sunlight',
-      'Phenomenal battery life compared to 1-2 day Apple/WearOS smartwatches',
-      'Comprehensive physiological training insights with no monthly subscription',
-      'On-wrist offline topographic map navigation',
-    ],
-    cons: [
-      'Smartwatch app ecosystem is focused strictly on fitness rather than complex third-party apps',
-      'Higher price point for casual gym-goers',
-    ],
-    whoShouldBuy: [
-      'Marathon runners, trail runners, cyclists, and triathletes',
-      'Users tired of charging their smartwatch every single night',
-    ],
-    whoShouldAvoid: [
-      'Users wanting to make cellular phone calls directly from their wrist without a phone',
-    ],
-    featured: true,
-    published: true,
-    createdAt: '2026-06-10T10:00:00Z',
-    updatedAt: '2026-08-16T12:00:00Z',
+    createdAt: '2026-05-20T12:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z'
   },
 ];
 
 export const initialBuyingGuides: BuyingGuide[] = [
   {
-    id: 'guide-best-wireless-headphones',
-    slug: 'best-wireless-noise-canceling-headphones',
-    title: 'The Best Wireless Noise-Canceling Headphones for 2026',
-    excerpt: 'We tested over 25 flagship headphones across 200+ hours of commuting, flights, and office work to find the ultimate ANC performers.',
-    content: `## How We Tested Wireless Headphones
+    id: 'guide-best-smartphones-2026',
+    slug: 'best-smartphones-flagship-and-budget-buyers-guide',
+    title: 'The Best Smartphones of 2026: Flagships, Battery Champions & Budget Picks',
+    excerpt: 'We benchmarked optical zoom cameras, battery discharge under 120Hz loads, and real-world durability to crown the top smartphones for every budget.',
+    content: `## The State of Mobile Hardware in 2026
 
-Finding the ideal pair of noise-canceling headphones is no longer just about cutting engine drone—it is about vocal attenuation, microphone clarity in unpredictable winds, and 8+ hour headband ergonomics for glasses wearers.
+The smartphone landscape has matured into a showdown between battery endurance, silicon AI efficiency, optical periscope zoom systems, and display anti-reflectivity. After over 500 hours of lab benchmarks, battery stress tests, and real-world camera shootouts, here is our definitive buying verdict.
 
-Over four months, our editorial team subjected top tier models to:
-1. **Acoustic Frequency Response Analysis**: Flatness of soundstage and sub-bass control.
-2. **Noise Isolation Benchmarks**: Measuring dB reduction against synthetic commuter chatter, cabin pink noise, and cafe soundscapes.
-3. **Microphone AI Filtering**: Recording voice samples in 60dB background wind tunnels.
-4. **Physical Long-Term Fatigue**: 8-hour continuous wearing sessions measuring crown clamping pressure.
+### 1. Best Overall Flagship: Apple iPhone 16 Pro Max
+If video production, battery stamina, and long-term durability are your top priorities, the **iPhone 16 Pro Max** is the undisputed king. In our continuous 5G browsing battery test, it delivered 17 hours and 42 minutes of runtime. The addition of 4K 120fps Dolby Vision and dedicated Camera Control makes it a formidable creative tool.
 
----
+### 2. Best Android Powerhouse: Samsung Galaxy S24 Ultra
+For multitasking, telephoto zoom, and note-taking, nothing touches the **Galaxy S24 Ultra**. Its anti-reflective Gorilla Armor screen eliminates outdoor glare, while the embedded S-Pen and 7 years of promised OS updates make it an unmatched long-term investment.
 
-## Our Top Recommendations at a Glance
+### 3. Best Flagship-Killer Value: OnePlus 12 5G
+For $799, the **OnePlus 12** offers Snapdragon 8 Gen 3 speed, 16GB RAM, 512GB storage, and a 5,400mAh battery that charges to 100% in 30 minutes.
 
-### 1. Overall Best: Sony WH-1000XM5
-If you want the most versatile noise cancellation and the clearest vocal call quality, the **Sony WH-1000XM5** remains unmatched. Its dual integrated processors dynamically adapt to ambient barometric pressure and high-pitched office chatter.
+### 4. Best Sub-$400 Budget Pick: Samsung Galaxy A55 5G
+Proving you don't need $1,000 for a quality phone, the **Galaxy A55** pairs an aluminum frame, 120Hz Super AMOLED panel, and a 2-day battery with 4 years of OS support.`,
+    featuredImage: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=80',
+    categoryId: 'cat-phones',
+    categoryName: 'Smartphones & Mobile Phones',
+    author: {
+      name: 'Marcus Vance',
+      role: 'Senior Hardware & Mobile Editor',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      bio: 'Marcus has tested over 300 smartphones, acoustic systems, and wearables over the last decade.'
+    },
+    recommendedProductIds: [
+      'prod-iphone-16-pro-max',
+      'prod-samsung-s24-ultra',
+      'prod-oneplus-12',
+      'prod-galaxy-a55'
+    ],
+    featuredProductIds: [
+      'prod-iphone-16-pro-max',
+      'prod-samsung-s24-ultra',
+      'prod-oneplus-12',
+      'prod-galaxy-a55'
+    ],
+    topPickProductId: 'prod-iphone-16-pro-max',
+    bestBudgetProductId: 'prod-galaxy-a55',
+    bestPremiumProductId: 'prod-samsung-s24-ultra',
+    selectionCriteria: [
+      'Sustained battery life under continuous 120Hz screen workloads',
+      'Low-light optical camera noise and telephoto periscope sharpness',
+      'Outdoor screen legibility in direct sunlight (1500+ nits)',
+      'Manufacturer software update commitments (minimum 4 to 7 years)'
+    ],
+    faqs: [
+      {
+        question: 'Is 128GB of storage enough in 2026?',
+        answer: 'For casual users relying on cloud storage (Google Photos/iCloud), 128GB is adequate. However, if you shoot 4K video or install modern 3D games, we strongly recommend stepping up to 256GB.'
+      },
+      {
+        question: 'Are high refresh rate 120Hz displays worth the battery trade-off?',
+        answer: 'Yes. Modern LTPO OLED screens dynamically throttle down to 1Hz when viewing static text or photos, conserving battery while delivering buttery smoothness when scrolling.'
+      }
+    ],
+    metaTitle: 'Best Smartphones of 2026 Tested: iPhone vs Galaxy vs Pixel | SmartPick',
+    metaDescription: 'In-depth camera benchmarks, battery tests, and value ratings for the top smartphones of 2026.',
+    published: true,
+    publishedAt: '2026-08-22T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z',
+    readTimeMinutes: 9
+  },
+  {
+    id: 'guide-best-noise-canceling-headphones',
+    slug: 'best-noise-canceling-headphones-buyers-guide',
+    title: 'The Best Noise-Canceling Headphones of 2026: Lab Tested for Commuters & WFH',
+    excerpt: 'We measured decibel attenuation across jet engines, coffee shop chatter, and subway rumble to rank the best ANC over-ear headphones you can buy.',
+    content: `## Finding the Perfect ANC Headphones
 
-### 2. Best for Pure Comfort: Bose QuietComfort Ultra
-If you wear glasses or experience headband fatigue after 2 hours, the **Bose QC Ultra** features deeper earcup wells and ultra-soft protein leather that relieves side pressure completely.
+Active Noise Cancellation (ANC) technology has advanced from a luxury airline amenity into a vital productivity tool for remote workers, frequent commuters, and students alike.
 
----
+### Key Factors We Test
+1. **Decibel Attenuation Curve**: We measure sound attenuation across sub-bass rumble (20–100Hz) and human speech frequencies (500–2000Hz).
+2. **Headband Pressure & Ear Cushion Thermals**: Clamping force measured in Newtons over 4+ hour continuous listening intervals.
+3. **Microphone Background Suppression**: Speech intelligibility in 75dB simulated coffee shop environments.
 
-## What to Look for When Buying in 2026
-
-- **Multipoint Bluetooth**: Ensure your headphones can remain connected to both your laptop and phone simultaneously without re-pairing.
-- **Physical vs Touch Controls**: If you frequently wear winter gloves, physical buttons (like on the Bose) offer tactile certainty over capacitive touch sliders.
-- **High-Res Codec Support**: Android users should look for LDAC or aptX Adaptive for near-lossless 24-bit audio playback.`,
-    featuredImage: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80',
+### The Top Picks
+- **Best Overall**: Sony WH-1000XM5. Supreme isolation against voices and subway rumble.
+- **Best for Folding Portability**: Bose QuietComfort Ultra. Foldable hinges and plush comfort for glasses wearers.`,
+    featuredImage: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80',
     categoryId: 'cat-audio',
     categoryName: 'Audio & Headphones',
     author: {
-      name: 'Marcus Vance',
-      role: 'Head of Audio & Hardware Testing',
+      name: 'Elena Rostova',
+      role: 'Lead Audio Testing Specialist',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+      bio: 'Acoustic engineer and former studio mastering technician with over 12 years of headphone benchmarking experience.'
     },
     recommendedProductIds: ['prod-sony-wh1000xm5', 'prod-bose-qc-ultra'],
+    featuredProductIds: ['prod-sony-wh1000xm5', 'prod-bose-qc-ultra'],
     topPickProductId: 'prod-sony-wh1000xm5',
+    bestBudgetProductId: 'prod-sony-wh1000xm5',
     bestPremiumProductId: 'prod-bose-qc-ultra',
     selectionCriteria: [
-      'Active Noise Cancellation (dB attenuation across 100Hz - 4kHz)',
-      'All-Day Physical Ergonomics & Glasses Clamping Relief',
-      'Beamforming Microphone Voice Isolation in Loud Rooms',
-      'Battery Life Minimum 24+ Hours with USB-C Fast Top Up',
+      'Acoustic decibel cancellation across airplane rumble and speech ranges',
+      'Battery life exceeding 24 hours with ANC engaged',
+      'Ergonomic ear cup depth and thermal ventilation'
     ],
     faqs: [
       {
-        question: 'Does ANC damage hearing or cause ear pressure?',
-        answer: 'No, ANC uses phase-inverted sound waves to cancel incoming frequencies. The slight "cabin pressure" feeling some users experience is an acoustic illusion caused by the sudden absence of low-frequency ambient rumble, which your brain adapts to within a few minutes.',
-      },
-      {
-        question: 'Can I use these headphones wired when the battery dies?',
-        answer: 'Yes, both the Sony WH-1000XM5 and Bose QC Ultra include standard 3.5mm audio cables for passive wired listening without battery power.',
-      },
-      {
-        question: 'How often do Amazon prices fluctuate for flagship headphones?',
-        answer: 'Flagship headphones typically see major seasonal discounts during Prime events, Black Friday, and back-to-school periods. Check the live Amazon button for real-time promotional pricing.',
-      },
+        question: 'Can ANC damage your hearing?',
+        answer: 'No. ANC produces sound waves that cancel incoming noise, actually protecting your hearing by allowing you to listen at lower volume levels.'
+      }
     ],
-    metaTitle: 'Best Wireless Noise-Canceling Headphones 2026: Tested & Reviewed',
-    metaDescription: 'Discover our top lab-tested wireless noise-canceling headphones for commuting, flights, and remote calls with real pros and cons.',
+    metaTitle: 'Best Noise Canceling Headphones 2026 | SmartPick Guide',
+    metaDescription: 'Discover lab-tested noise canceling headphones benchmarked for air travel, office noise, and daily commuting.',
     published: true,
-    publishedAt: '2026-07-01T08:00:00Z',
-    updatedAt: '2026-08-18T16:00:00Z',
-    readTimeMinutes: 8,
-  },
-  {
-    id: 'guide-ergonomic-workstation',
-    slug: 'definitive-ergonomic-home-office-guide',
-    title: 'The Definitive Ergonomic Home Office Setup Guide',
-    excerpt: 'Combat back pain, wrist strain, and eye fatigue with our chiropractor-approved ergonomic gear recommendations.',
-    content: `## The Science of All-Day Ergonomics
-
-Sitting statically for 8+ hours a day places significant compressive load on your lumbar spine and creates repetitive strain in the wrists and cervical vertebrae.
-
-A truly ergonomic workstation is not about a single magic product—it is an ecosystem:
-1. **The Foundation**: An orthopedic task chair with pelvic tilt adjustment.
-2. **Neutral Arm Angle**: A sculpted performance mouse and split or low-profile keyboard.
-3. **Eye-Level Alignment**: Monitor arms that position the top third of your screen directly at horizontal eye level.
-
----
-
-## Key Recommendations
-
-- **Ergonomic Chair**: The **Herman Miller Aeron** remains our highest rated task chair for lower back stabilization and breathability.
-- **Productivity Mouse**: The **Logitech MX Master 3S** relieves pronation strain through its 57-degree natural angle and low-friction MagSpeed scrolling.`,
-    featuredImage: 'https://images.unsplash.com/photo-1580481077195-73ab013d6dd7?auto=format&fit=crop&w=1200&q=80',
-    categoryId: 'cat-office',
-    categoryName: 'Office & Ergonomics',
-    author: {
-      name: 'Elena Rostova',
-      role: 'Senior Workspace & Health Editor',
-      avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
-    },
-    recommendedProductIds: ['prod-herman-miller-aeron', 'prod-logitech-mx-master-3s'],
-    topPickProductId: 'prod-herman-miller-aeron',
-    selectionCriteria: [
-      'Orthopedic Lumbar & Sacral Stabilization',
-      'Dynamic Forward and Recline Tilt Tension',
-      'Neutral Wrist Pronation Angle',
-      'Breathable Materials That Prevent Heat Buildup',
-    ],
-    faqs: [
-      {
-        question: 'Should I buy a standing desk or a high-end ergonomic chair first?',
-        answer: 'Most ergonomics specialists recommend investing in a world-class chair first, since 60-70% of workday time is spent seated. A sit-stand desk works best as a secondary phase to introduce posture variation.',
-      },
-      {
-        question: 'What size Herman Miller Aeron should I choose?',
-        answer: 'Herman Miller offers Size A (up to 5 ft 4 in / 130 lbs), Size B (5 ft 3 in to 6 ft 2 in / 130-230 lbs), and Size C (over 6 ft / 200+ lbs). Size B fits over 80% of adult users.',
-      },
-    ],
-    metaTitle: 'Definitive Ergonomic Home Office Setup Guide (2026) | SmartPick',
-    metaDescription: 'Eliminate desk fatigue with our tested recommendations for ergonomic chairs, mice, and workstation layout principles.',
-    published: true,
-    publishedAt: '2026-06-25T09:00:00Z',
-    updatedAt: '2026-08-15T11:00:00Z',
-    readTimeMinutes: 7,
-  },
+    publishedAt: '2026-07-01T10:00:00Z',
+    updatedAt: '2026-08-20T14:00:00Z',
+    readTimeMinutes: 8
+  }
 ];
 
 export const initialBlogPosts: BlogPost[] = [
+  // 1. SPECIFIC PRODUCT WRITE-UP WITH DIRECT AFFILIATE SPOTLIGHT
   {
-    id: 'post-noise-cancellation-explained',
-    slug: 'how-active-noise-cancellation-works-guide',
-    title: 'How Active Noise Cancellation Actually Works in 2026',
-    excerpt: 'Demystifying feedforward vs feedback microphones, anti-phase wave physics, and why some ANC headphones feel like air pressure.',
-    content: `## The Physics of Sound Cancellation
+    id: 'post-iphone-16-pro-max-review',
+    slug: 'iphone-16-pro-max-3-months-later-camera-battery-verdict',
+    title: 'iPhone 16 Pro Max Long-Term Review: Is It Still the Best Creator Phone?',
+    excerpt: 'After 90 days of daily field testing across 4K120fps video capture, international travel, and battery strain tests, here is our unfiltered verdict on Apple’s flagship.',
+    content: `## 90 Days with Apple's Titanium Flagship
+
+When the iPhone 16 Pro Max launched, much of the conversation centered around its larger 6.9-inch display and the tactile Camera Control button. Now, after three months of intense real-world use as our primary filming rig and daily driver, the verdict is in.
+
+### 1. The 4K 120fps Video Revolution
+For video creators, shooting 4K at 120 frames per second in 10-bit ProRes Log directly to an external Samsung T7 Shield SSD has completely replaced our mirrorless B-cam for travel reels and b-roll. The dynamic range holds highlight details that previously clipped on smartphone sensors.
+
+### 2. Battery Life That Refuses to Die
+Even with ProMotion 120Hz constantly engaged, GPS turn-by-turn navigation, and 3 hours of outdoor screen time at 2,000 nits, we consistently finish 16-hour days with **35% to 40% battery remaining**.
+
+### 3. The Verdict
+If you are upgrading from an iPhone 13 Pro or older, the leap in battery endurance, thermal management, and camera versatility makes the iPhone 16 Pro Max an unquestionable upgrade. Check the product spotlight box below for current Amazon pricing and stock.`,
+    featuredImage: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1000&q=80',
+    category: 'Smartphones & Mobile',
+    tags: ['iPhone 16 Pro Max', 'Apple', 'Smartphone Review', 'Camera Test', 'Amazon Deals'],
+    author: {
+      name: 'Marcus Vance',
+      role: 'Head of Mobile & Hardware Testing',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+      bio: 'Marcus has tested over 300 smartphones and mobile cameras over the last decade.'
+    },
+    // Linked Featured Product with Spotlight Box
+    featuredProductId: 'prod-iphone-16-pro-max',
+    productSpotlight: {
+      productId: 'prod-iphone-16-pro-max',
+      productName: 'Apple iPhone 16 Pro Max (256GB, Desert Titanium)',
+      brand: 'Apple',
+      productImageUrl: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80',
+      price: 1199.00,
+      asin: 'B0DGHN5Y21',
+      editorScore: 9.8,
+      badgeText: 'Top Tested Flagship',
+      shortVerdict: 'Unmatched 4K120fps video capabilities, Grade 5 Titanium ergonomics, and all-day 17+ hour battery longevity.',
+      pros: [
+        'Class-leading 4K 120fps ProRes Log video recording',
+        'Remarkable multi-day battery endurance (17h 42m tested)',
+        'Stunning 2000-nit Super Retina XDR OLED display'
+      ],
+      cons: [
+        'Large physical footprint requires two hands',
+        '25W wired charging speeds are slower than Android fast-chargers'
+      ],
+      ctaText: 'Check Price on Amazon'
+    },
+    metaTitle: 'iPhone 16 Pro Max Review: 3 Months Later Verdict | SmartPick',
+    metaDescription: 'Detailed long-term review of the iPhone 16 Pro Max testing 4K120fps video, battery drain, and titanium ergonomics.',
+    published: true,
+    publishedAt: '2026-08-24T10:00:00Z',
+    updatedAt: '2026-08-26T18:00:00Z',
+    readTimeMinutes: 6
+  },
+  {
+    id: 'post-anc-how-it-works',
+    slug: 'how-active-noise-cancellation-works-explained',
+    title: 'How Active Noise Cancellation Actually Works: Physics & DSP Explainer',
+    excerpt: 'From destructive wave interference to multi-microphone feedforward arrays, here is the scientific engineering behind silence.',
+    content: `## The Physics of Quiet
 
 Active Noise Cancellation (ANC) relies on the principle of destructive wave interference. When an acoustic wave meets an inverted replica of itself with equal amplitude, the peaks and troughs cancel each other out, leaving relative silence.
 
@@ -592,16 +855,37 @@ Modern flagship headphones (like the Sony WH-1000XM5 and Bose QC Ultra) use **Hy
     category: 'Audio Technology',
     tags: ['Noise Cancellation', 'Headphones', 'Audio Tech', 'Buying Advice'],
     author: {
-      name: 'Marcus Vance',
-      role: 'Head of Audio & Hardware Testing',
+      name: 'Elena Rostova',
+      role: 'Senior Workspace & Health Editor',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+    },
+    featuredProductId: 'prod-sony-wh1000xm5',
+    productSpotlight: {
+      productId: 'prod-sony-wh1000xm5',
+      productName: 'Sony WH-1000XM5 Wireless Noise-Canceling Headphones',
+      brand: 'Sony',
+      productImageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80',
+      price: 398.00,
+      asin: 'B09XS7JWHH',
+      editorScore: 9.6,
+      badgeText: 'Editor\'s Choice: Best ANC',
+      shortVerdict: 'The benchmark for silencing airplane engines and office chatter with lightweight all-day comfort.',
+      pros: [
+        'Industry-leading active noise cancellation',
+        '30-hour battery life with ANC on',
+        'Lightweight comfortable headband'
+      ],
+      cons: [
+        'Headband does not fold inward'
+      ],
+      ctaText: 'Check Price on Amazon'
     },
     metaTitle: 'How Active Noise Cancellation Works: Complete Explainer | SmartPick Guide',
     metaDescription: 'Understand the engineering behind ANC headphones, feedforward vs feedback mics, and how modern algorithms silence plane noise.',
     published: true,
     publishedAt: '2026-07-15T10:00:00Z',
-    updatedAt: '2026-08-10T14:00:00Z',
-    readTimeMinutes: 5,
+    updatedAt: '2026-08-26T18:00:00Z',
+    readTimeMinutes: 5
   },
   {
     id: 'post-usb-c-docks-guide',
@@ -626,13 +910,34 @@ Look for docks providing at least 85W to 100W Power Delivery to ensure your lapt
       role: 'Senior Workspace & Health Editor',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
     },
+    featuredProductId: 'prod-logitech-mx-master-3s',
+    productSpotlight: {
+      productId: 'prod-logitech-mx-master-3s',
+      productName: 'Logitech MX Master 3S Wireless Performance Mouse',
+      brand: 'Logitech',
+      productImageUrl: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80',
+      price: 99.99,
+      asin: 'B09HM94VDS',
+      editorScore: 9.7,
+      badgeText: 'Best Productivity Mouse',
+      shortVerdict: 'MagSpeed electromagnetic scroll wheel, quiet clicks, and multi-device flow across Mac & Windows.',
+      pros: [
+        'Electromagnetic scroll scrolls 1,000 lines per second',
+        '8,000 DPI sensor works on glass surfaces',
+        '70-day battery life on a single charge'
+      ],
+      cons: [
+        'Right-hand orientation only'
+      ],
+      ctaText: 'Check Price on Amazon'
+    },
     metaTitle: 'Thunderbolt 4 vs USB-C Docks Explained (2026 Guide) | SmartPick',
     metaDescription: 'Everything you need to know about dual monitor support, Power Delivery charging, and dock bandwidth.',
     published: true,
     publishedAt: '2026-07-20T10:00:00Z',
-    updatedAt: '2026-08-12T15:00:00Z',
-    readTimeMinutes: 6,
-  },
+    updatedAt: '2026-08-26T18:00:00Z',
+    readTimeMinutes: 6
+  }
 ];
 
 export const initialSiteSettings: SiteSettings = {

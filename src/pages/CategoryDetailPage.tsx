@@ -11,7 +11,19 @@ import {
   Home,
   Watch,
   Layers,
-  Sparkles
+  Sparkles,
+  Smartphone,
+  Tablet,
+  Tv,
+  Speaker,
+  Gamepad,
+  Monitor,
+  Wifi,
+  Coffee,
+  Briefcase,
+  Cpu,
+  Zap,
+  Package
 } from 'lucide-react';
 import { StorageService } from '../lib/storage';
 import { Category, Product, BuyingGuide } from '../types';
@@ -31,6 +43,19 @@ const iconMap: Record<string, React.ElementType> = {
   Home,
   Watch,
   Layers,
+  Smartphone,
+  Tablet,
+  Tv,
+  Speaker,
+  Gamepad,
+  Monitor,
+  Wifi,
+  Coffee,
+  Briefcase,
+  Cpu,
+  Zap,
+  Sparkles,
+  Package,
 };
 
 export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({

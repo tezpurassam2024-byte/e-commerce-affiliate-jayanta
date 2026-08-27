@@ -22,10 +22,15 @@ export const ArticleCard: React.FC<ArticleCardProps> = ({ post, onNavigate }) =>
           className="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
           loading="lazy"
         />
-        <div className="absolute top-3 left-3">
+        <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
           <span className="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider bg-slate-900/80 text-white backdrop-blur-md rounded-lg shadow-sm">
             {post.category}
           </span>
+          {(post.productSpotlight || post.featuredProductId) && (
+            <span className="px-2 py-0.5 text-[10px] font-extrabold bg-emerald-600/90 text-white backdrop-blur-md rounded-md shadow-xs">
+              ★ Product Spotlight
+            </span>
+          )}
         </div>
       </div>
 

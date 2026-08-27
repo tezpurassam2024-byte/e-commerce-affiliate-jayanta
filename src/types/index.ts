@@ -78,6 +78,22 @@ export interface BuyingGuide {
   readTimeMinutes: number;
 }
 
+export interface ProductSpotlight {
+  productId?: string;
+  productName: string;
+  brand?: string;
+  productImageUrl: string;
+  price?: number;
+  affiliateUrl?: string;
+  asin?: string;
+  editorScore?: number;
+  badgeText?: string;
+  shortVerdict?: string;
+  pros?: string[];
+  cons?: string[];
+  ctaText?: string;
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -93,6 +109,9 @@ export interface BlogPost {
     avatar: string;
     bio?: string;
   };
+  // Specific product spotlight & affiliate link
+  featuredProductId?: string;
+  productSpotlight?: ProductSpotlight;
   metaTitle?: string;
   metaDescription?: string;
   published: boolean;

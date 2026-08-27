@@ -71,6 +71,16 @@ export function extractAsinFromUrl(urlStr: string): string | null {
 }
 
 /**
+ * Price disclaimer helper complying with Amazon Operating Agreement
+ */
+export function getPriceDisclaimer(lastUpdated?: string): string {
+  const dateStr = lastUpdated
+    ? new Date(lastUpdated).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })
+    : 'publication date';
+  return `Product prices and availability are accurate as of ${dateStr} and are subject to change. Any price and availability information displayed on Amazon at the time of purchase will apply to the purchase of this product.`;
+}
+
+/**
  * Standard Amazon Associates Disclosure Text
  */
 export const AMAZON_STANDARD_DISCLOSURE =
@@ -78,3 +88,4 @@ export const AMAZON_STANDARD_DISCLOSURE =
 
 export const AMAZON_COMPREHENSIVE_DISCLOSURE =
   'SmartPick Guide is an independent product review and recommendation publication. When you click our affiliate links and make a purchase on Amazon, we may earn an affiliate commission at no additional cost to you. Product prices, ratings, and availability are accurate as of the date indicated and are subject to change. Check Amazon for real-time pricing.';
+
