@@ -14,13 +14,16 @@ import {
   ArrowLeft,
   CheckCircle2,
   AlertCircle,
-  HelpCircle
+  HelpCircle,
+  Copy,
 } from 'lucide-react';
 import { StorageService } from '../lib/storage';
 import { Product } from '../types';
 import { buildAmazonAffiliateUrl } from '../lib/amazon';
 import { trackAffiliateClick } from '../lib/analytics';
 import { ProductCard } from '../components/ProductCard';
+import { ShareModal } from '../components/ShareModal';
+import { copyToClipboard, buildShareUrl, triggerNativeShare } from '../lib/share';
 
 interface ProductDetailPageProps {
   slug: string;
@@ -35,6 +38,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
   const [isInComparison, setIsInComparison] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [shareModalOpen, setShareModalOpen] = useState(false);
 
   const loadProduct = () => {
     const found = StorageService.getProductBySlug(slug);
@@ -77,6 +81,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
   const settings = StorageService.getSettings();
   const affiliateUrl = buildAmazonAffiliateUrl(product);
+  const shareUrl = buildShareUrl('product', product.slug);
 
   const handleCtaClick = () => {
     trackAffiliateClick(product, 'product_detail_hero_cta');
@@ -87,12 +92,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     StorageService.toggleComparison(product.id);
   };
 
-  const handleShare = () => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href);
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2500);
+  const handleShare = async () => {
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      const shared = await triggerNativeShare({
+        title: product.name,
+        text: product.verdict || product.shortDescription,
+        url: shareUrl,
+      });
+      if (shared) return;
     }
+    setShareModalOpen(true);
   };
 
   return (
@@ -399,6 +408,18 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           </div>
         </div>
       )}
+
+      {/* Share Modal */}
+      <ShareModal
+        isOpen={shareModalOpen}
+        onClose={() => setShareModalOpen(false)}
+        shareData={{
+          title: product.name,
+          text: product.verdict || product.shortDescription,
+          url: shareUrl,
+          category: product.categoryName,
+        }}
+      />
     </div>
   );
 };

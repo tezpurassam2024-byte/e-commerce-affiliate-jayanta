@@ -8,11 +8,15 @@ import {
   BookOpen,
   Share2,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  Copy,
+  Check,
 } from 'lucide-react';
 import { StorageService } from '../lib/storage';
 import { BuyingGuide, Product } from '../types';
 import { ProductCard } from '../components/ProductCard';
+import { ShareModal } from '../components/ShareModal';
+import { copyToClipboard, buildShareUrl, triggerNativeShare } from '../lib/share';
 
 interface GuideDetailPageProps {
   slug: string;
@@ -26,6 +30,7 @@ export const GuideDetailPage: React.FC<GuideDetailPageProps> = ({
   const [guide, setGuide] = useState<BuyingGuide | null>(null);
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
   const [copied, setCopied] = useState(false);
+  const [shareModalOpen, setShareModalOpen] = useState(false);
 
   useEffect(() => {
     const allGuides = StorageService.getBuyingGuides();
@@ -56,16 +61,31 @@ export const GuideDetailPage: React.FC<GuideDetailPageProps> = ({
     );
   }
 
-  const handleShare = () => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href);
+  const shareUrl = buildShareUrl('guide', guide.slug);
+
+  const handleShare = async () => {
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      const shared = await triggerNativeShare({
+        title: guide.title,
+        text: guide.excerpt,
+        url: shareUrl,
+      });
+      if (shared) return;
+    }
+    setShareModalOpen(true);
+  };
+
+  const handleCopy = async () => {
+    const success = await copyToClipboard(shareUrl);
+    if (success) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
   };
 
   return (
-    <article id={`guide-detail-${guide.slug}`} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10">
+    <>
+      <article id={`guide-detail-${guide.slug}`} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-10">
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-xs text-slate-500 overflow-x-auto">
         <button onClick={() => onNavigate('home')} className="hover:text-slate-900">
@@ -122,13 +142,24 @@ export const GuideDetailPage: React.FC<GuideDetailPageProps> = ({
             </div>
           </div>
 
-          <button
-            onClick={handleShare}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold"
-          >
-            <Share2 className="w-3.5 h-3.5" />
-            <span>{copied ? 'Copied' : 'Share'}</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleCopy}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold"
+              title="Copy Link"
+            >
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Copied' : 'Copy Link'}</span>
+            </button>
+
+            <button
+              onClick={handleShare}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition-all shadow-xs"
+            >
+              <Share2 className="w-3.5 h-3.5" />
+              <span>Share Guide</span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -202,5 +233,18 @@ export const GuideDetailPage: React.FC<GuideDetailPageProps> = ({
         </div>
       </div>
     </article>
-  );
+
+    {/* Share Modal */}
+    <ShareModal
+      isOpen={shareModalOpen}
+      onClose={() => setShareModalOpen(false)}
+      shareData={{
+        title: guide.title,
+        text: guide.excerpt,
+        url: shareUrl,
+        category: guide.categoryName,
+      }}
+    />
+  </>
+);
 };
