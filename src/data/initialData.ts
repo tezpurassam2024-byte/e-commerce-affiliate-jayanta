@@ -259,9 +259,9 @@ Samsung also guarantees 7 full years of Android OS upgrades and security patches
     editorScore: 9.7,
     verdict: 'The ultimate Android smartphone for power users, photographers, and multitasking professionals.',
     bestFor: 'Android enthusiasts, note-takers, photographers, and professionals requiring desktop-class multitasking.',
-    asin: 'B0dXElT2M',
-    amazonUrl: 'https://link.amazon/B0dXElT2M',
-    affiliateUrl: 'https://link.amazon/B0dXElT2M',
+    asin: 'B0jeeWzoF',
+    amazonUrl: 'https://link.amazon/B0jeeWzoF',
+    affiliateUrl: 'https://link.amazon/B0jeeWzoF',
     imageUrl: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=800&q=80',
@@ -270,7 +270,7 @@ Samsung also guarantees 7 full years of Android OS upgrades and security patches
     price: 1299.99,
     currency: 'USD',
     priceNote: 'Unlocked 512GB version verified on Amazon',
-    priceLastUpdated: '2026-08-27T07:20:00Z',
+    priceLastUpdated: '2026-08-28T07:00:00Z',
     rating: 4.8,
     reviewCount: 3820,
     availability: 'in_stock',
@@ -312,7 +312,7 @@ Samsung also guarantees 7 full years of Android OS upgrades and security patches
     featured: true,
     published: true,
     createdAt: '2026-08-20T10:00:00Z',
-    updatedAt: '2026-08-27T07:20:00Z'
+    updatedAt: '2026-08-28T07:00:00Z'
   },
   {
     id: 'prod-pixel-9-pro-xl',
@@ -329,9 +329,9 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     editorScore: 9.5,
     verdict: 'The smartest still photography camera on the market, paired with stunning industrial design and pure Android software.',
     bestFor: 'Photographers, Android purists, and everyday users who want effortless, picture-perfect point-and-shoot photos.',
-    asin: 'B0dXElT2M',
-    amazonUrl: 'https://link.amazon/B0dXElT2M',
-    affiliateUrl: 'https://link.amazon/B0dXElT2M',
+    asin: 'B04q8Z0tH',
+    amazonUrl: 'https://link.amazon/B04q8Z0tH',
+    affiliateUrl: 'https://link.amazon/B04q8Z0tH',
     imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80'
@@ -339,7 +339,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     price: 1099.00,
     currency: 'USD',
     priceNote: 'Direct unlocked price on Amazon',
-    priceLastUpdated: '2026-08-27T07:20:00Z',
+    priceLastUpdated: '2026-08-28T07:00:00Z',
     rating: 4.7,
     reviewCount: 2150,
     availability: 'in_stock',
@@ -378,7 +378,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     featured: true,
     published: true,
     createdAt: '2026-08-21T10:00:00Z',
-    updatedAt: '2026-08-27T07:20:00Z'
+    updatedAt: '2026-08-28T07:00:00Z'
   },
   {
     id: 'prod-oneplus-12',
@@ -392,9 +392,9 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     editorScore: 9.4,
     verdict: 'The best value flagship smartphone on the market, offering absurdly fast charging and top-tier performance for under $800.',
     bestFor: 'Shoppers looking for top-shelf flagship specs, battery life, and rapid charging without paying over $1,000.',
-    asin: 'B0dXElT2M',
-    amazonUrl: 'https://link.amazon/B0dXElT2M',
-    affiliateUrl: 'https://link.amazon/B0dXElT2M',
+    asin: 'B0fjelcM0',
+    amazonUrl: 'https://link.amazon/B0fjelcM0',
+    affiliateUrl: 'https://link.amazon/B0fjelcM0',
     imageUrl: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=800&q=80'
@@ -402,7 +402,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     price: 799.99,
     currency: 'USD',
     priceNote: '512GB / 16GB RAM model verified on Amazon',
-    priceLastUpdated: '2026-08-27T07:20:00Z',
+    priceLastUpdated: '2026-08-28T07:00:00Z',
     rating: 4.7,
     reviewCount: 1840,
     availability: 'in_stock',
@@ -438,7 +438,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     featured: true,
     published: true,
     createdAt: '2026-08-21T10:00:00Z',
-    updatedAt: '2026-08-27T07:20:00Z'
+    updatedAt: '2026-08-28T07:00:00Z'
   },
   {
     id: 'prod-galaxy-a55',
@@ -452,9 +452,9 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     editorScore: 9.1,
     verdict: 'The best sub-$400 smartphone on the market with premium build quality, great battery life, and four years of OS upgrades.',
     bestFor: 'Budget-conscious buyers, students, and everyday users wanting dependable quality without the flagship markup.',
-    asin: 'B0dXElT2M',
-    amazonUrl: 'https://link.amazon/B0dXElT2M',
-    affiliateUrl: 'https://link.amazon/B0dXElT2M',
+    asin: 'B05yq2vzL',
+    amazonUrl: 'https://link.amazon/B05yq2vzL',
+    affiliateUrl: 'https://link.amazon/B05yq2vzL',
     imageUrl: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'
@@ -462,7 +462,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     price: 389.99,
     currency: 'USD',
     priceNote: 'Direct unlocked price on Amazon',
-    priceLastUpdated: '2026-08-27T07:20:00Z',
+    priceLastUpdated: '2026-08-28T07:00:00Z',
     rating: 4.6,
     reviewCount: 1420,
     availability: 'in_stock',
@@ -501,7 +501,7 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
     featured: true,
     published: true,
     createdAt: '2026-08-21T10:00:00Z',
-    updatedAt: '2026-08-27T07:20:00Z'
+    updatedAt: '2026-08-28T07:00:00Z'
   },
 
   // 2. AUDIO & HEADPHONES
