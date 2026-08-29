@@ -34,10 +34,13 @@ function initializeLocalStorage() {
   } else {
     try {
       const existing: Category[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.CATEGORIES) || '[]');
-      const missing = initialCategories.filter((ic) => !existing.some((e) => e.id === ic.id));
-      if (missing.length > 0) {
-        localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify([...existing, ...missing]));
-      }
+      const updated = existing.map((cat) => {
+        const init = initialCategories.find((ic) => ic.id === cat.id);
+        return init ? { ...cat, ...init } : cat;
+      });
+      const missing = initialCategories.filter((ic) => !updated.some((e) => e.id === ic.id));
+      const combined = [...updated, ...missing];
+      localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify(combined));
     } catch {
       localStorage.setItem(STORAGE_KEYS.CATEGORIES, JSON.stringify(initialCategories));
     }

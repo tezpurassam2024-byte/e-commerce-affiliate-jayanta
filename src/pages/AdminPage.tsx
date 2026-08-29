@@ -837,6 +837,27 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                   </div>
 
                   <div className="sm:col-span-2">
+                    <label className="font-bold text-slate-700 block mb-1">Category Image URL (Product Photo / Illustration)</label>
+                    <div className="flex gap-3 items-center">
+                      <input
+                        type="text"
+                        value={editingCategory.imageUrl || ''}
+                        onChange={(e) => setEditingCategory({ ...editingCategory, imageUrl: e.target.value })}
+                        placeholder="e.g. /src/assets/images/headphones_category.jpg or https://..."
+                        className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:border-emerald-500 font-mono text-xs"
+                      />
+                      {editingCategory.imageUrl && (
+                        <img
+                          src={editingCategory.imageUrl}
+                          alt="Preview"
+                          referrerPolicy="no-referrer"
+                          className="w-10 h-10 rounded-lg object-cover border border-slate-200 shrink-0"
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="sm:col-span-2">
                     <label className="font-bold text-slate-700 block mb-1">Short Category Description</label>
                     <textarea
                       rows={2}
@@ -889,6 +910,16 @@ export const AdminPage: React.FC<AdminPageProps> = ({ onNavigate }) => {
                   className="bg-white p-5 rounded-3xl border border-slate-200 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between"
                 >
                   <div className="space-y-2">
+                    {c.imageUrl && (
+                      <div className="aspect-16/9 rounded-2xl overflow-hidden bg-slate-100 mb-2 border border-slate-100">
+                        <img
+                          src={c.imageUrl}
+                          alt={c.name}
+                          referrerPolicy="no-referrer"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
                     <div className="flex items-center justify-between">
                       <span className="px-2.5 py-1 bg-emerald-50 text-emerald-800 text-[11px] font-bold rounded-lg uppercase">
                         {c.iconName}

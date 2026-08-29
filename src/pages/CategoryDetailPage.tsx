@@ -112,31 +112,44 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
       </nav>
 
       {/* Category Hero Banner */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xs p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div className="flex items-start gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 shadow-xs">
-            <IconComponent className="w-7 h-7" />
+      <div className="bg-white rounded-3xl border border-slate-200 shadow-2xs overflow-hidden">
+        {category.imageUrl && (
+          <div className="relative h-48 sm:h-64 w-full bg-slate-100 overflow-hidden">
+            <img
+              src={category.imageUrl}
+              alt={category.name}
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
           </div>
-          <div className="space-y-1">
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-700">
-              Lab Category Hub
+        )}
+        <div className="p-6 sm:p-10 -mt-12 relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-md">
+              <IconComponent className="w-7 h-7" />
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-editorial">
-              {category.name}
-            </h1>
-            <p className="text-slate-600 text-sm max-w-2xl pt-1 leading-relaxed">
-              {category.description}
-            </p>
+            <div className="space-y-1">
+              <div className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                Lab Category Hub
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-serif-editorial">
+                {category.name}
+              </h1>
+              <p className="text-slate-600 text-sm max-w-2xl pt-1 leading-relaxed">
+                {category.description}
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div className="flex items-center gap-3 shrink-0">
-          <button
-            onClick={() => onNavigate('products', { category: category.id })}
-            className="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow-xs"
-          >
-            Filter In Catalog
-          </button>
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={() => onNavigate('products', { category: category.id })}
+              className="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow-xs"
+            >
+              Filter In Catalog
+            </button>
+          </div>
         </div>
       </div>
 

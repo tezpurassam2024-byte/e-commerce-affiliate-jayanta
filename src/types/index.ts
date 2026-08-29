@@ -42,6 +42,7 @@ export interface Category {
   name: string;
   description: string;
   iconName: string;
+  imageUrl?: string;
   featured: boolean;
   productCount?: number;
   metaTitle?: string;

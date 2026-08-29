@@ -33,6 +33,7 @@ interface CategoryCardProps {
   category: Category;
   productCount?: number;
   onNavigate: (page: string, params?: Record<string, any>) => void;
+  dark?: boolean;
 }
 
 export const iconMap: Record<string, React.ElementType> = {
@@ -68,6 +69,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   category,
   productCount,
   onNavigate,
+  dark = false,
 }) => {
   const IconComponent = iconMap[category.iconName] || Layers;
 
@@ -75,32 +77,85 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
     <div
       id={`category-card-${category.slug}`}
       onClick={() => onNavigate('category-detail', { slug: category.slug })}
-      className="group bg-white rounded-2xl border border-slate-200/80 hover:border-emerald-500/50 p-5 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
+      className={`group rounded-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden ${
+        dark
+          ? 'bg-zinc-900/90 border border-zinc-800 hover:border-blue-500/60 shadow-lg hover:shadow-blue-950/40 text-white'
+          : 'bg-white border border-slate-200/80 hover:border-emerald-500/50 shadow-xs hover:shadow-md'
+      }`}
     >
       <div>
-        <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-all flex items-center justify-center shadow-xs">
-            <IconComponent className="w-6 h-6" />
+        {category.imageUrl ? (
+          <div className={`relative aspect-16/9 w-full overflow-hidden border-b ${dark ? 'bg-zinc-950 border-zinc-800' : 'bg-slate-100 border-slate-100'}`}>
+            <img
+              src={category.imageUrl}
+              alt={category.name}
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className={`absolute inset-0 ${dark ? 'bg-gradient-to-t from-black/90 via-black/30 to-transparent' : 'bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent'}`} />
+            
+            <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shadow-xs ${dark ? 'bg-blue-950/90 text-blue-400 border border-blue-500/40 backdrop-blur-md' : 'bg-white/95 backdrop-blur-xs text-emerald-800'}`}>
+                  <IconComponent className="w-4 h-4" />
+                </div>
+                <span className="text-xs sm:text-sm font-bold text-white tracking-tight drop-shadow-sm line-clamp-1">
+                  {category.name}
+                </span>
+              </div>
+              {typeof productCount === 'number' && (
+                <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full shadow-xs shrink-0 ${dark ? 'bg-blue-600/90 text-white backdrop-blur-md' : 'bg-white/95 backdrop-blur-xs text-slate-900'}`}>
+                  {productCount} {productCount === 1 ? 'Pick' : 'Picks'}
+                </span>
+              )}
+            </div>
           </div>
-          {typeof productCount === 'number' && (
-            <span className="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-600 rounded-full">
-              {productCount} {productCount === 1 ? 'Pick' : 'Picks'}
-            </span>
+        ) : (
+          <div className="p-5 pb-0 flex items-center justify-between mb-4">
+            <div className={`w-12 h-12 rounded-xl transition-all flex items-center justify-center shadow-xs ${
+              dark
+                ? 'bg-blue-950/80 text-blue-400 border border-blue-500/30 group-hover:bg-blue-600 group-hover:text-white'
+                : 'bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white'
+            }`}>
+              <IconComponent className="w-6 h-6" />
+            </div>
+            {typeof productCount === 'number' && (
+              <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                dark ? 'bg-zinc-800 text-slate-300 border border-zinc-700' : 'bg-slate-100 text-slate-600'
+              }`}>
+                {productCount} {productCount === 1 ? 'Pick' : 'Picks'}
+              </span>
+            )}
+          </div>
+        )}
+
+        <div className="p-5 pb-2">
+          {!category.imageUrl && (
+            <h3 className={`font-bold text-lg transition-colors mb-1.5 ${
+              dark ? 'text-white group-hover:text-blue-400' : 'text-slate-900 group-hover:text-emerald-700'
+            }`}>
+              {category.name}
+            </h3>
           )}
+
+          <p className={`text-xs sm:text-sm leading-relaxed line-clamp-2 ${
+            dark ? 'text-slate-300' : 'text-slate-600'
+          }`}>
+            {category.description}
+          </p>
         </div>
-
-        <h3 className="font-bold text-slate-900 text-lg group-hover:text-emerald-700 transition-colors mb-1.5">
-          {category.name}
-        </h3>
-
-        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2">
-          {category.description}
-        </p>
       </div>
 
-      <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-700 group-hover:text-emerald-800">
-        <span>Explore Category</span>
-        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      <div className="px-5 pb-4 pt-2">
+        <div className={`pt-3 border-t flex items-center justify-between text-xs font-bold transition-colors ${
+          dark
+            ? 'border-zinc-800 text-blue-400 group-hover:text-blue-300'
+            : 'border-slate-100 text-emerald-700 group-hover:text-emerald-800'
+        }`}>
+          <span>Explore Category</span>
+          <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </div>
       </div>
     </div>
   );
