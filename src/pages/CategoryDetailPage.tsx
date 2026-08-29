@@ -116,10 +116,17 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
         {category.imageUrl && (
           <div className="relative h-48 sm:h-64 w-full bg-slate-100 overflow-hidden">
             <img
-              src={category.imageUrl}
+              src={category.imageUrl.startsWith('/src/assets/') ? category.imageUrl.replace('/src/assets/', '/assets/') : category.imageUrl}
               alt={category.name}
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.triedSrc && category.imageUrl?.includes('/src/assets/')) {
+                  target.dataset.triedSrc = 'true';
+                  target.src = category.imageUrl;
+                }
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
           </div>

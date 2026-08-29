@@ -24,6 +24,15 @@ const STORAGE_KEYS = {
   ADMIN_AUTH: 'smartpick_admin_session_v1',
 };
 
+// Helper to ensure all local asset URLs point to valid public static paths
+export function normalizeAssetUrl(url?: string): string | undefined {
+  if (!url) return url;
+  if (url.startsWith('/src/assets/')) {
+    return url.replace('/src/assets/', '/assets/');
+  }
+  return url;
+}
+
 // Initialize Local Storage with smart merging
 function initializeLocalStorage() {
   if (typeof window === 'undefined') return;
@@ -36,7 +45,11 @@ function initializeLocalStorage() {
       const existing: Category[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.CATEGORIES) || '[]');
       const updated = existing.map((cat) => {
         const init = initialCategories.find((ic) => ic.id === cat.id);
-        return init ? { ...cat, ...init } : cat;
+        const merged = init ? { ...cat, ...init } : cat;
+        return {
+          ...merged,
+          imageUrl: normalizeAssetUrl(merged.imageUrl) || init?.imageUrl,
+        };
       });
       const missing = initialCategories.filter((ic) => !updated.some((e) => e.id === ic.id));
       const combined = [...updated, ...missing];
@@ -57,7 +70,12 @@ function initializeLocalStorage() {
       );
       const updated = filteredExisting.map((p) => {
         const init = initialProducts.find((ip) => ip.id === p.id);
-        return init ? { ...p, ...init } : p;
+        const merged = init ? { ...p, ...init } : p;
+        return {
+          ...merged,
+          imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
+          galleryImages: merged.galleryImages?.map((g) => normalizeAssetUrl(g) || g),
+        };
       });
       const missing = initialProducts.filter((ip) => !updated.some((e) => e.id === ip.id));
       const combined = [...missing, ...updated];
@@ -220,7 +238,14 @@ export const StorageService = {
     if (typeof window === 'undefined') return initialCategories;
     try {
       const data = localStorage.getItem(STORAGE_KEYS.CATEGORIES);
-      return data ? JSON.parse(data) : initialCategories;
+      const parsed: Category[] = data ? JSON.parse(data) : initialCategories;
+      return parsed.map((cat) => {
+        const init = initialCategories.find((ic) => ic.id === cat.id);
+        return {
+          ...cat,
+          imageUrl: normalizeAssetUrl(cat.imageUrl) || init?.imageUrl,
+        };
+      });
     } catch {
       return initialCategories;
     }

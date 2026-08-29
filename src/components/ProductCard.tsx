@@ -71,11 +71,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Top Media & Badges */}
       <div className={`relative aspect-4/3 sm:aspect-16/10 overflow-hidden ${dark ? 'bg-zinc-950' : 'bg-slate-100'}`}>
         <img
-          src={product.imageUrl}
+          src={product.imageUrl?.startsWith('/src/assets/') ? product.imageUrl.replace('/src/assets/', '/assets/') : product.imageUrl}
           alt={product.name}
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-500"
           loading="lazy"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.dataset.triedSrc && product.imageUrl?.includes('/src/assets/')) {
+              target.dataset.triedSrc = 'true';
+              target.src = product.imageUrl;
+            }
+          }}
         />
 
         {/* Overlay Badges */}

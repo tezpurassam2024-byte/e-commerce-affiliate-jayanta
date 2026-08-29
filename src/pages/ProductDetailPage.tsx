@@ -132,10 +132,17 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         <div className="lg:col-span-5 space-y-4">
           <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200">
             <img
-              src={product.imageUrl}
+              src={product.imageUrl?.startsWith('/src/assets/') ? product.imageUrl.replace('/src/assets/', '/assets/') : product.imageUrl}
               alt={product.name}
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.triedSrc && product.imageUrl?.includes('/src/assets/')) {
+                  target.dataset.triedSrc = 'true';
+                  target.src = product.imageUrl;
+                }
+              }}
             />
             {product.editorScore && (
               <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 text-white rounded-xl font-extrabold text-sm shadow-md">

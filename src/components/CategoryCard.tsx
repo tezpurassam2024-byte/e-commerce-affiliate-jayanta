@@ -71,7 +71,18 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   onNavigate,
   dark = false,
 }) => {
+  const [imgError, setImgError] = React.useState(false);
   const IconComponent = iconMap[category.iconName] || Layers;
+
+  const getResolvedImageUrl = (url?: string) => {
+    if (!url) return '';
+    if (url.startsWith('/src/assets/')) {
+      return url.replace('/src/assets/', '/assets/');
+    }
+    return url;
+  };
+
+  const imageSrc = getResolvedImageUrl(category.imageUrl);
 
   return (
     <div
@@ -84,14 +95,23 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
       }`}
     >
       <div>
-        {category.imageUrl ? (
+        {imageSrc && !imgError ? (
           <div className={`relative aspect-16/9 w-full overflow-hidden border-b ${dark ? 'bg-zinc-950 border-zinc-800' : 'bg-slate-100 border-slate-100'}`}>
             <img
-              src={category.imageUrl}
+              src={imageSrc}
               alt={category.name}
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.dataset.triedSrc && category.imageUrl && category.imageUrl !== imageSrc) {
+                  target.dataset.triedSrc = 'true';
+                  target.src = category.imageUrl;
+                } else {
+                  setImgError(true);
+                }
+              }}
             />
             <div className={`absolute inset-0 ${dark ? 'bg-gradient-to-t from-black/90 via-black/30 to-transparent' : 'bg-gradient-to-t from-slate-950/75 via-slate-950/20 to-transparent'}`} />
             
