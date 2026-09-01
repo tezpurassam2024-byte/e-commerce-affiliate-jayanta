@@ -540,10 +540,9 @@ The Redmi Note 14 Pro+ 5G delivers unbeatable durability, a gorgeous curved AMOL
     asin: 'B09H1ZZHl',
     amazonUrl: 'https://link.amazon/B09H1ZZHl',
     affiliateUrl: 'https://link.amazon/B09H1ZZHl',
-    imageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://i03.appmifile.com/554_item_in/09/12/2024/62494a7f99233f5bc780985b0c5b35c5.png',
     galleryImages: [
-      'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'
+      'https://i03.appmifile.com/554_item_in/09/12/2024/62494a7f99233f5bc780985b0c5b35c5.png'
     ],
     price: 269.83,
     currency: 'USD',
@@ -1362,7 +1361,7 @@ Built on TSMC's 4nm node, the MediaTek Dimensity 7300-Ultra delivers snappy day-
 ### Check Current Pricing & Stock on Amazon
 Check the latest verified discounts and live Amazon stock via our direct affiliate link:
 [Check your price on Amazon for Redmi 14 Pro 5G](https://link.amazon/B09H1ZZHl)`,
-    featuredImage: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=1000&q=80',
+    featuredImage: 'https://i03.appmifile.com/554_item_in/09/12/2024/62494a7f99233f5bc780985b0c5b35c5.png',
     category: 'Smartphones & Mobile',
     tags: ['Redmi 14 Pro 5G', 'Redme 14 Pro 5G', 'Xiaomi', 'Budget Flagship', 'Camera Phone', 'Amazon Deals'],
     author: {
@@ -1376,7 +1375,7 @@ Check the latest verified discounts and live Amazon stock via our direct affilia
       productId: 'prod-redmi-14-pro-5g',
       productName: 'Redmi Note 14 Pro+ 5G (Xiaomi Redmi Note 14 Pro Plus 5G / Redme 14 Pro 5G, 8GB RAM, 256GB Storage)',
       brand: 'Xiaomi Redmi',
-      productImageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
+      productImageUrl: 'https://i03.appmifile.com/554_item_in/09/12/2024/62494a7f99233f5bc780985b0c5b35c5.png',
       price: 269.83,
       asin: 'B09H1ZZHl',
       affiliateUrl: 'https://link.amazon/B09H1ZZHl',
