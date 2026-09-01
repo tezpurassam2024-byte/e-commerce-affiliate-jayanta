@@ -65,23 +65,31 @@ function initializeLocalStorage() {
   } else {
     try {
       const existing: Product[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.PRODUCTS) || '[]');
-      const filteredExisting = existing.filter(
-        (p) => p.id !== 'prod-iphone-16-pro-max' && p.slug !== 'apple-iphone-16-pro-max'
+      
+      const isRedmi14Pro = (p: Product) =>
+        p.id === 'prod-redmi-14-pro-5g' ||
+        p.asin === 'B09H1ZZHl' ||
+        (p.name && /redm.*14.*pro/i.test(p.name)) ||
+        (p.slug && /redm.*14.*pro/i.test(p.slug));
+
+      const nonRedmiExisting = existing.filter(
+        (p) => !isRedmi14Pro(p) && p.id !== 'prod-iphone-16-pro-max' && p.slug !== 'apple-iphone-16-pro-max'
       );
-      const updated = filteredExisting.map((p) => {
-        const init = initialProducts.find((ip) => ip.id === p.id);
-        let merged = init ? { ...p, ...init } : p;
-        if (merged.id === 'prod-redmi-14-pro-5g') {
-          merged = {
-            ...merged,
-            price: 269.83,
-            name: 'Redmi Note 14 Pro+ 5G (Xiaomi Redmi Note 14 Pro Plus 5G / Redme 14 Pro 5G, 8GB RAM, 256GB Storage, Midnight Black)',
-            affiliateUrl: 'https://link.amazon/B09H1ZZHl',
-            amazonUrl: 'https://link.amazon/B09H1ZZHl',
-            asin: 'B09H1ZZHl',
-            slug: 'redmi-note-14-pro-plus-5g-smartphone'
-          };
+      
+      const seenIds = new Set<string>();
+      const seenSlugs = new Set<string>();
+      const deduplicatedExisting: Product[] = [];
+      for (const p of nonRedmiExisting) {
+        if (!seenIds.has(p.id) && !seenSlugs.has(p.slug)) {
+          seenIds.add(p.id);
+          seenSlugs.add(p.slug);
+          deduplicatedExisting.push(p);
         }
+      }
+
+      const updated = deduplicatedExisting.map((p) => {
+        const init = initialProducts.find((ip) => ip.id === p.id);
+        const merged = init ? { ...p, ...init } : p;
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
@@ -90,7 +98,16 @@ function initializeLocalStorage() {
       });
       const missing = initialProducts.filter((ip) => !updated.some((e) => e.id === ip.id));
       const combined = [...missing, ...updated];
-      localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(combined));
+      
+      const finalUnique: Product[] = [];
+      const finalIds = new Set<string>();
+      for (const p of combined) {
+        if (!finalIds.has(p.id)) {
+          finalIds.add(p.id);
+          finalUnique.push(p);
+        }
+      }
+      localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(finalUnique));
     } catch {
       localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(initialProducts));
     }
@@ -108,7 +125,12 @@ function initializeLocalStorage() {
       });
       const missing = initialBuyingGuides.filter((ig) => !updated.some((e) => e.id === ig.id));
       const combined = [...missing, ...updated];
-      localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(combined));
+      const deduplicatedGuides = combined.map((g) => ({
+        ...g,
+        recommendedProductIds: Array.from(new Set(g.recommendedProductIds)),
+        featuredProductIds: Array.from(new Set(g.featuredProductIds)),
+      }));
+      localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(deduplicatedGuides));
     } catch {
       localStorage.setItem(STORAGE_KEYS.GUIDES, JSON.stringify(initialBuyingGuides));
     }
@@ -120,16 +142,44 @@ function initializeLocalStorage() {
   } else {
     try {
       const existing: BlogPost[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.POSTS) || '[]');
-      const filteredExisting = existing.filter(
-        (p) => p.id !== 'post-iphone-16-pro-max-review' && p.slug !== 'iphone-16-pro-max-3-months-later-camera-battery-verdict'
+      
+      const isRedmiPost = (post: BlogPost) =>
+        post.id === 'post-redmi-14-pro-5g-review' ||
+        (post.slug && /redm.*14.*pro/i.test(post.slug)) ||
+        (post.title && /redm.*14.*pro/i.test(post.title));
+
+      const nonRedmiExistingPosts = existing.filter(
+        (p) => !isRedmiPost(p) && p.id !== 'post-iphone-16-pro-max-review' && p.slug !== 'iphone-16-pro-max-3-months-later-camera-battery-verdict'
       );
-      const updated = filteredExisting.map((post) => {
+
+      const seenPostIds = new Set<string>();
+      const seenPostSlugs = new Set<string>();
+      const deduplicatedPosts: BlogPost[] = [];
+      for (const post of nonRedmiExistingPosts) {
+        if (!seenPostIds.has(post.id) && !seenPostSlugs.has(post.slug)) {
+          seenPostIds.add(post.id);
+          seenPostSlugs.add(post.slug);
+          deduplicatedPosts.push(post);
+        }
+      }
+
+      const updatedPosts = deduplicatedPosts.map((post) => {
         const init = initialBlogPosts.find((ip) => ip.id === post.id);
         return init ? { ...post, ...init } : post;
       });
-      const missing = initialBlogPosts.filter((ip) => !updated.some((e) => e.id === ip.id));
-      const combined = [...missing, ...updated];
-      localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(combined));
+
+      const missingPosts = initialBlogPosts.filter((ip) => !updatedPosts.some((e) => e.id === ip.id));
+      const combinedPosts = [...missingPosts, ...updatedPosts];
+
+      const finalPosts: BlogPost[] = [];
+      const finalPostIds = new Set<string>();
+      for (const p of combinedPosts) {
+        if (!finalPostIds.has(p.id)) {
+          finalPostIds.add(p.id);
+          finalPosts.push(p);
+        }
+      }
+      localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(finalPosts));
     } catch {
       localStorage.setItem(STORAGE_KEYS.POSTS, JSON.stringify(initialBlogPosts));
     }
@@ -345,7 +395,15 @@ export const StorageService = {
 
   getBlogPostBySlug(slug: string): BlogPost | undefined {
     const posts = this.getBlogPosts();
-    return posts.find((p) => p.slug === slug);
+    const cleanSlug = slug.toLowerCase().trim();
+    return posts.find(
+      (p) =>
+        p.slug === cleanSlug ||
+        (p.id === 'post-redmi-14-pro-5g-review' &&
+          (cleanSlug === 'redmi-14-pro-5g-full-review-camera-battery-verdict' ||
+            cleanSlug === 'redmi-note-14-pro-plus-5g-review' ||
+            cleanSlug === 'redmi-14-pro-5g-review'))
+    );
   },
 
   saveBlogPost(post: BlogPost): void {
