@@ -70,7 +70,18 @@ function initializeLocalStorage() {
       );
       const updated = filteredExisting.map((p) => {
         const init = initialProducts.find((ip) => ip.id === p.id);
-        const merged = init ? { ...p, ...init } : p;
+        let merged = init ? { ...p, ...init } : p;
+        if (merged.id === 'prod-redmi-14-pro-5g') {
+          merged = {
+            ...merged,
+            price: 269.83,
+            name: 'Redmi Note 14 Pro+ 5G (Xiaomi Redmi Note 14 Pro Plus 5G / Redme 14 Pro 5G, 8GB RAM, 256GB Storage, Midnight Black)',
+            affiliateUrl: 'https://link.amazon/B09H1ZZHl',
+            amazonUrl: 'https://link.amazon/B09H1ZZHl',
+            asin: 'B09H1ZZHl',
+            slug: 'redmi-note-14-pro-plus-5g-smartphone'
+          };
+        }
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
@@ -203,7 +214,16 @@ export const StorageService = {
 
   getProductBySlug(slug: string): Product | undefined {
     const products = this.getProducts();
-    return products.find((p) => p.slug === slug);
+    const cleanSlug = slug.toLowerCase().trim();
+    return products.find(
+      (p) =>
+        p.slug === cleanSlug ||
+        (p.id === 'prod-redmi-14-pro-5g' &&
+          (cleanSlug === 'redmi-14-pro-5g-smartphone' ||
+            cleanSlug === 'redme-14-pro-5g-smartphone' ||
+            cleanSlug === 'redmi-note-14-pro-plus-5g-smartphone' ||
+            cleanSlug === 'redmi-note-14-pro-5g'))
+    );
   },
 
   getProductById(id: string): Product | undefined {

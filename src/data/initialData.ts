@@ -512,28 +512,28 @@ The 50MP primary sensor and 48MP 5x optical telephoto work in tandem with Google
   },
   {
     id: 'prod-redmi-14-pro-5g',
-    slug: 'redmi-14-pro-5g-smartphone',
-    name: 'Redme 14 Pro 5G (Xiaomi Redmi Note 14 Pro 5G, 8GB RAM, 256GB Storage, Midnight Black)',
+    slug: 'redmi-note-14-pro-plus-5g-smartphone',
+    name: 'Redmi Note 14 Pro+ 5G (Xiaomi Redmi Note 14 Pro Plus 5G / Redme 14 Pro 5G, 8GB RAM, 256GB Storage, Midnight Black)',
     brand: 'Xiaomi Redmi',
     categoryId: 'cat-phones',
     categoryName: 'Smartphones & Mobile Phones',
     shortDescription: 'The breakthrough sub-$300 camera & durability champion featuring a 50MP Sony LYT-600 OIS camera, 6.67" 1.5K 120Hz curved AMOLED display, MediaTek Dimensity 7300-Ultra, and IP68/IP69K water resistance.',
-    longDescription: `The **Xiaomi Redmi 14 Pro 5G** (Redme 14 Pro 5G) sets a bold new standard in the mid-range smartphone arena. By combining flagship-level IP68/IP69K extreme dust and high-pressure water ingress protection, a stunning 1.5K 120Hz curved AMOLED panel, and a 50MP Sony LYT-600 sensor with hardware Optical Image Stabilization (OIS), it delivers features usually exclusive to $800+ flagships at an accessible sub-$300 price point.
+    longDescription: `The **Xiaomi Redmi Note 14 Pro+ 5G** (Redme 14 Pro 5G / Redmi Note 14 Pro 5G) sets a bold new standard in the mid-range smartphone arena. By combining flagship-level IP68/IP69K extreme dust and high-pressure water ingress protection, a stunning 1.5K 120Hz curved AMOLED panel, and a 50MP Sony LYT-600 sensor with hardware Optical Image Stabilization (OIS), it delivers features usually exclusive to $800+ flagships at an accessible sub-$300 price point.
 
 ### 1. Flagship IP68 & IP69K Ingress Protection
-Unlike almost every mid-range competitor that only offers basic splash resistance, the Redmi 14 Pro 5G achieves both IP68 submersion resistance and IP69K resistance against high-temperature, high-pressure water jets. Combined with Corning Gorilla Glass Victus 2 on the front and King Kong anti-fall reinforced chassis architecture, it is one of the most durable daily drivers tested in our lab.
+Unlike almost every mid-range competitor that only offers basic splash resistance, the Redmi Note 14 Pro+ 5G achieves both IP68 submersion resistance and IP69K resistance against high-temperature, high-pressure water jets. Combined with Corning Gorilla Glass Victus 2 on the front and King Kong anti-fall reinforced chassis architecture, it is one of the most durable daily drivers tested in our lab.
 
 ### 2. 1.5K 120Hz Curved AMOLED with 3,000 Nits Peak Brightness
 The 6.67-inch curved AMOLED display provides a crisp 2712 x 1220 resolution, 100% DCI-P3 wide color gamut, Dolby Vision, and an eye-catching 3,000 nits local peak brightness. 1920Hz high-frequency PWM dimming and TÜV Rheinland triple eye-care certifications ensure maximum visual comfort during extended reading and streaming sessions.
 
 ### 3. 50MP Sony LYT-600 Camera System with Hardware OIS
-Equipped with Sony's modern LYT-600 50MP 1/1.95" sensor, an f/1.5 large aperture, and dedicated hardware Optical Image Stabilization (OIS), the Redmi 14 Pro 5G delivers sharp night mode details, vibrant dynamic range, and smooth 4K video recording.
+Equipped with Sony's modern LYT-600 50MP 1/1.95" sensor, an f/1.5 large aperture, and dedicated hardware Optical Image Stabilization (OIS), the Redmi Note 14 Pro+ 5G delivers sharp night mode details, vibrant dynamic range, and smooth 4K video recording.
 
 ### 4. Efficient MediaTek Dimensity 7300-Ultra & 5500mAh Battery
 Built on TSMC's 4nm node, the MediaTek Dimensity 7300-Ultra delivers snappy day-to-day multitasking and fluid 60/90 FPS mobile gaming while remaining remarkably power-efficient. The 5,500mAh high-density battery easily delivers 1.5 to 2 days of real-world use with fast 45W TurboCharge.
 
 ### Verdict
-The Redmi 14 Pro 5G delivers unbeatable durability, a gorgeous curved AMOLED screen, and dependable Sony OIS photography at a fraction of flagship pricing.`,
+The Redmi Note 14 Pro+ 5G delivers unbeatable durability, a gorgeous curved AMOLED screen, and dependable Sony OIS photography at a fraction of flagship pricing.`,
     editorScore: 9.5,
     verdict: 'The new durability and camera benchmark under $300 with IP68/IP69K ingress protection, 1.5K curved AMOLED, and Sony OIS clarity.',
     bestFor: 'Mobile photographers, students, and active users seeking flagship-grade durability, curved AMOLED visuals, and sharp low-light cameras under $300.',
@@ -545,10 +545,10 @@ The Redmi 14 Pro 5G delivers unbeatable durability, a gorgeous curved AMOLED scr
       'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 279.00,
+    price: 269.83,
     currency: 'USD',
     priceNote: 'Verified Amazon price with prime delivery',
-    priceLastUpdated: '2026-09-01T07:00:00Z',
+    priceLastUpdated: '2026-09-01T08:35:00Z',
     rating: 4.8,
     reviewCount: 1680,
     availability: 'in_stock',
@@ -593,7 +593,7 @@ The Redmi 14 Pro 5G delivers unbeatable durability, a gorgeous curved AMOLED scr
     featured: true,
     published: true,
     createdAt: '2026-09-01T07:00:00Z',
-    updatedAt: '2026-09-01T07:00:00Z'
+    updatedAt: '2026-09-01T08:35:00Z'
   },
 
   // 2. AUDIO & HEADPHONES
@@ -1374,10 +1374,10 @@ Check the latest verified discounts and live Amazon stock via our direct affilia
     featuredProductId: 'prod-redmi-14-pro-5g',
     productSpotlight: {
       productId: 'prod-redmi-14-pro-5g',
-      productName: 'Redme 14 Pro 5G (Xiaomi Redmi Note 14 Pro 5G, 8GB RAM, 256GB Storage)',
+      productName: 'Redmi Note 14 Pro+ 5G (Xiaomi Redmi Note 14 Pro Plus 5G / Redme 14 Pro 5G, 8GB RAM, 256GB Storage)',
       brand: 'Xiaomi Redmi',
       productImageUrl: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80',
-      price: 279.00,
+      price: 269.83,
       asin: 'B09H1ZZHl',
       affiliateUrl: 'https://link.amazon/B09H1ZZHl',
       editorScore: 9.5,
@@ -1395,8 +1395,8 @@ Check the latest verified discounts and live Amazon stock via our direct affilia
       ],
       ctaText: 'Check your price on Amazon'
     },
-    metaTitle: 'Xiaomi Redmi 14 Pro 5G Review: Best Phone Under $300 | SmartPick',
-    metaDescription: 'Full in-depth review and lab benchmarks of the Redmi 14 Pro 5G testing IP68 water resistance, Sony LYT-600 camera, and 5500mAh battery.',
+    metaTitle: 'Xiaomi Redmi Note 14 Pro+ 5G Review: Best Phone Under $300 | SmartPick',
+    metaDescription: 'Full in-depth review and lab benchmarks of the Redmi Note 14 Pro+ 5G testing IP68 water resistance, Sony LYT-600 camera, and 5500mAh battery.',
     published: true,
     publishedAt: '2026-09-01T07:00:00Z',
     updatedAt: '2026-09-01T07:00:00Z',
