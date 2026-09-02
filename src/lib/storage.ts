@@ -98,6 +98,16 @@ function initializeLocalStorage() {
             asin: 'B0iDBeXE4',
           };
         }
+        if (merged.id === 'prod-redmi-note-15-pro-5g' || (merged.name && /redm.*15.*pro/i.test(merged.name)) || merged.asin === 'B0j64c6va') {
+          merged = {
+            ...merged,
+            affiliateUrl: 'https://link.amazon/B0j64c6va',
+            amazonUrl: 'https://link.amazon/B0j64c6va',
+            asin: 'B0j64c6va',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBQIDyFThnuExayMPSJlxJEcmp0NC7yR6Fx9SvBpBUg&s=10',
+            galleryImages: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBQIDyFThnuExayMPSJlxJEcmp0NC7yR6Fx9SvBpBUg&s=10']
+          };
+        }
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
@@ -180,6 +190,16 @@ function initializeLocalStorage() {
               ...merged.productSpotlight,
               affiliateUrl: 'https://link.amazon/B0iDBeXE4',
               asin: 'B0iDBeXE4',
+            };
+          }
+        }
+        if (merged.id === 'post-redmi-note-15-pro-5g-review' || (merged.title && /redm.*15.*pro/i.test(merged.title))) {
+          if (merged.productSpotlight) {
+            merged.productSpotlight = {
+              ...merged.productSpotlight,
+              affiliateUrl: 'https://link.amazon/B0j64c6va',
+              asin: 'B0j64c6va',
+              productImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBQIDyFThnuExayMPSJlxJEcmp0NC7yR6Fx9SvBpBUg&s=10',
             };
           }
         }
@@ -295,7 +315,14 @@ export const StorageService = {
           (cleanSlug === 'realme-p4-power-5g-smartphone' ||
             cleanSlug === 'realme-p4-power-5g' ||
             cleanSlug === 'realme-p4-power' ||
-            cleanSlug === 'realme-p4-5g'))
+            cleanSlug === 'realme-p4-5g')) ||
+        (p.id === 'prod-redmi-note-15-pro-5g' &&
+          (cleanSlug === 'redmi-note-15-pro-5g-smartphone' ||
+            cleanSlug === 'redmi-note-15-pro-5g' ||
+            cleanSlug === 'redmi-15-pro-5g-smartphone' ||
+            cleanSlug === 'redmi-15-pro-5g' ||
+            cleanSlug === 'redmi-note-15-pro' ||
+            cleanSlug === 'redmi-15-pro'))
     );
   },
 
@@ -430,7 +457,13 @@ export const StorageService = {
           (cleanSlug === 'realme-p4-power-5g-full-review-battery-camera-verdict' ||
             cleanSlug === 'realme-p4-power-5g-review' ||
             cleanSlug === 'realme-p4-power-review' ||
-            cleanSlug === 'realme-p4-review'))
+            cleanSlug === 'realme-p4-review')) ||
+        (p.id === 'post-redmi-note-15-pro-5g-review' &&
+          (cleanSlug === 'redmi-note-15-pro-5g-full-review-camera-battery-verdict' ||
+            cleanSlug === 'redmi-note-15-pro-5g-review' ||
+            cleanSlug === 'redmi-15-pro-5g-review' ||
+            cleanSlug === 'redmi-15-pro-review' ||
+            cleanSlug === 'redmi-note-15-pro-review'))
     );
   },
 
