@@ -6,8 +6,17 @@ import { Product } from '../types';
  */
 export function buildAmazonAffiliateUrl(product: Partial<Product>, customTag?: string): string {
   const settings = StorageService.getSettings();
-  const tag = customTag || settings.amazonAssociateTag || 'smartpick-20';
-  const marketplace = settings.amazonMarketplace || 'amazon.com';
+  const isIndiaProduct =
+    product.currency === 'INR' ||
+    product.currency === '₹' ||
+    product.currency === 'RS' ||
+    product.amazonUrl?.includes('amazon.in') ||
+    product.affiliateUrl?.includes('amazon.in') ||
+    settings.amazonMarketplace === 'amazon.in';
+
+  const defaultMarketplace = isIndiaProduct ? 'amazon.in' : (settings.amazonMarketplace || 'amazon.in');
+  const tag = customTag || settings.amazonAssociateTag || (isIndiaProduct ? 'smartpickin-21' : 'smartpick-20');
+  const marketplace = defaultMarketplace;
 
   // If explicit affiliateUrl is already configured by admin/author, return it directly
   if (product.affiliateUrl && product.affiliateUrl.trim() !== '') {
@@ -63,7 +72,7 @@ export function buildAmazonAffiliateUrl(product: Partial<Product>, customTag?: s
     }
   }
 
-  // Fallback search link by product name
+  // Fallback search link by product name on amazon.in
   if (product.name) {
     return `https://www.${marketplace}/s?k=${encodeURIComponent(product.name)}&tag=${encodeURIComponent(tag)}`;
   }

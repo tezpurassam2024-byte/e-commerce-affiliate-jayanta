@@ -3188,11 +3188,11 @@ Look for docks providing at least 85W to 100W Power Delivery to ensure your lapt
 export const initialSiteSettings: SiteSettings = {
   siteName: 'SmartPick Guide',
   tagline: 'Find Better Products. Buy With Confidence.',
-  siteDescription: 'Independent product research, comparisons, and buying guides to help you make smarter purchasing decisions.',
+  siteDescription: 'Independent product research, comparisons, and buying guides to help you make smarter purchasing decisions on Amazon India.',
   contactEmail: 'editor@smartpickguide.com',
-  amazonAssociateTag: 'smartpick-20',
-  amazonMarketplace: 'amazon.com',
-  defaultCtaText: 'Check Price on Amazon',
+  amazonAssociateTag: 'smartpickin-21',
+  amazonMarketplace: 'amazon.in',
+  defaultCtaText: 'Check Price on Amazon.in',
   gaMeasurementId: 'G-XXXXXXXXXX',
   enableAiAssistant: true,
   socialLinks: {
@@ -3200,5 +3200,5 @@ export const initialSiteSettings: SiteSettings = {
     twitter: 'https://x.com/smartpickguide',
     facebook: 'https://facebook.com/smartpickguide',
   },
-  affiliateDisclosureText: 'As an Amazon Associate I earn from qualifying purchases. SmartPick Guide participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Product prices and availability are accurate as of the date/time indicated and are subject to change.',
+  affiliateDisclosureText: 'As an Amazon Associate I earn from qualifying purchases. SmartPick Guide participates in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.in. Product prices, ratings, and availability are accurate as of the date/time indicated and are subject to change.',
 };

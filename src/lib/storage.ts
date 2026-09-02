@@ -225,6 +225,19 @@ function initializeLocalStorage() {
 
   if (!localStorage.getItem(STORAGE_KEYS.SETTINGS)) {
     localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(initialSiteSettings));
+  } else {
+    try {
+      const existingSettings = JSON.parse(localStorage.getItem(STORAGE_KEYS.SETTINGS) || '{}');
+      const updatedSettings = {
+        ...initialSiteSettings,
+        ...existingSettings,
+        amazonMarketplace: existingSettings.amazonMarketplace === 'amazon.com' ? 'amazon.in' : (existingSettings.amazonMarketplace || 'amazon.in'),
+        amazonAssociateTag: existingSettings.amazonAssociateTag || 'smartpickin-21',
+      };
+      localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(updatedSettings));
+    } catch {
+      localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(initialSiteSettings));
+    }
   }
   if (!localStorage.getItem(STORAGE_KEYS.CLICKS)) {
     // Generate some initial realistic demo clicks for analytics dashboard
