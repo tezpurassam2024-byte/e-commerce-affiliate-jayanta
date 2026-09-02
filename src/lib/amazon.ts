@@ -111,3 +111,23 @@ export const AMAZON_STANDARD_DISCLOSURE =
 export const AMAZON_COMPREHENSIVE_DISCLOSURE =
   'SmartPick Guide is an independent product review and recommendation publication. When you click our affiliate links and make a purchase on Amazon, we may earn an affiliate commission at no additional cost to you. Product prices, ratings, and availability are accurate as of the date indicated and are subject to change. Check Amazon for real-time pricing.';
 
+/**
+ * Formats price with appropriate currency symbol (INR ₹, USD $, EUR €, GBP £)
+ */
+export function formatProductPrice(price?: number, currency?: string): string {
+  if (price === undefined || price === null || isNaN(price)) {
+    return 'Check Amazon';
+  }
+  const curr = (currency || 'USD').toUpperCase();
+  if (curr === 'INR' || curr === '₹' || curr === 'RS' || curr === 'RUPEES') {
+    return `₹${price.toLocaleString('en-IN')}`;
+  }
+  if (curr === 'EUR' || curr === '€') {
+    return `€${price.toFixed(2)}`;
+  }
+  if (curr === 'GBP' || curr === '£') {
+    return `£${price.toFixed(2)}`;
+  }
+  return `$${price.toFixed(2)}`;
+}
+

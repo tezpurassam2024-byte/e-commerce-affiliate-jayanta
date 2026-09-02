@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { StorageService } from '../lib/storage';
 import { Product } from '../types';
-import { buildAmazonAffiliateUrl } from '../lib/amazon';
+import { buildAmazonAffiliateUrl, formatProductPrice } from '../lib/amazon';
 import { trackAffiliateClick } from '../lib/analytics';
 
 interface ComparisonPageProps {
@@ -181,7 +181,7 @@ export const ComparisonPage: React.FC<ComparisonPageProps> = ({ onNavigate }) =>
                         {/* Price & CTA Button */}
                         <div className="space-y-2 pt-1">
                           <div className="text-base font-extrabold text-slate-900">
-                            {p.price ? `$${p.price.toFixed(2)}` : 'Check Amazon'}
+                            {formatProductPrice(p.price, p.currency)}
                             <span className="text-xs text-slate-400 font-normal ml-1">*</span>
                           </div>
 

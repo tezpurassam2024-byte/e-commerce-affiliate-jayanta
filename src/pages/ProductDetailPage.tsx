@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { StorageService } from '../lib/storage';
 import { Product } from '../types';
-import { buildAmazonAffiliateUrl } from '../lib/amazon';
+import { buildAmazonAffiliateUrl, formatProductPrice } from '../lib/amazon';
 import { trackAffiliateClick } from '../lib/analytics';
 import { ProductCard } from '../components/ProductCard';
 import { ShareModal } from '../components/ShareModal';
@@ -210,7 +210,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   Amazon Verified Pricing
                 </span>
                 <span className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-                  {product.price ? `$${product.price.toFixed(2)}` : 'Check Amazon'}
+                  {formatProductPrice(product.price, product.currency)}
                 </span>
                 <span className="text-xs text-slate-500 ml-1.5">*</span>
               </div>

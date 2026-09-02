@@ -10,7 +10,7 @@ import {
   Tag
 } from 'lucide-react';
 import { Product } from '../types';
-import { buildAmazonAffiliateUrl } from '../lib/amazon';
+import { buildAmazonAffiliateUrl, formatProductPrice } from '../lib/amazon';
 import { trackAffiliateClick } from '../lib/analytics';
 import { StorageService } from '../lib/storage';
 
@@ -132,7 +132,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               <span className={`text-xs font-bold px-2 py-0.5 rounded-md ${
                 dark ? 'text-white bg-zinc-800 border border-zinc-700' : 'text-slate-900 bg-slate-100'
               }`}>
-                ${product.price.toFixed(2)}*
+                {formatProductPrice(product.price, product.currency)}*
               </span>
             )}
           </div>
