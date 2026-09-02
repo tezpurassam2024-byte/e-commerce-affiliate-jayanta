@@ -272,7 +272,12 @@ export const StorageService = {
           (cleanSlug === 'redmi-14-pro-5g-smartphone' ||
             cleanSlug === 'redme-14-pro-5g-smartphone' ||
             cleanSlug === 'redmi-note-14-pro-plus-5g-smartphone' ||
-            cleanSlug === 'redmi-note-14-pro-5g'))
+            cleanSlug === 'redmi-note-14-pro-5g')) ||
+        (p.id === 'prod-realme-p4-power-5g' &&
+          (cleanSlug === 'realme-p4-power-5g-smartphone' ||
+            cleanSlug === 'realme-p4-power-5g' ||
+            cleanSlug === 'realme-p4-power' ||
+            cleanSlug === 'realme-p4-5g'))
     );
   },
 
@@ -402,7 +407,12 @@ export const StorageService = {
         (p.id === 'post-redmi-14-pro-5g-review' &&
           (cleanSlug === 'redmi-14-pro-5g-full-review-camera-battery-verdict' ||
             cleanSlug === 'redmi-note-14-pro-plus-5g-review' ||
-            cleanSlug === 'redmi-14-pro-5g-review'))
+            cleanSlug === 'redmi-14-pro-5g-review')) ||
+        (p.id === 'post-realme-p4-power-5g-review' &&
+          (cleanSlug === 'realme-p4-power-5g-full-review-battery-camera-verdict' ||
+            cleanSlug === 'realme-p4-power-5g-review' ||
+            cleanSlug === 'realme-p4-power-review' ||
+            cleanSlug === 'realme-p4-review'))
     );
   },
 
