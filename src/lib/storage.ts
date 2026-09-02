@@ -89,7 +89,15 @@ function initializeLocalStorage() {
 
       const updated = deduplicatedExisting.map((p) => {
         const init = initialProducts.find((ip) => ip.id === p.id);
-        const merged = init ? { ...p, ...init } : p;
+        let merged = init ? { ...p, ...init } : p;
+        if (merged.id === 'prod-realme-p4-power-5g' || (merged.name && /realme.*p4/i.test(merged.name)) || merged.asin === 'B0iDBeXE4') {
+          merged = {
+            ...merged,
+            affiliateUrl: 'https://link.amazon/B0iDBeXE4',
+            amazonUrl: 'https://link.amazon/B0iDBeXE4',
+            asin: 'B0iDBeXE4',
+          };
+        }
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
@@ -165,7 +173,17 @@ function initializeLocalStorage() {
 
       const updatedPosts = deduplicatedPosts.map((post) => {
         const init = initialBlogPosts.find((ip) => ip.id === post.id);
-        return init ? { ...post, ...init } : post;
+        let merged = init ? { ...post, ...init } : post;
+        if (merged.id === 'post-realme-p4-power-5g-review' || (merged.title && /realme.*p4/i.test(merged.title))) {
+          if (merged.productSpotlight) {
+            merged.productSpotlight = {
+              ...merged.productSpotlight,
+              affiliateUrl: 'https://link.amazon/B0iDBeXE4',
+              asin: 'B0iDBeXE4',
+            };
+          }
+        }
+        return merged;
       });
 
       const missingPosts = initialBlogPosts.filter((ip) => !updatedPosts.some((e) => e.id === ip.id));

@@ -616,6 +616,10 @@ Equipped with a 50MP Sony primary sensor and advanced computational photography 
 ### 4. MediaTek Dimensity 5G Octa-Core & 3D VC Heat Dissipation
 Built on energy-efficient TSMC architecture, the MediaTek Dimensity 5G processor seamlessly handles multitasking, smooth streaming, and popular mobile games. An integrated multi-layer 3D Vapor Chamber cooling system keeps internal temperatures low during extended gaming and charging.
 
+### Check Current Pricing & Stock on Amazon
+Check the latest verified discounts and live Amazon stock via our direct affiliate link:
+[Check your price on Amazon for Realme P4 Power 5G](https://link.amazon/B0iDBeXE4)
+
 ### Verdict
 The Realme P4 Power 5G is the benchmark for sub-$250 battery endurance, pairing huge 6000mAh stamina with a gorgeous 120Hz AMOLED screen, solid 50MP Sony optics, and rapid 45W charging.`,
     editorScore: 9.4,

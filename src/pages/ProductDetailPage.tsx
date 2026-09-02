@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import {
   ExternalLink,
   Star,
@@ -86,9 +87,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
   const handleOpenAffiliate = (placement: string = 'product_detail_hero_cta') => {
     trackAffiliateClick(product, placement);
-    if (typeof window !== 'undefined' && affiliateUrl) {
-      window.open(affiliateUrl, '_blank', 'noopener,noreferrer');
-    }
   };
 
   const handleCopyAffiliateUrl = (e: React.MouseEvent) => {
@@ -379,15 +377,44 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               Full Editorial Review & Long-Term Impressions
             </h2>
             <div className="prose-editorial">
-              {reviewText.split('\n\n').map((paragraph, pIdx) => {
-                if (paragraph.startsWith('## ')) {
-                  return <h2 key={pIdx}>{paragraph.replace('## ', '')}</h2>;
-                }
-                if (paragraph.startsWith('### ')) {
-                  return <h3 key={pIdx}>{paragraph.replace('### ', '')}</h3>;
-                }
-                return <p key={pIdx}>{paragraph}</p>;
-              })}
+              <ReactMarkdown
+                components={{
+                  h2: ({ node, ...props }) => (
+                    <h2
+                      className="text-2xl sm:text-3xl font-bold text-slate-900 pt-6 pb-2 border-b border-slate-100 font-serif-editorial first:pt-0"
+                      {...props}
+                    />
+                  ),
+                  h3: ({ node, ...props }) => (
+                    <h3
+                      className="text-xl sm:text-2xl font-bold text-slate-800 pt-4 pb-1 font-serif-editorial"
+                      {...props}
+                    />
+                  ),
+                  p: ({ node, ...props }) => (
+                    <p className="text-slate-700 leading-relaxed text-base sm:text-lg mb-4" {...props} />
+                  ),
+                  ul: ({ node, ...props }) => (
+                    <ul className="list-disc list-inside space-y-2 text-slate-700 text-base my-4 pl-2" {...props} />
+                  ),
+                  ol: ({ node, ...props }) => (
+                    <ol className="list-decimal list-inside space-y-2 text-slate-700 text-base my-4 pl-2" {...props} />
+                  ),
+                  strong: ({ node, ...props }) => (
+                    <strong className="font-bold text-slate-900" {...props} />
+                  ),
+                  a: ({ node, ...props }) => (
+                    <a
+                      className="text-emerald-700 hover:text-emerald-800 underline font-bold transition-colors cursor-pointer"
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      {...props}
+                    />
+                  ),
+                }}
+              >
+                {reviewText}
+              </ReactMarkdown>
             </div>
 
             {/* Inline CTA block inside article */}
