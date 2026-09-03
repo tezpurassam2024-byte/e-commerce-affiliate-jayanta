@@ -248,7 +248,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
               <div className="flex items-center justify-between gap-2">
                 <span className="text-slate-800 font-bold flex items-center gap-1.5">
                   <Tag className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Check your price on Amazon:</span>
+                  <span>Check Price on Amazon:</span>
                 </span>
                 <button
                   type="button"

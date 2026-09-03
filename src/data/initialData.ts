@@ -1115,9 +1115,9 @@ With zero cooling fans, the MacBook Air remains whisper quiet regardless of the 
     editorScore: 9.9,
     verdict: 'The new gold standard for portable computers. 16GB RAM as baseline makes it future-proof for creators and developers.',
     bestFor: 'Prosumers, developers, data scientists, and creators needing dual-monitor workstation support and 16GB RAM overhead.',
-    asin: 'B0CX21C78Q',
-    amazonUrl: 'https://www.amazon.in/dp/B0CX21C78Q',
-    affiliateUrl: 'https://www.amazon.in/dp/B0CX21C78Q',
+    asin: 'B08aY1VxN',
+    amazonUrl: 'https://link.amazon/B08aY1VxN',
+    affiliateUrl: 'https://link.amazon/B08aY1VxN',
     imageUrl: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80'
@@ -3192,7 +3192,7 @@ export const initialSiteSettings: SiteSettings = {
   contactEmail: 'editor@smartpickguide.com',
   amazonAssociateTag: 'smartpickin-21',
   amazonMarketplace: 'amazon.in',
-  defaultCtaText: 'Check Price on Amazon.in',
+  defaultCtaText: 'Check Price on Amazon',
   gaMeasurementId: 'G-XXXXXXXXXX',
   enableAiAssistant: true,
   socialLinks: {

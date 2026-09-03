@@ -108,6 +108,19 @@ function initializeLocalStorage() {
             galleryImages: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyBQIDyFThnuExayMPSJlxJEcmp0NC7yR6Fx9SvBpBUg&s=10']
           };
         }
+        if (
+          merged.id === 'prod-apple-macbook-air-m3' ||
+          (merged.name && /macbook.*air.*m3/i.test(merged.name)) ||
+          merged.asin === 'B0CX21C78Q' ||
+          merged.asin === 'B08aY1VxN'
+        ) {
+          merged = {
+            ...merged,
+            affiliateUrl: 'https://link.amazon/B08aY1VxN',
+            amazonUrl: 'https://link.amazon/B08aY1VxN',
+            asin: 'B08aY1VxN',
+          };
+        }
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
@@ -335,7 +348,12 @@ export const StorageService = {
             cleanSlug === 'redmi-15-pro-5g-smartphone' ||
             cleanSlug === 'redmi-15-pro-5g' ||
             cleanSlug === 'redmi-note-15-pro' ||
-            cleanSlug === 'redmi-15-pro'))
+            cleanSlug === 'redmi-15-pro')) ||
+        (p.id === 'prod-apple-macbook-air-m3' &&
+          (cleanSlug === 'apple-macbook-air-m3-13-inch' ||
+            cleanSlug === 'apple-macbook-air-m3' ||
+            cleanSlug === 'macbook-air-m3' ||
+            cleanSlug === 'apple-macbook-air-m3-13'))
     );
   },
 
