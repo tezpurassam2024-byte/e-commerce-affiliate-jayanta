@@ -183,6 +183,23 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             <ExternalLink className="w-3.5 h-3.5 text-blue-100" />
           </a>
 
+          {/* Direct Hyperlink Under Banner / Button */}
+          <div className="text-center pt-0.5 px-1">
+            <a
+              href={affiliateUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              onClick={handleAffiliateClick}
+              className={`text-[11px] font-mono hover:underline inline-flex items-center justify-center gap-1 max-w-full truncate ${
+                dark ? 'text-blue-400 hover:text-blue-300' : 'text-emerald-700 hover:text-emerald-900 font-medium'
+              }`}
+              title={affiliateUrl}
+            >
+              <span className="truncate">{affiliateUrl}</span>
+              <ExternalLink className="w-2.5 h-2.5 shrink-0" />
+            </a>
+          </div>
+
           {/* Amazon price note */}
           <p className={`text-[10px] text-center ${dark ? 'text-slate-400' : 'text-slate-400'}`}>
             *Prices and availability verified on Amazon. Subject to change.

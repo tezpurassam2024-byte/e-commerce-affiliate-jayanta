@@ -425,16 +425,31 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                   {product.priceNote || 'Direct merchant stock on Amazon'}
                 </p>
               </div>
-              <a
-                href={affiliateUrl}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                onClick={() => trackAffiliateClick(product, 'product_detail_article_inline_cta')}
-                className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 shrink-0 transition-all cursor-pointer"
-              >
-                <span>{settings.defaultCtaText || 'Check Price on Amazon'}</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
+              <div className="flex flex-col items-center sm:items-end gap-2 w-full sm:w-auto">
+                <a
+                  href={affiliateUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  onClick={() => trackAffiliateClick(product, 'product_detail_article_inline_cta')}
+                  className="w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shrink-0 transition-all cursor-pointer shadow-md"
+                >
+                  <span>{settings.defaultCtaText || 'Check Price on Amazon'}</span>
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <div className="flex items-center justify-center sm:justify-end gap-1.5 text-[11px]">
+                  <span className="text-slate-400">Check Price on Amazon:</span>
+                  <a
+                    href={affiliateUrl}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    onClick={() => trackAffiliateClick(product, 'product_detail_article_inline_direct_link')}
+                    className="text-emerald-400 hover:text-emerald-300 font-mono underline flex items-center gap-1 break-all"
+                  >
+                    <span>{affiliateUrl}</span>
+                    <ExternalLink className="w-3 h-3 shrink-0" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         );

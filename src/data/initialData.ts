@@ -1039,69 +1039,80 @@ With zero cooling fans, the MacBook Air remains whisper quiet regardless of the 
     updatedAt: '2026-09-02T06:00:00Z'
   },
   {
-    id: 'prod-apple-macbook-air-m2',
-    slug: 'apple-macbook-air-m2-13-inch',
-    name: 'Apple MacBook Air M2 (13.6-inch Liquid Retina Display, 8GB Unified Memory, 256GB SSD, Midnight)',
+    id: 'prod-apple-macbook-air-m5-2026',
+    slug: '2026-macbook-air-13-inch-m5-laptop',
+    name: '2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 16GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Silver',
     brand: 'Apple',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
-    shortDescription: 'Strikingly thin unibody redesign with Apple M2 chip, 13.6-inch Liquid Retina display with 500 nits brightness, 1080p FaceTime HD camera, and MagSafe 3 fast charging.',
-    longDescription: `The **Apple MacBook Air M2** introduces a modern flat-edge design that is remarkably thin at just 11.3mm. It combines the next-generation M2 chip with a larger 13.6-inch Liquid Retina display, upgraded 1080p camera, quad-speaker spatial audio system, and dedicated MagSafe 3 charging.`,
-    editorScore: 9.7,
-    verdict: 'The ultimate modern ultraportable with a gorgeous Liquid Retina display, MagSafe 3 charging, and sleek lightweight unibody.',
-    bestFor: 'Executives, digital nomads, college students, and creatives wanting a modern aesthetic with MagSafe convenience.',
-    asin: 'B0B3C58K6T',
-    amazonUrl: 'https://www.amazon.in/dp/B0B3C58K6T',
-    affiliateUrl: 'https://www.amazon.in/dp/B0B3C58K6T',
+    shortDescription: 'The 2026 MacBook Air 13″ powered by Apple M5 chip features next-gen AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina display, 16GB Unified Memory, 1TB SSD storage, 12MP Center Stage camera, and Touch ID in classic Silver.',
+    longDescription: `The **2026 MacBook Air 13″ Laptop with M5 chip** delivers groundbreaking performance and on-device machine intelligence. Powered by the breakthrough Apple M5 processor with a dedicated Apple Intelligence Neural Engine, it offers lightning-fast responsiveness for creative workloads, developer builds, and daily tasks with up to 18 hours of whisper-quiet, fanless battery endurance.
+
+Its brilliant **34.46 cm (13.6″) Liquid Retina Display** boasts 500 nits brightness, 1 billion colors, and P3 wide color gamut for ultra-crisp typography and true-to-life images. Configured with **16GB Unified Memory** and massive **1TB high-speed SSD Storage**, you have virtually limitless headroom for 4K video editing, local AI generation, and heavy multitasking.
+
+Communicate effortlessly with the upgraded **12MP Center Stage Camera** featuring Desk View support, studio-quality three-mic array, and Spatial Audio quad speakers. Featuring Touch ID biometric security, dedicated MagSafe 3 fast charging, dual Thunderbolt 4 / USB 4 ports, and support for dual external displays in an ultralight 1.24 kg **Silver** unibody enclosure.`,
+    editorScore: 9.9,
+    verdict: 'The ultimate flagship ultraportable of 2026. Next-gen Apple M5 silicon, built-in Apple Intelligence, 16GB unified memory, and 1TB SSD in an ultra-sleek 1.24 kg aluminum unibody.',
+    bestFor: 'Professionals, students, creative power users, and developers needing Apple Intelligence, 1TB fast SSD storage, and all-day battery life.',
+    asin: 'B0iSrg0fF',
+    amazonUrl: 'https://link.amazon/B0iSrg0fF',
+    affiliateUrl: 'https://link.amazon/B0iSrg0fF',
     imageUrl: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 89990,
+    price: 134900,
     currency: 'INR',
-    priceNote: 'Amazon.in verified pricing with fast shipping',
-    priceLastUpdated: '2026-09-02T06:00:00Z',
-    rating: 4.8,
-    reviewCount: 14200,
+    priceNote: 'Amazon.in verified pricing with fast Prime delivery',
+    priceLastUpdated: '2026-09-03T07:00:00Z',
+    rating: 4.9,
+    reviewCount: 3850,
     availability: 'in_stock',
     keyFeatures: [
-      'Apple M2 chip with 8-core CPU and 8-core GPU',
-      '13.6-inch Liquid Retina display with 500 nits brightness and True Tone',
-      'MagSafe 3 dedicated charging port + 2x Thunderbolt / USB 4 ports',
-      '1080p FaceTime HD camera with three-mic array',
-      'Four-speaker sound system with Spatial Audio and Dolby Atmos',
-      'Ultra-thin 11.3mm aluminium unibody weighing only 1.24 kg'
+      'Apple M5 chip with next-generation Neural Engine for hardware-accelerated AI and Apple Intelligence',
+      '34.46 cm (13.6″) Liquid Retina Display with 500 nits peak brightness, P3 wide color, and True Tone',
+      '16GB Unified Memory for high-throughput multitasking and running local AI models',
+      '1TB high-speed PCIe SSD Storage for massive project files, datasets, and 4K media',
+      '12MP Center Stage Camera with Desk View support and studio-quality three-microphone array',
+      'Fast, secure Touch ID sensor for biometric unlocking, Apple Pay, and password autofill',
+      'Dedicated MagSafe 3 charging port + dual Thunderbolt / USB 4 ports with dual external monitor support',
+      'Precision-machined all-aluminum unibody enclosure in timeless Silver weighing just 1.24 kg'
     ],
     specifications: {
-      'Processor': 'Apple M2 Chip (8-Core CPU, 8-Core GPU, 16-Core Neural Engine)',
-      'Memory': '8GB Unified RAM',
-      'Storage': '256GB SSD',
-      'Display': '13.6-inch Liquid Retina (2560 x 1664, 500 nits, 1 billion colors)',
-      'Battery': '52.6 Wh lithium-polymer (Up to 18 hrs battery life)',
+      'Processor': 'Apple M5 Chip with AI and Apple Intelligence Neural Engine',
+      'Memory': '16GB Unified Memory',
+      'Storage': '1TB NVMe SSD Storage',
+      'Display': '34.46 cm (13.6-inch) Liquid Retina (2560 x 1664, 500 nits, P3 Color, True Tone)',
+      'Camera': '12MP Center Stage Camera with Desk View',
+      'Security': 'Touch ID Biometric Sensor on Magic Keyboard',
+      'Color / Finish': 'Silver',
+      'Battery': 'Up to 18 hours battery life (MagSafe 3 fast charging)',
       'Ports': 'MagSafe 3, 2x Thunderbolt 4 / USB 4, 3.5mm Headphone jack',
+      'Audio': 'Four-speaker sound system with Spatial Audio & Dolby Atmos',
       'Weight': '1.24 kg'
     },
     pros: [
-      'Gorgeous 13.6-inch 500-nit Liquid Retina display with thin bezels',
-      'Dedicated MagSafe 3 charging frees up both Thunderbolt ports',
-      'Upgraded 1080p webcam and quad-speaker Spatial Audio system',
-      'Extremely slim 11.3mm durable unibody construction'
+      'Next-generation Apple M5 processor with dedicated Apple Intelligence & AI acceleration',
+      'Spacious 1TB high-speed SSD and standard 16GB unified memory',
+      'Crystal-clear 12MP Center Stage camera with Desk View for superior video meetings',
+      'Vibrant 34.46 cm (13.6″) 500-nit Liquid Retina display with accurate P3 colors',
+      'Whisper-silent fanless design with up to 18 hours of real-world battery endurance'
     ],
     cons: [
-      'Base 256GB SSD has slower single-NAND read speeds than 512GB model',
-      'Midnight finish tends to show fingerprint smudges'
+      'Higher price point for the 1TB premium capacity tier',
+      'Dual external monitor support requires laptop lid to be closed'
     ],
     whoShouldBuy: [
-      'Users wanting the modern MacBook design language with thin bezels and MagSafe',
-      'Professionals attending frequent video meetings requiring 1080p camera quality'
+      'Users looking for the latest 2026 MacBook Air with next-generation M5 AI performance and 1TB SSD',
+      'Developers, creators, and business professionals seeking silent all-day battery reliability in Silver'
     ],
     whoShouldAvoid: [
-      'Shoppers strictly on a sub-₹60,000 budget (where M1 Air is better value)'
+      'Buyers strictly shopping on a sub-₹60,000 budget where previous generations offer budget value'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-09-02T06:00:00Z',
-    updatedAt: '2026-09-02T06:00:00Z'
+    createdAt: '2026-09-03T07:00:00Z',
+    updatedAt: '2026-09-03T07:00:00Z'
   },
   {
     id: 'prod-apple-macbook-air-m3',

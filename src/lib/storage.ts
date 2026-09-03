@@ -72,9 +72,24 @@ function initializeLocalStorage() {
         (p.name && /redm.*14.*pro/i.test(p.name)) ||
         (p.slug && /redm.*14.*pro/i.test(p.slug));
 
-      const nonRedmiExisting = existing.filter(
-        (p) => !isRedmi14Pro(p) && p.id !== 'prod-iphone-16-pro-max' && p.slug !== 'apple-iphone-16-pro-max'
-      );
+      const nonRedmiExisting = existing
+        .filter(
+          (p) => !isRedmi14Pro(p) && p.id !== 'prod-iphone-16-pro-max' && p.slug !== 'apple-iphone-16-pro-max'
+        )
+        .map((p) => {
+          if (
+            p.id === 'prod-apple-macbook-air-m2' ||
+            p.asin === 'B0B3C58K6T' ||
+            (p.name && /macbook.*air.*m2/i.test(p.name))
+          ) {
+            return {
+              ...p,
+              id: 'prod-apple-macbook-air-m5-2026',
+              slug: '2026-macbook-air-13-inch-m5-laptop',
+            };
+          }
+          return p;
+        });
       
       const seenIds = new Set<string>();
       const seenSlugs = new Set<string>();
@@ -120,6 +135,27 @@ function initializeLocalStorage() {
             amazonUrl: 'https://link.amazon/B08aY1VxN',
             asin: 'B08aY1VxN',
           };
+        }
+        if (
+          merged.id === 'prod-apple-macbook-air-m2' ||
+          merged.id === 'prod-apple-macbook-air-m5-2026' ||
+          (merged.name && /macbook.*air.*m2/i.test(merged.name)) ||
+          (merged.name && /macbook.*air.*m5/i.test(merged.name)) ||
+          merged.asin === 'B0B3C58K6T' ||
+          merged.asin === 'B0iSrg0fF'
+        ) {
+          const m5Init = initialProducts.find((ip) => ip.id === 'prod-apple-macbook-air-m5-2026');
+          merged = m5Init
+            ? { ...merged, ...m5Init }
+            : {
+                ...merged,
+                id: 'prod-apple-macbook-air-m5-2026',
+                slug: '2026-macbook-air-13-inch-m5-laptop',
+                name: '2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 16GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Silver',
+                asin: 'B0iSrg0fF',
+                amazonUrl: 'https://link.amazon/B0iSrg0fF',
+                affiliateUrl: 'https://link.amazon/B0iSrg0fF',
+              };
         }
         return {
           ...merged,
@@ -353,13 +389,25 @@ export const StorageService = {
           (cleanSlug === 'apple-macbook-air-m3-13-inch' ||
             cleanSlug === 'apple-macbook-air-m3' ||
             cleanSlug === 'macbook-air-m3' ||
-            cleanSlug === 'apple-macbook-air-m3-13'))
+            cleanSlug === 'apple-macbook-air-m3-13')) ||
+        ((p.id === 'prod-apple-macbook-air-m5-2026' || p.id === 'prod-apple-macbook-air-m2') &&
+          (cleanSlug === '2026-macbook-air-13-inch-m5-laptop' ||
+            cleanSlug === '2026-macbook-air-13-laptop-with-m5-chip' ||
+            cleanSlug === 'apple-macbook-air-m5-13-inch' ||
+            cleanSlug === 'macbook-air-m5' ||
+            cleanSlug === 'apple-macbook-air-m2-13-inch' ||
+            cleanSlug === 'apple-macbook-air-m2'))
     );
   },
 
   getProductById(id: string): Product | undefined {
     const products = this.getProducts();
-    return products.find((p) => p.id === id);
+    return products.find(
+      (p) =>
+        p.id === id ||
+        ((id === 'prod-apple-macbook-air-m2' || id === 'prod-apple-macbook-air-m5-2026') &&
+          (p.id === 'prod-apple-macbook-air-m5-2026' || p.id === 'prod-apple-macbook-air-m2'))
+    );
   },
 
   saveProduct(product: Product): void {
