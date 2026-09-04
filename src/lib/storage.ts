@@ -277,6 +277,19 @@ function initializeLocalStorage() {
             affiliateUrl: 'https://link.amazon/B01rNPLDK',
           };
         }
+        if (
+          merged.id === 'prod-lenovo-ideapad-slim-1-ryzen3' ||
+          (merged.name && /No 9:.*slim.*1/i.test(merged.name)) ||
+          merged.asin === 'B0B7RSY3Z5' ||
+          merged.asin === 'B0imyOsWX'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B0imyOsWX',
+            amazonUrl: 'https://link.amazon/B0imyOsWX',
+            affiliateUrl: 'https://link.amazon/B0imyOsWX',
+          };
+        }
         // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts
         if (init && init.categoryId === 'cat-computers' && init.name.startsWith('No ')) {
           merged.name = init.name;

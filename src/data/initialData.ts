@@ -1564,9 +1564,9 @@ Pre-loaded with lifetime licensed **Microsoft Office Home & Student 2021** (Word
     editorScore: 9.1,
     verdict: 'The best budget laptop under ₹32,000. Provides a fast 512GB NVMe SSD and 6nm AMD Ryzen processor where rivals offer sluggish eMMC storage.',
     bestFor: 'School students, beginners, parents, and budget-conscious buyers needing a dependable laptop under ₹32,000.',
-    asin: 'B0B7RSY3Z5',
-    amazonUrl: 'https://www.amazon.in/dp/B0B7RSY3Z5',
-    affiliateUrl: 'https://www.amazon.in/dp/B0B7RSY3Z5',
+    asin: 'B0imyOsWX',
+    amazonUrl: 'https://link.amazon/B0imyOsWX',
+    affiliateUrl: 'https://link.amazon/B0imyOsWX',
     imageUrl: 'https://images.unsplash.com/photo-1509741102003-ca64bfe5f069?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1509741102003-ca64bfe5f069?auto=format&fit=crop&w=800&q=80'
