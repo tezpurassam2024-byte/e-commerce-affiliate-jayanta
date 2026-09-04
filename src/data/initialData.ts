@@ -1502,9 +1502,9 @@ Pre-loaded with lifetime licensed **Microsoft Office Home & Student 2021** (Word
     editorScore: 9.3,
     verdict: 'Exceptional battery endurance and modern 6nm architecture make this an outstanding everyday student laptop.',
     bestFor: 'Students attending long lectures, writers, and home-office workers needing cool, quiet, long-lasting performance.',
-    asin: 'B0C2P2FHKF',
-    amazonUrl: 'https://www.amazon.in/dp/B0C2P2FHKF',
-    affiliateUrl: 'https://www.amazon.in/dp/B0C2P2FHKF',
+    asin: 'B01rNPLDK',
+    amazonUrl: 'https://link.amazon/B01rNPLDK',
+    affiliateUrl: 'https://link.amazon/B01rNPLDK',
     imageUrl: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80'

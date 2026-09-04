@@ -264,6 +264,19 @@ function initializeLocalStorage() {
             affiliateUrl: 'https://link.amazon/B05ImP1Ey',
           };
         }
+        if (
+          merged.id === 'prod-lenovo-ideapad-slim-3-ryzen5-7520u' ||
+          (merged.name && /No 8:.*7520u/i.test(merged.name)) ||
+          merged.asin === 'B0C2P2FHKF' ||
+          merged.asin === 'B01rNPLDK'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B01rNPLDK',
+            amazonUrl: 'https://link.amazon/B01rNPLDK',
+            affiliateUrl: 'https://link.amazon/B01rNPLDK',
+          };
+        }
         // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts
         if (init && init.categoryId === 'cat-computers' && init.name.startsWith('No ')) {
           merged.name = init.name;
