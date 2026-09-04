@@ -121,6 +121,17 @@ function initializeLocalStorage() {
               slug: 'hp-pavilion-16-intel-core-ultra-5-125u-16gb-512gb-af0015tu',
             };
           }
+          if (
+            p.id === 'prod-asus-vivobook-15-i5-1235u' ||
+            p.asin === 'B0B8K4P9F7' ||
+            (p.name && /No 10:.*vivobook.*15/i.test(p.name))
+          ) {
+            return {
+              ...p,
+              id: 'prod-asus-vivobook-15-i5-13420h-x1502va',
+              slug: 'asus-vivobook-15-intel-core-i5-13420h-16gb-512gb-x1502va',
+            };
+          }
           return p;
         });
       
@@ -288,6 +299,19 @@ function initializeLocalStorage() {
             asin: 'B0imyOsWX',
             amazonUrl: 'https://link.amazon/B0imyOsWX',
             affiliateUrl: 'https://link.amazon/B0imyOsWX',
+          };
+        }
+        if (
+          merged.id === 'prod-asus-vivobook-15-i5-13420h-x1502va' ||
+          (merged.name && /13420h.*vivobook|vivobook.*13420h/i.test(merged.name)) ||
+          merged.asin === 'B0B8K4P9F7' ||
+          merged.asin === 'B0dutuOH6'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B0dutuOH6',
+            amazonUrl: 'https://link.amazon/B0dutuOH6',
+            affiliateUrl: 'https://link.amazon/B0dutuOH6',
           };
         }
         // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts

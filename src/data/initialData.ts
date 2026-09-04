@@ -1616,67 +1616,94 @@ Pre-loaded with lifetime licensed **Microsoft Office Home & Student 2021** (Word
     updatedAt: '2026-09-02T06:00:00Z'
   },
   {
-    id: 'prod-asus-vivobook-15-i5-1235u',
-    slug: 'asus-vivobook-15-intel-core-i5-1235u-16gb-512gb',
-    name: 'No 10: ASUS Vivobook 15 (12th Gen Intel Core i5-1235U, 16GB RAM, 512GB SSD, 15.6-inch FHD, Quiet Blue)',
+    id: 'prod-asus-vivobook-15-i5-13420h-x1502va',
+    slug: 'asus-vivobook-15-intel-core-i5-13420h-16gb-512gb-x1502va',
+    name: 'No 10: ASUS Vivobook 15, Smartchoice,Intel Core i5 13th Gen 13420H,16GB RAM, 512GB SSD, FHD 15.6",Windows 11, Office Home 2024, Quiet Blue, 1.70 kg, X1502VA-BQ836WS,Intel UHD iGPU, M365 Basic (1Year)* Laptop',
     brand: 'ASUS',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
-    shortDescription: 'Top-selling stylish daily laptop featuring 10-core Intel Core i5-1235U, 16GB RAM, 180° lay-flat hinge, ASUS Antimicrobial Guard Plus, and military-grade toughness.',
-    longDescription: `The **ASUS Vivobook 15 (X1502ZA)** combines modern aesthetics with everyday functionality. Featuring an ErgoSense tactile keyboard, a 180-degree lay-flat display hinge for easy collaboration, and ASUS Antimicrobial Guard Plus coating that inhibits 99% of bacterial growth.`,
-    editorScore: 9.4,
-    verdict: 'A stylish, dependable everyday laptop with an ergonomic keyboard, lay-flat hinge, and solid 16GB RAM configuration.',
-    bestFor: 'Students, young professionals, and home users looking for a sleek, responsive laptop with great typing ergonomics.',
-    asin: 'B0B8K4P9F7',
-    amazonUrl: 'https://www.amazon.in/dp/B0B8K4P9F7',
-    affiliateUrl: 'https://www.amazon.in/dp/B0B8K4P9F7',
+    shortDescription: 'Smartchoice performance daily laptop featuring 8-core 13th Gen Intel Core i5-13420H (45W TDP), 16GB RAM, 512GB SSD, 15.6″ FHD Anti-Glare display, Windows 11, Office Home 2024, M365 Basic (1Yr), and 180° lay-flat hinge in Quiet Blue at 1.70kg (X1502VA-BQ836WS).',
+    longDescription: `The **ASUS Vivobook 15 (X1502VA-BQ836WS Smartchoice)** brings high-performance computing to everyday productivity. Powered by the high-wattage 45W **13th Gen Intel Core i5-13420H** processor (8 cores / 12 threads), it delivers substantially higher multi-core speeds than standard U-series processors, making it a powerhouse for heavy multitasking, coding, data analysis, and student projects.
+
+### 1. High-Performance 13th Gen Intel Core i5-13420H Processor
+Featuring 8 cores (4 Performance and 4 Efficient cores) and 12 threads with turbo clock speeds reaching up to 4.6 GHz, the 45W H-series architecture crushes intensive computational tasks and compilation with ease.
+
+### 2. 16GB RAM & 512GB M.2 NVMe PCIe 4.0 SSD
+Equipped with 16GB high-speed memory and a responsive 512GB PCIe 4.0 NVMe SSD, you get rapid boot times, instant file transfers, and stutter-free application switching even with dozens of browser tabs open.
+
+### 3. 15.6-inch FHD NanoEdge Anti-Glare Display & 180° Lay-Flat Hinge
+The 15.6-inch Full HD (1920 x 1080) screen offers slim NanoEdge bezels with an 82% screen-to-body ratio and anti-glare coating. The precision-engineered 180-degree lay-flat hinge allows effortless screen sharing with teammates and colleagues.
+
+### 4. Windows 11, Office Home 2024 & Microsoft 365 Basic (1 Year)
+Comes ready for work right out of the box with genuine **Windows 11 Home**, pre-installed **Office Home 2024**, and 1 year of **Microsoft 365 Basic** with 100GB of secure OneDrive cloud storage.
+
+### 5. ASUS ErgoSense Keyboard, Privacy Shutter & Antimicrobial Guard
+The ASUS ErgoSense tactile keyboard with dedicated numeric keypad provides optimal 1.4mm key travel for typing comfort. Includes an integrated 720p HD webcam with physical privacy shutter, AI Noise-Canceling audio, and ASUS Antimicrobial Guard Plus surface protection.`,
+    editorScore: 9.5,
+    verdict: 'An outstanding Smartchoice daily laptop packing 45W 13th Gen H-series Intel Core i5 power, 16GB RAM, Office Home 2024, and an ergonomic lay-flat chassis.',
+    bestFor: 'Students, coders, accountants, and office professionals seeking high-performance 13th Gen H-series processing with modern Office 2024 software pre-loaded.',
+    asin: 'B0dutuOH6',
+    amazonUrl: 'https://link.amazon/B0dutuOH6',
+    affiliateUrl: 'https://link.amazon/B0dutuOH6',
     imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 48990,
+    price: 51990,
     currency: 'INR',
-    priceNote: 'Amazon.in Choice with MS Office 2021 pre-loaded',
-    priceLastUpdated: '2026-09-02T06:00:00Z',
-    rating: 4.3,
-    reviewCount: 14500,
+    priceNote: 'Amazon.in Smartchoice verified pricing with Office Home 2024 & M365 Basic (1Yr)',
+    priceLastUpdated: '2026-09-04T13:09:00Z',
+    rating: 4.4,
+    reviewCount: 15800,
     availability: 'in_stock',
     keyFeatures: [
-      '12th Gen Intel Core i5-1235U (10 Cores, 12 Threads, up to 4.4 GHz)',
-      '16GB DDR4 RAM + 512GB M.2 NVMe PCIe 3.0 SSD',
-      '15.6-inch Full HD (1920 x 1080) NanoEdge Anti-Glare Screen',
-      '180° Lay-Flat ErgoLift Hinge for easy screen sharing',
-      'ASUS ErgoSense Keyboard with tactile 1.4mm key travel',
-      'ASUS Antimicrobial Guard Plus surface protection'
+      '13th Gen Intel Core i5-13420H Processor (8 Cores, 12 Threads, up to 4.6 GHz Max Turbo, 12MB Cache)',
+      '16GB DDR4 RAM + 512GB M.2 NVMe PCIe 4.0 SSD Storage',
+      '15.6-inch Full HD (1920 x 1080) NanoEdge Anti-Glare Display (250 nits)',
+      'Intel UHD Graphics (Intel UHD iGPU) with DirectX 12 support',
+      'Pre-installed Windows 11 Home, Office Home 2024 & 1 Year Microsoft 365 Basic (100GB Cloud)',
+      '180° Lay-Flat Hinge for easy collaboration and screen sharing',
+      'ASUS ErgoSense Keyboard with tactile 1.4mm key travel & full numeric keypad',
+      '720p HD Camera with physical Privacy Shutter & ASUS AI Noise-Canceling technology',
+      'Fast Charging support (60% in 49 mins), 42Wh battery, 1.70 kg lightweight Quiet Blue body'
     ],
     specifications: {
-      'Processor': 'Intel Core i5-1235U (10 Cores, 12MB Cache)',
-      'RAM': '16GB DDR4 (8GB onboard + 8GB SO-DIMM)',
-      'Storage': '512GB M.2 NVMe PCIe 3.0 SSD',
-      'Display': '15.6" FHD (1920 x 1080), 82% Screen-to-body ratio',
-      'Battery': '42 Wh (Up to 6.5 hrs)',
-      'Weight': '1.70 kg'
+      'Model Number': 'X1502VA-BQ836WS',
+      'Processor': '13th Gen Intel Core i5-13420H (8 Cores, 12 Threads, up to 4.6 GHz, 12MB Cache)',
+      'RAM': '16GB DDR4 (3200 MHz)',
+      'Storage': '512GB M.2 NVMe PCIe 4.0 SSD',
+      'Display': '15.6" FHD (1920 x 1080), 16:9, Anti-Glare, 250 nits, 82% Screen-to-body ratio',
+      'Graphics': 'Intel UHD Graphics (Intel UHD iGPU)',
+      'Operating System': 'Windows 11 Home',
+      'Pre-loaded Software': 'Office Home 2024 + 1-Year Microsoft 365 Basic (100GB Cloud)',
+      'Webcam': '720p HD Camera with Physical Privacy Shutter',
+      'Keyboard': 'ASUS ErgoSense Keyboard with Number Pad',
+      'Battery': '3-cell 42 Wh with Fast Charge (60% in 49 mins)',
+      'Weight': '1.70 kg',
+      'Color': 'Quiet Blue'
     },
     pros: [
-      'ErgoSense keyboard offers satisfying typing tactile feedback',
-      '180-degree lay-flat hinge simplifies team discussions and presentations',
-      'Antimicrobial surface treatment keeps key surfaces clean',
-      'Includes 16GB dual-channel memory out of the box'
+      'High-performance 45W 13th Gen Intel Core i5-13420H CPU handles compiling & multitasking with ease',
+      'Comes with lifetime Office Home 2024 and 1 year of Microsoft 365 Basic included',
+      '180-degree lay-flat hinge and ErgoSense keyboard deliver outstanding ergonomics',
+      'Webcam physical privacy shutter and AI noise-canceling mic for clean calls',
+      'Sleek Quiet Blue chassis weighing just 1.70 kg'
     ],
     cons: [
-      'Standard 250 nits display brightness'
+      '250 nits brightness is ideal for indoor use rather than direct sunlight',
+      'Integrated Intel UHD graphics (not designed for heavy AAA 3D gaming)'
     ],
     whoShouldBuy: [
-      'Content writers, college students, and office workers who type extensively',
-      'Shoppers wanting a durable 180-degree hinge design'
+      'Students, programmers, and professionals wanting high-performance 13th Gen H-series CPU speed with Office Home 2024 included',
+      'Users seeking a dependable 16GB RAM laptop with full number pad and lay-flat hinge'
     ],
     whoShouldAvoid: [
-      'Outdoor workers needing 400+ nit sunlight-legible displays'
+      'Dedicated gamers needing discrete RTX graphics cards'
     ],
     featured: false,
     published: true,
-    createdAt: '2026-09-02T06:00:00Z',
-    updatedAt: '2026-09-02T06:00:00Z'
+    createdAt: '2026-09-04T13:09:00Z',
+    updatedAt: '2026-09-04T13:09:00Z'
   },
   {
     id: 'prod-asus-vivobook-16x-ryzen5',
