@@ -110,6 +110,17 @@ function initializeLocalStorage() {
               slug: 'hp-15-laptop-amd-ryzen-7-7730u-16gb-512gb-fc0761au',
             };
           }
+          if (
+            p.id === 'prod-hp-pavilion-14-i5' ||
+            p.asin === 'B09WDP6D55' ||
+            (p.name && /No 6:.*pavilion/i.test(p.name))
+          ) {
+            return {
+              ...p,
+              id: 'prod-hp-pavilion-16-core-ultra-5-af0015tu',
+              slug: 'hp-pavilion-16-intel-core-ultra-5-125u-16gb-512gb-af0015tu',
+            };
+          }
           return p;
         });
       
@@ -225,6 +236,19 @@ function initializeLocalStorage() {
             asin: 'B05aGOlX4',
             amazonUrl: 'https://link.amazon/B05aGOlX4',
             affiliateUrl: 'https://link.amazon/B05aGOlX4',
+          };
+        }
+        if (
+          merged.id === 'prod-hp-pavilion-16-core-ultra-5-af0015tu' ||
+          (merged.name && /ultra.*5.*125u/i.test(merged.name)) ||
+          merged.asin === 'B09WDP6D55' ||
+          merged.asin === 'B0iGqXeYI'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B0iGqXeYI',
+            amazonUrl: 'https://link.amazon/B0iGqXeYI',
+            affiliateUrl: 'https://link.amazon/B0iGqXeYI',
           };
         }
         // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts

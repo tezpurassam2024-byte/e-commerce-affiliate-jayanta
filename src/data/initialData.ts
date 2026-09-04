@@ -1335,68 +1335,95 @@ Comes pre-installed with lifetime **Office Home 2024**, 1 year of **Microsoft 36
     updatedAt: '2026-09-04T08:45:00Z'
   },
   {
-    id: 'prod-hp-pavilion-14-i5',
-    slug: 'hp-pavilion-14-intel-core-i5-1235u-16gb-512gb',
-    name: 'No 6: HP Pavilion 14 (12th Gen Intel Core i5-1235U, 16GB DDR4, 512GB SSD, 14-inch FHD IPS, B&O Audio, Silver)',
+    id: 'prod-hp-pavilion-16-core-ultra-5-af0015tu',
+    slug: 'hp-pavilion-16-intel-core-ultra-5-125u-16gb-512gb-af0015tu',
+    name: 'No 6: HP Pavilion, Intel Core Ultra 5-125U, (16GB RAM, 512GB SSD) IPS, WUXGA, Anti-Glare, 16"/40.6cm, Win 11, Office 2021, Silver, 1.77Kg, af0015tu, Intel Graphics, 1080p FHD Camera AI Laptop',
     brand: 'HP',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
-    shortDescription: 'Premium metal-lid compact ultrabook featuring 14-inch FHD IPS 300 nits display, Bang & Olufsen tuned audio, backlit keyboard, fingerprint reader, and 1.41kg ultra-lightweight chassis.',
-    longDescription: `The **HP Pavilion 14** bridges the gap between affordable computing and premium executive ultrabooks. Built with a sleek aluminum keyboard deck, a vibrant 300-nit IPS display, and custom-tuned Bang & Olufsen stereo speakers, it is built for style, sound, and all-day mobile productivity.`,
-    editorScore: 9.5,
-    verdict: 'The ideal premium student and office laptop. Crisp 300-nit IPS display, B&O audio, backlit keys, and featherlight 1.41kg portability.',
-    bestFor: 'Business professionals, frequent travelers, university students, and media lovers seeking a bright screen and premium audio.',
-    asin: 'B09WDP6D55',
-    amazonUrl: 'https://www.amazon.in/dp/B09WDP6D55',
-    affiliateUrl: 'https://www.amazon.in/dp/B09WDP6D55',
+    shortDescription: 'Next-gen AI Laptop powered by Intel Core Ultra 5-125U with Intel AI Boost NPU, 16GB RAM, 512GB SSD, expansive 16″ (40.6cm) 16:10 WUXGA Anti-Glare IPS display, Windows 11, Office 2021, and 1080p FHD Camera in Natural Silver at 1.77kg (af0015tu).',
+    longDescription: `The **HP Pavilion 16 (af0015tu)** is a cutting-edge AI PC engineered for modern productivity, content workflows, and hybrid collaboration. Powered by Intel’s Meteor Lake architecture with the **Intel Core Ultra 5-125U**, it integrates a dedicated **Intel AI Boost NPU** for local on-device AI tasks, smart camera framing, real-time background blur, and optimized power efficiency.
+
+### 1. Intel Core Ultra 5-125U Processor with Dedicated AI NPU
+Featuring 12 cores (2 Performance, 8 Efficient, 2 Low-Power Efficient cores), 14 threads, and up to 4.3 GHz Intel Smart Cache, this Meteor Lake chip balances immense responsiveness with whisper-quiet battery conservation. The integrated **Intel AI Boost NPU** accelerates Microsoft Copilot and local AI workloads.
+
+### 2. Expansive 16-inch (40.6 cm) WUXGA 16:10 IPS Anti-Glare Display
+Experience 11% more vertical viewing area with the modern 16:10 aspect ratio WUXGA (1920 x 1200) IPS panel. With 300 nits brightness, anti-glare coating, and ultra-slim micro-edge bezels, it provides ample screen real estate for large spreadsheets, documents, and split-screen creative editing.
+
+### 3. 16GB RAM & 512GB PCIe Gen4 NVMe High-Speed SSD
+Equipped with 16GB high-bandwidth system memory and 512GB ultra-fast PCIe Gen4 NVMe SSD, the HP Pavilion 16 boots within seconds, rapidly loads dense project files, and switches smoothly between demanding multitasking sessions.
+
+### 4. 1080p FHD Camera with Windows Studio Effects & Privacy Shutter
+Conduct executive-grade video calls with the integrated 1080p FHD camera equipped with temporal noise reduction, hardware privacy shutter, and dual-array digital microphones with AI background noise suppression.
+
+### 5. Genuine Windows 11 Home & Microsoft Office 2021
+Pre-loaded with lifetime licensed **Microsoft Office Home & Student 2021** (Word, Excel, PowerPoint) and **Windows 11 Home** featuring dedicated Microsoft Copilot access. HP Fast Charge powers the 3-cell 59Wh battery up to 50% in roughly 45 minutes.`,
+    editorScore: 9.6,
+    verdict: 'A superb 16-inch AI-ready laptop with Intel Core Ultra 5, dedicated NPU, tall 16:10 WUXGA anti-glare display, 16GB RAM, and pre-installed Office 2021 in a sleek 1.77 kg aluminum finish.',
+    bestFor: 'Professionals, business executives, students, and analysts seeking a large 16:10 productivity display with next-gen Intel Core Ultra AI processing.',
+    asin: 'B0iGqXeYI',
+    amazonUrl: 'https://link.amazon/B0iGqXeYI',
+    affiliateUrl: 'https://link.amazon/B0iGqXeYI',
     imageUrl: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 62490,
+    price: 69990,
     currency: 'INR',
-    priceNote: 'Amazon.in verified price with Prime delivery',
-    priceLastUpdated: '2026-09-02T06:00:00Z',
-    rating: 4.4,
-    reviewCount: 8450,
+    priceNote: 'Amazon.in verified pricing with Office 2021 & Intel AI Boost',
+    priceLastUpdated: '2026-09-04T09:23:00Z',
+    rating: 4.5,
+    reviewCount: 5120,
     availability: 'in_stock',
     keyFeatures: [
-      '12th Gen Intel Core i5-1235U (10 Cores, 12 Threads, 4.4 GHz Max)',
-      '16GB DDR4-3200 MHz RAM + 512GB PCIe NVMe SSD',
-      '14.0-inch FHD (1920 x 1080) IPS Display with 300 Nits Brightness & 45% NTSC',
-      'Dual Speakers custom tuned by Bang & Olufsen (B&O)',
-      'Backlit Keyboard with built-in Fingerprint Reader',
-      'Ultra-portable 1.41 kg weight with metal keyboard deck'
+      'Intel Core Ultra 5-125U (12 Cores, 14 Threads, up to 4.3 GHz, 12MB L3 Cache)',
+      'Dedicated Intel AI Boost NPU for local AI acceleration & Windows Studio Effects',
+      '16GB LPDDR5x RAM + 512GB PCIe Gen4 NVMe M.2 SSD Storage',
+      '16.0-inch (40.6 cm) WUXGA (1920 x 1200) IPS Anti-Glare 16:10 Display (300 nits)',
+      'Intel Graphics with DirectX 12.1 and 4K media engine support',
+      'HP True Vision 1080p FHD Camera with temporal noise reduction & privacy shutter',
+      'Pre-loaded Windows 11 Home & lifetime Microsoft Office Home & Student 2021',
+      'Full-size backlit keyboard with numeric keypad & precision touchpad',
+      'Natural Silver aluminum design (1.77 kg) with 59Wh battery & HP Fast Charge'
     ],
     specifications: {
-      'Processor': 'Intel Core i5-1235U (10 Cores, 12MB Cache)',
-      'RAM': '16GB DDR4-3200 MHz',
-      'Storage': '512GB PCIe NVMe SSD',
-      'Display': '14.0" FHD IPS (1920 x 1080), 300 nits, Micro-Edge',
-      'Audio': 'Bang & Olufsen (B&O) Dual Speakers + HP Audio Boost',
-      'Weight': '1.41 kg',
-      'Battery': '43 Wh with HP Fast Charge'
+      'Model Number': 'af0015tu',
+      'Processor': 'Intel Core Ultra 5-125U (12 Cores, 14 Threads, up to 4.3 GHz, 12MB Cache)',
+      'AI Processor': 'Intel AI Boost NPU (Integrated Neural Processing Unit)',
+      'RAM': '16GB LPDDR5x RAM',
+      'Storage': '512GB PCIe Gen4 NVMe M.2 SSD',
+      'Display': '16.0" (40.6 cm) WUXGA (1920 x 1200), IPS, Anti-Glare, Micro-Edge, 300 nits, 16:10',
+      'Graphics': 'Intel Graphics',
+      'Operating System': 'Windows 11 Home',
+      'Pre-loaded Software': 'Microsoft Office Home & Student 2021',
+      'Webcam': '1080p FHD Camera with Privacy Shutter and Dual Microphones',
+      'Keyboard': 'Full-size Backlit Keyboard with Number Pad',
+      'Battery': '3-cell 59 Wh with Fast Charge (50% in 45 mins)',
+      'Weight': '1.77 kg',
+      'Color': 'Natural Silver'
     },
     pros: [
-      'Bright 300-nit IPS screen is much clearer than standard 250-nit panels',
-      'Rich, punchy Bang & Olufsen stereo speakers',
-      'Comfortable backlit keyboard with integrated fingerprint reader',
-      'Compact 1.41kg weight slips easily into any backpack or tote'
+      'Next-gen Meteor Lake Intel Core Ultra 5 CPU with dedicated on-device AI NPU',
+      'Tall 16:10 WUXGA (1920x1200) display provides significantly more vertical workspace',
+      'Includes lifetime genuine Microsoft Office Home & Student 2021',
+      'High-fidelity 1080p FHD webcam with hardware privacy shutter & AI noise reduction',
+      'Full-size keyboard with numeric keypad and crisp backlighting'
     ],
     cons: [
-      'No full-size numeric keypad (due to compact 14-inch form factor)'
+      'Weighs 1.77 kg due to the larger 16-inch screen format',
+      'RAM is soldered LPDDR5x (non-upgradable)'
     ],
     whoShouldBuy: [
-      'Users prioritizing compact 14-inch portability and premium audio/video streaming',
-      'Professionals who work in dim environments needing backlit keys'
+      'Professionals and students wanting a large 16-inch 16:10 screen with AI Copilot acceleration',
+      'Users looking for pre-installed Office 2021, an FHD webcam, and reliable battery life'
     ],
     whoShouldAvoid: [
-      'Data entry clerks who require a dedicated physical number pad'
+      'Shoppers looking for sub-1.4kg ultra-lightweight travel laptops'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-09-02T06:00:00Z',
-    updatedAt: '2026-09-02T06:00:00Z'
+    createdAt: '2026-09-04T09:23:00Z',
+    updatedAt: '2026-09-04T09:23:00Z'
   },
   {
     id: 'prod-lenovo-ideapad-slim-3-i5-12450h',
