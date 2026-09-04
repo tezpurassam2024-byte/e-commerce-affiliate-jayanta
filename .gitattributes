@@ -1,0 +1,10 @@
+# Mark binary assets to prevent git diff timeouts
+*.png binary -diff
+*.jpg binary -diff
+*.jpeg binary -diff
+*.webp binary -diff
+*.ico binary -diff
+*.gif binary -diff
+
+# Enforce standard LF line endings
+* text=auto eol=lf
