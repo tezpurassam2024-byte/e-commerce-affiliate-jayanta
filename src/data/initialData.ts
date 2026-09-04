@@ -1437,9 +1437,9 @@ Pre-loaded with lifetime licensed **Microsoft Office Home & Student 2021** (Word
     editorScore: 9.5,
     verdict: 'The best performance-per-rupee Windows laptop under ₹50,000. 45W H-series processor delivers massive computing horsepower.',
     bestFor: 'Engineering students, programmers, data analysts, and creators who need high-voltage H-series processor speed.',
-    asin: 'B0C6FRN8G5',
-    amazonUrl: 'https://www.amazon.in/dp/B0C6FRN8G5',
-    affiliateUrl: 'https://www.amazon.in/dp/B0C6FRN8G5',
+    asin: 'B05ImP1Ey',
+    amazonUrl: 'https://link.amazon/B05ImP1Ey',
+    affiliateUrl: 'https://link.amazon/B05ImP1Ey',
     imageUrl: 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80'

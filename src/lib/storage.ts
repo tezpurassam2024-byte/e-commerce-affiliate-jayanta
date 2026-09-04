@@ -251,6 +251,19 @@ function initializeLocalStorage() {
             affiliateUrl: 'https://link.amazon/B0iGqXeYI',
           };
         }
+        if (
+          merged.id === 'prod-lenovo-ideapad-slim-3-i5-12450h' ||
+          (merged.name && /No 7:.*ideapad.*slim.*3/i.test(merged.name)) ||
+          merged.asin === 'B0C6FRN8G5' ||
+          merged.asin === 'B05ImP1Ey'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B05ImP1Ey',
+            amazonUrl: 'https://link.amazon/B05ImP1Ey',
+            affiliateUrl: 'https://link.amazon/B05ImP1Ey',
+          };
+        }
         // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts
         if (init && init.categoryId === 'cat-computers' && init.name.startsWith('No ')) {
           merged.name = init.name;
