@@ -99,6 +99,17 @@ function initializeLocalStorage() {
               slug: '2026-macbook-air-13-inch-m5-24gb-midnight-laptop',
             };
           }
+          if (
+            p.id === 'prod-hp-15s-ryzen5-5500u' ||
+            p.asin === 'B09FHY48MV' ||
+            (p.name && /5500u/i.test(p.name))
+          ) {
+            return {
+              ...p,
+              id: 'prod-hp-15-ryzen7-7730u-fc0761au',
+              slug: 'hp-15-laptop-amd-ryzen-7-7730u-16gb-512gb-fc0761au',
+            };
+          }
           return p;
         });
       
@@ -201,6 +212,19 @@ function initializeLocalStorage() {
             asin: 'B0c8hDAk0',
             amazonUrl: 'https://link.amazon/B0c8hDAk0',
             affiliateUrl: 'https://link.amazon/B0c8hDAk0',
+          };
+        }
+        if (
+          merged.id === 'prod-hp-15-ryzen7-7730u-fc0761au' ||
+          (merged.name && /7730u/i.test(merged.name)) ||
+          merged.asin === 'B09FHY48MV' ||
+          merged.asin === 'B05aGOlX4'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B05aGOlX4',
+            amazonUrl: 'https://link.amazon/B05aGOlX4',
+            affiliateUrl: 'https://link.amazon/B05aGOlX4',
           };
         }
         // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts

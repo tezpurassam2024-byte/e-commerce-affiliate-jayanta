@@ -1249,67 +1249,90 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
     updatedAt: '2026-09-02T06:00:00Z'
   },
   {
-    id: 'prod-hp-15s-ryzen5-5500u',
-    slug: 'hp-15s-amd-ryzen-5-5500u-16gb-512gb',
-    name: 'No 5: HP Laptop 15s (AMD Ryzen 5 5500U 6-Core, 16GB RAM, 512GB SSD, 15.6-inch FHD IPS, Natural Silver)',
+    id: 'prod-hp-15-ryzen7-7730u-fc0761au',
+    slug: 'hp-15-laptop-amd-ryzen-7-7730u-16gb-512gb-fc0761au',
+    name: 'No 5: HP 15 Laptop, AMD Ryzen 7 7730U (16GB DDR4,512GB SSD) Anti-Glare, Micro-Edge,15.6\'\'/39.6cm, FHD, Win11, M365 Basic(1yr),Office Home24,Silver,1.59kg,FHD Camera w/Privacy Shutter, Backlit KB, fc0761AU',
     brand: 'HP',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
-    shortDescription: 'Incredible value 6-core powerhouse featuring AMD Ryzen 5 5500U, 16GB RAM, 512GB SSD, AMD Radeon Vega graphics, and lightweight 1.69kg portable design under ₹42,000.',
-    longDescription: `The **HP 15s AMD Ryzen 5 Edition** provides unmatched multi-threaded computing power in the sub-₹45,000 category. With 6 physical cores and 12 processing threads, it handles photo editing in Lightroom, programming compilers, and intense multitasking effortlessly.`,
-    editorScore: 9.3,
-    verdict: 'The value champion for students and budget-conscious professionals. 6 physical cores and 16GB RAM at an unbeatable price.',
-    bestFor: 'College students, budget-conscious coders, and work-from-home users seeking maximum processor speed per rupee.',
-    asin: 'B09FHY48MV',
-    amazonUrl: 'https://www.amazon.in/dp/B09FHY48MV',
-    affiliateUrl: 'https://www.amazon.in/dp/B09FHY48MV',
+    shortDescription: 'High-performance 8-core AMD Ryzen 7 7730U with 16GB DDR4 RAM, 512GB SSD, 15.6″ (39.6cm) FHD Anti-Glare micro-edge display, Windows 11, Office Home 2024, M365 Basic (1yr), Backlit Keyboard, FHD Privacy Shutter Camera, in Silver at 1.59kg (fc0761AU).',
+    longDescription: `The **HP 15 Laptop (fc0761AU)** delivers an outstanding combination of 8-core processing power, modern software suites, and enterprise privacy features in a portable 1.59 kg chassis. Powered by the efficient **AMD Ryzen 7 7730U** with 8 physical cores and 16 threads, it easily handles demanding computational workloads, data analysis, content creation, and high-volume multitasking.
+
+### 1. 8-Core AMD Ryzen 7 7730U & 16GB DDR4 RAM
+Armed with 8 cores, 16 threads, and up to 4.5 GHz boost clock paired with **16GB DDR4 RAM** and high-speed **512GB PCIe NVMe SSD**, you get instantaneous app startups and responsive everyday multitasking.
+
+### 2. 15.6″ (39.6cm) FHD Micro-Edge Anti-Glare Display
+The spacious 15.6-inch Full HD (1920 x 1080) screen features ultra-narrow micro-edge bezels and an anti-glare matte finish to eliminate distracting reflections during long work and study sessions.
+
+### 3. FHD Camera with Privacy Shutter & Backlit Keyboard
+Video calls are crisp and clear thanks to the integrated **1080p FHD Camera** with temporal noise reduction and a physical **Privacy Shutter**. The full-sized **Backlit Keyboard** with integrated numeric keypad enables effortless typing in dimly lit settings.
+
+### 4. Windows 11, Office Home 2024 & Microsoft 365 Basic
+Comes pre-installed with lifetime **Office Home 2024**, 1 year of **Microsoft 365 Basic** with 100GB OneDrive cloud storage, and genuine **Windows 11 Home**, backed by HP Fast Charge technology.`,
+    editorScore: 9.6,
+    verdict: 'An exceptional 8-core Ryzen 7 powerhouse with 16GB RAM, lifetime Office Home 2024, backlit keys, and an FHD privacy camera weighing only 1.59 kg.',
+    bestFor: 'Professionals, university students, programmers, and business users needing 8-core Ryzen 7 speed, backlit keyboard, and pre-activated Office 2024.',
+    asin: 'B05aGOlX4',
+    amazonUrl: 'https://link.amazon/B05aGOlX4',
+    affiliateUrl: 'https://link.amazon/B05aGOlX4',
     imageUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 41990,
+    price: 49990,
     currency: 'INR',
-    priceNote: 'Amazon.in top-selling AMD laptop with MS Office 2021',
-    priceLastUpdated: '2026-09-02T06:00:00Z',
-    rating: 4.3,
-    reviewCount: 16500,
+    priceNote: 'Amazon.in verified pricing with Office Home 2024 & M365 Basic (1yr)',
+    priceLastUpdated: '2026-09-04T08:45:00Z',
+    rating: 4.4,
+    reviewCount: 8920,
     availability: 'in_stock',
     keyFeatures: [
-      'AMD Ryzen 5 5500U (6 Cores, 12 Threads, up to 4.0 GHz Max Boost)',
-      '16GB DDR4 RAM + 512GB PCIe NVMe SSD',
-      '15.6-inch Full HD (1920 x 1080) IPS Anti-Glare Display',
-      'AMD Radeon Graphics for smooth video playback and light gaming',
-      'Dual speakers and integrated dual-array digital microphones'
+      'AMD Ryzen 7 7730U Processor (8 Cores, 16 Threads, up to 4.5 GHz Boost, 16MB L3 Cache)',
+      '16GB DDR4-3200 MHz RAM + 512GB PCIe NVMe M.2 SSD Storage',
+      '15.6-inch (39.6 cm) Full HD (1920 x 1080) Micro-Edge Anti-Glare Display (250 nits)',
+      'HP True Vision 1080p FHD Camera with physical Privacy Shutter',
+      'Full-size Backlit Keyboard with integrated numeric keypad',
+      'Pre-installed Windows 11 Home, Office Home 2024 & 1-Year Microsoft 365 Basic',
+      'Lightweight 1.59 kg chassis in Natural Silver with HP Fast Charge (50% in 45 mins)',
+      'AMD Radeon Graphics, dual speakers, Wi-Fi 6, USB Type-C & HDMI'
     ],
     specifications: {
-      'Processor': 'AMD Ryzen 5 5500U (6 Cores, 12 Threads, 8MB L3 Cache)',
+      'Model Number': 'fc0761AU',
+      'Processor': 'AMD Ryzen 7 7730U (8 Cores, 16 Threads, up to 4.5 GHz)',
       'RAM': '16GB DDR4-3200 MHz',
       'Storage': '512GB PCIe NVMe M.2 SSD',
-      'Display': '15.6" FHD (1920 x 1080) Micro-edge IPS Anti-glare',
-      'Battery': '3-cell 41 Wh (Up to 8 hrs)',
-      'Weight': '1.69 kg'
+      'Display': '15.6" (39.6 cm) FHD (1920 x 1080), Anti-Glare, Micro-Edge, 250 nits',
+      'Operating System': 'Windows 11 Home',
+      'Pre-loaded Software': 'Office Home 2024 + 1 Year Microsoft 365 Basic (100GB Cloud)',
+      'Webcam': '1080p FHD Camera with Privacy Shutter',
+      'Keyboard': 'Full-size Backlit Keyboard with Number Pad',
+      'Graphics': 'AMD Radeon Graphics',
+      'Battery': '3-cell 41 Wh with Fast Charge (50% in 45 mins)',
+      'Weight': '1.59 kg',
+      'Color': 'Silver'
     },
     pros: [
-      '6 true CPU cores deliver outstanding multi-threaded compiling & multitasking',
-      'Equipped with 16GB RAM under ₹42,000',
-      'Clean Natural Silver finish looks sleek and professional',
-      'Integrated AMD Radeon graphics handle casual eSports smoothly'
+      '8 physical cores and 16 threads provide top-tier computing and compilation speed',
+      'Includes genuine lifetime Office Home 2024 plus 1 year Microsoft 365 Basic',
+      'Crisp 1080p FHD webcam with physical hardware privacy shutter',
+      'Backlit keyboard ensures comfortable typing in any ambient lighting',
+      'Noticeably lightweight and portable at only 1.59 kg'
     ],
     cons: [
-      'Plastic build construction',
-      '720p webcam is average in dim rooms'
+      '250 nits display brightness is standard and best used indoors',
+      'Memory uses DDR4 instead of DDR5'
     ],
     whoShouldBuy: [
-      'Engineering and computer science students needing 6 cores for compiling and virtualization',
-      'Shoppers wanting 16GB RAM without exceeding ₹45,000'
+      'Professionals, students, and remote workers seeking 8 Ryzen cores with Office Home 2024 included',
+      'Users wanting a backlit keyboard, high-quality FHD webcam with privacy shutter, and lightweight design'
     ],
     whoShouldAvoid: [
-      'Users looking for metallic all-aluminum unibodies'
+      'Gamers seeking dedicated high-end NVIDIA RTX graphics'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-09-02T06:00:00Z',
-    updatedAt: '2026-09-02T06:00:00Z'
+    createdAt: '2026-09-04T08:45:00Z',
+    updatedAt: '2026-09-04T08:45:00Z'
   },
   {
     id: 'prod-hp-pavilion-14-i5',
@@ -2463,8 +2486,8 @@ Choosing the right laptop on Amazon India requires balancing processor performan
 ### 1. Best Overall Flagship & Battery King: 2026 Apple MacBook Air 13″ (M5 Chip, Midnight)
 The **2026 MacBook Air 13″ with M5 chip** sets the standard for ultraportable computing with dedicated AI and Apple Intelligence, 24GB unified memory, and 1TB SSD in signature Midnight. It offers 18-hour real-world battery life, completely silent fanless cooling, and a vivid 34.46 cm (13.6″) Liquid Retina display.
 
-### 2. Best Windows Daily Driver: HP 15s (12th Gen Intel Core i5 / AMD Ryzen 5)
-For corporate workflows, accounting, and multi-tab browsing, the **HP 15s** lineup dominates with 16GB dual-channel RAM, full numeric keypads, and lifetime genuine Microsoft Office 2021 licenses.
+### 2. Best Windows Daily Driver: HP 15 (12th Gen Intel Core i5 / AMD Ryzen 7 7730U)
+For corporate workflows, accounting, and multi-tab browsing, the **HP 15** lineup dominates with 16GB RAM, full numeric keypads, and genuine Microsoft Office licenses.
 
 ### 3. Best Gaming Laptop Under ₹50,000: ASUS TUF Gaming F15 (RTX 2050)
 If you play Valorant, GTA V, or edit 4K video on Premiere Pro, the **ASUS TUF F15** pairs a dedicated 70W RTX 2050 GPU with a 144Hz screen and military-grade durability.
