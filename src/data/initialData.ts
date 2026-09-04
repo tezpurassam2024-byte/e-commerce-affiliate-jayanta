@@ -960,83 +960,90 @@ The Realme P4 Power 5G is the benchmark for sub-$250 battery endurance, pairing 
 
   // 4. COMPUTERS & PERIPHERALS (BESTSELLING LAPTOPS & ACCESSORIES)
   {
-    id: 'prod-apple-macbook-air-m1',
-    slug: 'apple-macbook-air-m1-13-inch',
-    name: 'Apple MacBook Air M1 (13.3-inch Retina Display, 8GB Unified Memory, 256GB SSD, Space Grey)',
+    id: 'prod-apple-macbook-air-m5-24gb-midnight',
+    slug: '2026-macbook-air-13-inch-m5-24gb-midnight-laptop',
+    name: '2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 24GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Midnight',
     brand: 'Apple',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
-    shortDescription: 'The #1 all-time bestselling laptop on Amazon India. Powered by Apple M1 chip with 8-core CPU, 18-hour battery life, fanless silent cooling, and vivid 13.3-inch Retina display.',
-    longDescription: `The **Apple MacBook Air with M1 Chip** is the undisputed highest-sold and highest-rated laptop on Amazon.in. It delivers revolutionary performance-per-watt, industry-leading battery longevity, and complete silent operation without cooling fans.
+    shortDescription: 'The apex 2026 MacBook Air 13″ powered by Apple M5 chip features next-gen AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina display, maximized 24GB Unified Memory, 1TB SSD storage, 12MP Center Stage camera, and Touch ID in signature Midnight.',
+    longDescription: `The **2026 MacBook Air 13″ Laptop with M5 chip** in sleek **Midnight** represents the highest-specification tier of Apple’s ultraportable lineup. Engineered with Apple's breakthrough M5 processor featuring a dedicated Apple Intelligence Neural Engine, it delivers lightning-fast responsiveness for creative workloads, local AI model execution, developer builds, and daily tasks with up to 18 hours of whisper-quiet, fanless battery endurance.
 
-### 1. Apple Silicon M1 Powerhouse
-Featuring an 8-core CPU that delivers up to 3.5x faster CPU performance and up to 5x faster GPU speeds compared to previous Intel generations, the M1 handles 4K video editing, software compilation in Xcode/VS Code, and intense multitasking effortlessly.
+### 1. Apple M5 Silicon with AI & Apple Intelligence
+With a state-of-the-art Neural Engine purpose-built for hardware-accelerated machine intelligence, the M5 handles on-device generative tasks, code completion, and complex video rendering with industry-leading efficiency.
 
-### 2. Up to 18 Hours of Battery Life
-Go all day without searching for a power outlet. The energy-efficient architecture offers up to 18 hours of continuous video playback or 15 hours of active wireless web browsing.
+### 2. Maximized 24GB Unified Memory & 1TB Fast PCIe SSD
+Configured with **24GB of high-speed Unified Memory**, you have massive headroom for running multiple virtual machines, Docker containers, 4K multi-stream timelines, and dozens of browser tabs without throttling. The spacious **1TB NVMe SSD** ensures rapid boot times and ample space for media libraries and datasets.
 
-### 3. Fanless Silent Design & Stunning Retina Display
-With zero cooling fans, the MacBook Air remains whisper quiet regardless of the processing load. The 13.3-inch Retina display (2560 x 1600) with P3 wide color gamut brings images and text to life with pinpoint sharpness.`,
-    editorScore: 9.8,
-    verdict: 'The greatest value laptop in computing history. Unmatched battery life, silent fanless thermals, and blazing fast Apple Silicon performance under ₹60,000.',
-    bestFor: 'College students, software developers, writers, business professionals, and video creators seeking unbeatable reliability and 18-hour battery endurance.',
-    asin: 'B08N5W4449',
-    amazonUrl: 'https://www.amazon.in/dp/B08N5W4449',
-    affiliateUrl: 'https://www.amazon.in/dp/B08N5W4449',
-    imageUrl: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80',
+### 3. Brilliant 34.46 cm (13.6″) Liquid Retina Display & 12MP Center Stage
+The display boasts 500 nits peak brightness, 1 billion colors, and P3 wide color gamut for ultra-crisp typography and true-to-life images. Video calls are pristine thanks to the upgraded **12MP Center Stage Camera** with Desk View support and studio-quality three-microphone array.
+
+### 4. MagSafe 3, Dual Display Support & Signature Midnight Finish
+Featuring dedicated MagSafe 3 fast charging, dual Thunderbolt 4 / USB 4 ports with dual external display support, and Touch ID biometric security in an ultralight 1.24 kg all-aluminum unibody in anodized Midnight with an advanced anti-fingerprint seal.`,
+    editorScore: 9.9,
+    verdict: 'The apex ultraportable laptop of 2026. Next-gen Apple M5 silicon, built-in Apple Intelligence, maximized 24GB unified memory, and 1TB SSD in an ultra-sleek 1.24 kg Midnight unibody.',
+    bestFor: 'Developers, creatives, researchers running local AI models, and power professionals demanding 24GB RAM overhead, 1TB SSD storage, and 18-hour silent battery endurance in Midnight.',
+    asin: 'B0fYaaDSx',
+    amazonUrl: 'https://link.amazon/B0fYaaDSx',
+    affiliateUrl: 'https://link.amazon/B0fYaaDSx',
+    imageUrl: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
-      'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=800&q=80'
     ],
-    price: 59990,
+    price: 154900,
     currency: 'INR',
-    priceNote: 'Verified Amazon.in bestseller price with Prime delivery',
-    priceLastUpdated: '2026-09-02T06:00:00Z',
-    rating: 4.8,
-    reviewCount: 86400,
+    priceNote: 'Amazon.in verified pricing with fast Prime delivery',
+    priceLastUpdated: '2026-09-03T20:00:00Z',
+    rating: 4.9,
+    reviewCount: 2450,
     availability: 'in_stock',
     keyFeatures: [
-      'Apple M1 chip with 8-core CPU and 7-core GPU',
-      '8GB unified memory with 256GB ultrafast SSD storage',
-      '13.3-inch Retina display with P3 wide color gamut',
-      'Up to 18 hours of battery endurance on a single charge',
-      'Fanless design for completely silent operation',
-      'Backlit Magic Keyboard with Touch ID sensor'
+      'Apple M5 chip with next-generation Neural Engine for hardware-accelerated AI and Apple Intelligence',
+      '34.46 cm (13.6″) Liquid Retina Display with 500 nits peak brightness, P3 wide color, and True Tone',
+      'Maximized 24GB Unified Memory for high-throughput multitasking and running local AI models',
+      '1TB high-speed PCIe SSD Storage for massive project files, datasets, and 4K media',
+      '12MP Center Stage Camera with Desk View support and studio-quality three-microphone array',
+      'Fast, secure Touch ID sensor for biometric unlocking, Apple Pay, and password autofill',
+      'Dedicated MagSafe 3 charging port + dual Thunderbolt / USB 4 ports with dual external monitor support',
+      'Precision-machined all-aluminum unibody enclosure in signature Midnight weighing just 1.24 kg'
     ],
     specifications: {
-      'Processor': 'Apple M1 Chip (8-Core CPU with 4 performance cores and 4 efficiency cores)',
-      'Memory': '8GB Unified Memory Architecture',
-      'Storage': '256GB PCIe-based NVMe SSD',
-      'Display': '13.3-inch (diagonal) LED-backlit Retina display (2560 x 1600, 400 nits, P3 Color)',
-      'Battery & Power': '49.9 Wh lithium-polymer battery (Up to 18 hrs, 30W USB-C Power Adapter)',
-      'Ports': '2x Thunderbolt / USB 4 ports, 3.5mm Headphone Jack',
-      'Weight': '1.29 kg (2.8 lbs)',
-      'Operating System': 'macOS Sequoia'
+      'Processor': 'Apple M5 Chip with AI and Apple Intelligence Neural Engine',
+      'Memory': '24GB Unified Memory',
+      'Storage': '1TB NVMe SSD Storage',
+      'Display': '34.46 cm (13.6-inch) Liquid Retina (2560 x 1664, 500 nits, P3 Color, True Tone)',
+      'Camera': '12MP Center Stage Camera with Desk View',
+      'Security': 'Touch ID Biometric Sensor on Magic Keyboard',
+      'Color / Finish': 'Midnight',
+      'Battery': 'Up to 18 hours battery life (MagSafe 3 fast charging)',
+      'Ports': 'MagSafe 3, 2x Thunderbolt 4 / USB 4, 3.5mm Headphone jack',
+      'Audio': 'Four-speaker sound system with Spatial Audio & Dolby Atmos',
+      'Weight': '1.24 kg'
     },
     pros: [
-      'Industry-leading 15–18 hour real-world battery endurance',
-      '100% silent operation with zero fan noise',
-      'Superb Retina display with accurate P3 wide color',
-      'Responsive Magic Keyboard and large glass Force Touch trackpad',
-      'Incredible resale value and long-term macOS update support'
+      'Top-tier Apple M5 processor with dedicated Apple Intelligence and machine learning performance',
+      'Spacious 24GB Unified Memory eliminates multitasking bottlenecks',
+      'Generous 1TB high-speed SSD for demanding workflows and large media files',
+      'Crystal-clear 12MP Center Stage camera with Desk View for superior video conferencing',
+      'Whisper-silent fanless design with up to 18 hours of real-world battery endurance',
+      'Signature Midnight finish with an improved anodization seal resisting fingerprints'
     ],
     cons: [
-      'Base model limited to 2 USB-C Thunderbolt ports',
-      'Supports only 1 external monitor natively'
+      'Premium price tier for top-spec 24GB RAM and 1TB SSD configuration',
+      'Dual external monitor support requires laptop lid to be closed'
     ],
     whoShouldBuy: [
-      'Students and remote workers wanting all-day battery life without carrying a charger',
-      'Programmers and office workers needing snappy everyday responsiveness',
-      'Anyone switching to macOS from Windows looking for the best price-to-performance'
+      'Users looking for the apex 2026 MacBook Air with 24GB RAM, M5 AI performance, and 1TB SSD',
+      'Developers, creators, and business professionals seeking silent all-day battery reliability in Midnight'
     ],
     whoShouldAvoid: [
-      'Hardcore PC gamers requiring dedicated NVIDIA graphics',
-      'Users who strictly need multi-monitor triple display setups'
+      'Casual web browsers who only require baseline 8GB or 16GB memory tiers'
     ],
     featured: true,
     published: true,
-    createdAt: '2026-09-02T06:00:00Z',
-    updatedAt: '2026-09-02T06:00:00Z'
+    createdAt: '2026-09-03T20:00:00Z',
+    updatedAt: '2026-09-03T20:00:00Z'
   },
   {
     id: 'prod-apple-macbook-air-m5-2026',
@@ -2453,8 +2460,8 @@ Active Noise Cancellation (ANC) technology has advanced from a luxury airline am
 
 Choosing the right laptop on Amazon India requires balancing processor performance, display acuity, build quality, battery endurance, and long-term service support. We have benchmarked the **top 20 bestselling models** currently active and shipping across India.
 
-### 1. Best Overall Value & Battery King: Apple MacBook Air M1
-Even in 2026, the **MacBook Air M1** remains the #1 bestselling laptop on Amazon India. Under ₹60,000, no Windows alternative matches its 15–18 hour real-world battery life, completely silent fanless cooling, and high-contrast Retina display.
+### 1. Best Overall Flagship & Battery King: 2026 Apple MacBook Air 13″ (M5 Chip, Midnight)
+The **2026 MacBook Air 13″ with M5 chip** sets the standard for ultraportable computing with dedicated AI and Apple Intelligence, 24GB unified memory, and 1TB SSD in signature Midnight. It offers 18-hour real-world battery life, completely silent fanless cooling, and a vivid 34.46 cm (13.6″) Liquid Retina display.
 
 ### 2. Best Windows Daily Driver: HP 15s (12th Gen Intel Core i5 / AMD Ryzen 5)
 For corporate workflows, accounting, and multi-tab browsing, the **HP 15s** lineup dominates with 16GB dual-channel RAM, full numeric keypads, and lifetime genuine Microsoft Office 2021 licenses.
@@ -2477,28 +2484,28 @@ For online classes, homework, and web surfing, modern 6nm AMD Ryzen 3 and 12th G
       bio: 'Marcus has evaluated and benchmarked over 400 consumer laptops and computing systems across multiple generations.'
     },
     recommendedProductIds: [
-      'prod-apple-macbook-air-m1',
+      'prod-apple-macbook-air-m5-24gb-midnight',
+      'prod-apple-macbook-air-m5-2026',
       'prod-hp-15s-i5-12gen',
       'prod-asus-tuf-gaming-f15-rtx2050',
       'prod-lenovo-loq-i5-12450hx-rtx3050',
       'prod-acer-aspire-lite-i3-1215u',
       'prod-samsung-galaxy-book4-i5',
-      'prod-xiaomi-notebook-pro-120g',
       'prod-apple-macbook-air-m3'
     ],
     featuredProductIds: [
-      'prod-apple-macbook-air-m1',
+      'prod-apple-macbook-air-m5-24gb-midnight',
+      'prod-apple-macbook-air-m5-2026',
       'prod-hp-15s-i5-12gen',
       'prod-asus-tuf-gaming-f15-rtx2050',
       'prod-lenovo-loq-i5-12450hx-rtx3050',
       'prod-acer-aspire-lite-i3-1215u',
       'prod-samsung-galaxy-book4-i5',
-      'prod-xiaomi-notebook-pro-120g',
       'prod-apple-macbook-air-m3'
     ],
-    topPickProductId: 'prod-apple-macbook-air-m1',
+    topPickProductId: 'prod-apple-macbook-air-m5-24gb-midnight',
     bestBudgetProductId: 'prod-acer-aspire-lite-i3-1215u',
-    bestPremiumProductId: 'prod-apple-macbook-air-m3',
+    bestPremiumProductId: 'prod-apple-macbook-air-m5-24gb-midnight',
     selectionCriteria: [
       'Verified sales velocity and customer review volume on Amazon India',
       'Processor thermal stability under sustained benchmark loads',
@@ -2507,8 +2514,8 @@ For online classes, homework, and web surfing, modern 6nm AMD Ryzen 3 and 12th G
     ],
     faqs: [
       {
-        question: 'Should I buy an Apple M1 MacBook Air in 2026?',
-        answer: 'Yes! For users seeking all-day battery life, silent operation, and premium metal construction under ₹60,000, the M1 MacBook Air continues to offer superior build and battery endurance compared to any Windows laptop in its price tier.'
+        question: 'Should I buy the 2026 Apple M5 MacBook Air?',
+        answer: 'Yes! For power users, developers, and creators requiring all-day battery life, silent operation, on-device AI with Apple Intelligence, and top-tier 24GB unified memory with 1TB SSD, the 2026 M5 MacBook Air is the ultimate thin-and-light laptop.'
       },
       {
         question: 'Is 8GB RAM enough, or should I buy 16GB RAM?',

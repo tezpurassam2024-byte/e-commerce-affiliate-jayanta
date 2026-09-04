@@ -88,6 +88,17 @@ function initializeLocalStorage() {
               slug: '2026-macbook-air-13-inch-m5-laptop',
             };
           }
+          if (
+            p.id === 'prod-apple-macbook-air-m1' ||
+            p.asin === 'B08N5W4449' ||
+            (p.name && /macbook.*air.*m1/i.test(p.name))
+          ) {
+            return {
+              ...p,
+              id: 'prod-apple-macbook-air-m5-24gb-midnight',
+              slug: '2026-macbook-air-13-inch-m5-24gb-midnight-laptop',
+            };
+          }
           return p;
         });
       
@@ -140,7 +151,7 @@ function initializeLocalStorage() {
           merged.id === 'prod-apple-macbook-air-m2' ||
           merged.id === 'prod-apple-macbook-air-m5-2026' ||
           (merged.name && /macbook.*air.*m2/i.test(merged.name)) ||
-          (merged.name && /macbook.*air.*m5/i.test(merged.name)) ||
+          (merged.name && /macbook.*air.*m5.*16gb/i.test(merged.name)) ||
           merged.asin === 'B0B3C58K6T' ||
           merged.asin === 'B0iSrg0fF'
         ) {
@@ -155,6 +166,28 @@ function initializeLocalStorage() {
                 asin: 'B0iSrg0fF',
                 amazonUrl: 'https://link.amazon/B0iSrg0fF',
                 affiliateUrl: 'https://link.amazon/B0iSrg0fF',
+              };
+        }
+        if (
+          merged.id === 'prod-apple-macbook-air-m1' ||
+          merged.id === 'prod-apple-macbook-air-m5-24gb-midnight' ||
+          (merged.name && /macbook.*air.*m1/i.test(merged.name)) ||
+          (merged.name && /macbook.*air.*m5.*24gb/i.test(merged.name)) ||
+          (merged.name && /macbook.*air.*m5.*midnight/i.test(merged.name)) ||
+          merged.asin === 'B08N5W4449' ||
+          merged.asin === 'B0fYaaDSx'
+        ) {
+          const m5MidnightInit = initialProducts.find((ip) => ip.id === 'prod-apple-macbook-air-m5-24gb-midnight');
+          merged = m5MidnightInit
+            ? { ...merged, ...m5MidnightInit }
+            : {
+                ...merged,
+                id: 'prod-apple-macbook-air-m5-24gb-midnight',
+                slug: '2026-macbook-air-13-inch-m5-24gb-midnight-laptop',
+                name: '2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 24GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Midnight',
+                asin: 'B0fYaaDSx',
+                amazonUrl: 'https://link.amazon/B0fYaaDSx',
+                affiliateUrl: 'https://link.amazon/B0fYaaDSx',
               };
         }
         return {
@@ -188,7 +221,20 @@ function initializeLocalStorage() {
       const existing: BuyingGuide[] = JSON.parse(localStorage.getItem(STORAGE_KEYS.GUIDES) || '[]');
       const updated = existing.map((g) => {
         const init = initialBuyingGuides.find((ig) => ig.id === g.id);
-        return init ? { ...g, ...init } : g;
+        const base = init ? { ...g, ...init } : g;
+        return {
+          ...base,
+          recommendedProductIds: base.recommendedProductIds.map((pid) =>
+            pid === 'prod-apple-macbook-air-m1' ? 'prod-apple-macbook-air-m5-24gb-midnight' : pid
+          ),
+          featuredProductIds: base.featuredProductIds.map((pid) =>
+            pid === 'prod-apple-macbook-air-m1' ? 'prod-apple-macbook-air-m5-24gb-midnight' : pid
+          ),
+          topPickProductId:
+            base.topPickProductId === 'prod-apple-macbook-air-m1'
+              ? 'prod-apple-macbook-air-m5-24gb-midnight'
+              : base.topPickProductId,
+        };
       });
       const missing = initialBuyingGuides.filter((ig) => !updated.some((e) => e.id === ig.id));
       const combined = [...missing, ...updated];
@@ -396,7 +442,16 @@ export const StorageService = {
             cleanSlug === 'apple-macbook-air-m5-13-inch' ||
             cleanSlug === 'macbook-air-m5' ||
             cleanSlug === 'apple-macbook-air-m2-13-inch' ||
-            cleanSlug === 'apple-macbook-air-m2'))
+            cleanSlug === 'apple-macbook-air-m2')) ||
+        ((p.id === 'prod-apple-macbook-air-m5-24gb-midnight' || p.id === 'prod-apple-macbook-air-m1') &&
+          (cleanSlug === '2026-macbook-air-13-inch-m5-24gb-midnight-laptop' ||
+            cleanSlug === '2026-macbook-air-13-inch-m5-midnight-laptop' ||
+            cleanSlug === '2026-macbook-air-13-laptop-with-m5-chip-midnight' ||
+            cleanSlug === 'apple-macbook-air-m5-24gb-midnight' ||
+            cleanSlug === 'macbook-air-m5-midnight' ||
+            cleanSlug === 'apple-macbook-air-m1-13-inch' ||
+            cleanSlug === 'apple-macbook-air-m1' ||
+            cleanSlug === 'macbook-air-m1'))
     );
   },
 
@@ -406,7 +461,9 @@ export const StorageService = {
       (p) =>
         p.id === id ||
         ((id === 'prod-apple-macbook-air-m2' || id === 'prod-apple-macbook-air-m5-2026') &&
-          (p.id === 'prod-apple-macbook-air-m5-2026' || p.id === 'prod-apple-macbook-air-m2'))
+          (p.id === 'prod-apple-macbook-air-m5-2026' || p.id === 'prod-apple-macbook-air-m2')) ||
+        ((id === 'prod-apple-macbook-air-m1' || id === 'prod-apple-macbook-air-m5-24gb-midnight') &&
+          (p.id === 'prod-apple-macbook-air-m5-24gb-midnight' || p.id === 'prod-apple-macbook-air-m1'))
     );
   },
 
