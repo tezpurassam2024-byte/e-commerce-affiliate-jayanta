@@ -86,7 +86,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
         if (sortBy === 'score') return (b.editorScore || 0) - (a.editorScore || 0);
         if (sortBy === 'price_asc') return (a.price || 0) - (b.price || 0);
         if (sortBy === 'price_desc') return (b.price || 0) - (a.price || 0);
-        if (sortBy === 'name') return a.name.localeCompare(b.name);
+        if (sortBy === 'name') return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' });
         return 0;
       });
   }, [products, selectedCategory, selectedBrand, minScore, priceTier, searchQuery, sortBy]);

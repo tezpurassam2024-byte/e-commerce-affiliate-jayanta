@@ -73,7 +73,18 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
     if (found) {
       setCategory(found);
       const allProducts = StorageService.getProducts();
-      setCategoryProducts(allProducts.filter((p) => p.categoryId === found.id && p.published));
+      const filtered = allProducts.filter((p) => p.categoryId === found.id && p.published);
+      filtered.sort((a, b) => {
+        const matchA = a.name.match(/^No\s+(\d+)[:.-]?\s*/i);
+        const matchB = b.name.match(/^No\s+(\d+)[:.-]?\s*/i);
+        if (matchA && matchB) {
+          return parseInt(matchA[1], 10) - parseInt(matchB[1], 10);
+        }
+        if (matchA) return -1;
+        if (matchB) return 1;
+        return 0;
+      });
+      setCategoryProducts(filtered);
 
       const allGuides = StorageService.getBuyingGuides();
       setCategoryGuides(allGuides.filter((g) => g.categoryId === found.id));
@@ -169,6 +180,7 @@ export const CategoryDetailPage: React.FC<CategoryDetailPageProps> = ({
             </h2>
             <p className="text-xs text-slate-500 mt-0.5">
               {categoryProducts.length} verified product review{categoryProducts.length === 1 ? '' : 's'} available
+              {category.id === 'cat-computers' && ' • Serialized No 1 to No 20 for structured comparison'}
             </p>
           </div>
         </div>

@@ -962,7 +962,7 @@ The Realme P4 Power 5G is the benchmark for sub-$250 battery endurance, pairing 
   {
     id: 'prod-apple-macbook-air-m5-24gb-midnight',
     slug: '2026-macbook-air-13-inch-m5-24gb-midnight-laptop',
-    name: '2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 24GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Midnight',
+    name: 'No 1: 2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 24GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Midnight',
     brand: 'Apple',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1048,7 +1048,7 @@ Featuring dedicated MagSafe 3 fast charging, dual Thunderbolt 4 / USB 4 ports wi
   {
     id: 'prod-apple-macbook-air-m5-2026',
     slug: '2026-macbook-air-13-inch-m5-laptop',
-    name: '2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 16GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Silver',
+    name: 'No 2: 2026 MacBook Air 13″ Laptop with M5 chip: AI and Apple Intelligence, 34.46 cm (13.6″) Liquid Retina Display, 16GB Unified Memory, 1TB SSD Storage, 12MP Center Stage Camera, Touch ID; Silver',
     brand: 'Apple',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1124,7 +1124,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-apple-macbook-air-m3',
     slug: 'apple-macbook-air-m3-13-inch',
-    name: 'Apple MacBook Air M3 (13.6-inch Liquid Retina Display, 16GB Unified Memory, 256GB SSD, Starlight)',
+    name: 'No 3: Apple MacBook Air M3 (13.6-inch Liquid Retina Display, 16GB Unified Memory, 256GB SSD, Starlight)',
     brand: 'Apple',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1186,7 +1186,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-hp-15s-i5-12gen',
     slug: 'hp-15s-intel-core-i5-1235u-16gb-512gb',
-    name: 'HP 15s (12th Gen Intel Core i5-1235U, 16GB DDR4, 512GB SSD, 15.6-inch FHD, Natural Silver)',
+    name: 'No 4: HP 15s (12th Gen Intel Core i5-1235U, 16GB DDR4, 512GB SSD, 15.6-inch FHD, Natural Silver)',
     brand: 'HP',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1251,7 +1251,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-hp-15s-ryzen5-5500u',
     slug: 'hp-15s-amd-ryzen-5-5500u-16gb-512gb',
-    name: 'HP Laptop 15s (AMD Ryzen 5 5500U 6-Core, 16GB RAM, 512GB SSD, 15.6-inch FHD IPS, Natural Silver)',
+    name: 'No 5: HP Laptop 15s (AMD Ryzen 5 5500U 6-Core, 16GB RAM, 512GB SSD, 15.6-inch FHD IPS, Natural Silver)',
     brand: 'HP',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1314,7 +1314,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-hp-pavilion-14-i5',
     slug: 'hp-pavilion-14-intel-core-i5-1235u-16gb-512gb',
-    name: 'HP Pavilion 14 (12th Gen Intel Core i5-1235U, 16GB DDR4, 512GB SSD, 14-inch FHD IPS, B&O Audio, Silver)',
+    name: 'No 6: HP Pavilion 14 (12th Gen Intel Core i5-1235U, 16GB DDR4, 512GB SSD, 14-inch FHD IPS, B&O Audio, Silver)',
     brand: 'HP',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1378,7 +1378,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-lenovo-ideapad-slim-3-i5-12450h',
     slug: 'lenovo-ideapad-slim-3-intel-core-i5-12450h-16gb-512gb',
-    name: 'Lenovo IdeaPad Slim 3 (12th Gen Intel Core i5-12450H, 16GB RAM, 512GB SSD, 15.6-inch FHD, Arctic Grey)',
+    name: 'No 7: Lenovo IdeaPad Slim 3 (12th Gen Intel Core i5-12450H, 16GB RAM, 512GB SSD, 15.6-inch FHD, Arctic Grey)',
     brand: 'Lenovo',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1443,7 +1443,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-lenovo-ideapad-slim-3-ryzen5-7520u',
     slug: 'lenovo-ideapad-slim-3-amd-ryzen-5-7520u-16gb-512gb',
-    name: 'Lenovo IdeaPad Slim 3 (AMD Ryzen 5 7520U, 16GB LPDDR5, 512GB SSD, 15.6-inch FHD, Arctic Grey)',
+    name: 'No 8: Lenovo IdeaPad Slim 3 (AMD Ryzen 5 7520U, 16GB LPDDR5, 512GB SSD, 15.6-inch FHD, Arctic Grey)',
     brand: 'Lenovo',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1505,7 +1505,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-lenovo-ideapad-slim-1-ryzen3',
     slug: 'lenovo-ideapad-slim-1-amd-ryzen-3-7320u-8gb-512gb',
-    name: 'Lenovo IdeaPad Slim 1 (AMD Ryzen 3 7320U, 8GB LPDDR5, 512GB SSD, 15.6-inch FHD, Cloud Grey)',
+    name: 'No 9: Lenovo IdeaPad Slim 1 (AMD Ryzen 3 7320U, 8GB LPDDR5, 512GB SSD, 15.6-inch FHD, Cloud Grey)',
     brand: 'Lenovo',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1568,7 +1568,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-asus-vivobook-15-i5-1235u',
     slug: 'asus-vivobook-15-intel-core-i5-1235u-16gb-512gb',
-    name: 'ASUS Vivobook 15 (12th Gen Intel Core i5-1235U, 16GB RAM, 512GB SSD, 15.6-inch FHD, Quiet Blue)',
+    name: 'No 10: ASUS Vivobook 15 (12th Gen Intel Core i5-1235U, 16GB RAM, 512GB SSD, 15.6-inch FHD, Quiet Blue)',
     brand: 'ASUS',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1631,7 +1631,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-asus-vivobook-16x-ryzen5',
     slug: 'asus-vivobook-16x-amd-ryzen-5-5600h-16gb-512gb',
-    name: 'ASUS Vivobook 16X (AMD Ryzen 5 5600H 6-Core, 16GB RAM, 512GB SSD, 16-inch 16:10 FHD+, Cool Silver)',
+    name: 'No 11: ASUS Vivobook 16X (AMD Ryzen 5 5600H 6-Core, 16GB RAM, 512GB SSD, 16-inch 16:10 FHD+, Cool Silver)',
     brand: 'ASUS',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1694,7 +1694,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-asus-tuf-gaming-f15-rtx2050',
     slug: 'asus-tuf-gaming-f15-intel-core-i5-11400h-rtx-2050',
-    name: 'ASUS TUF Gaming F15 (Intel Core i5-11400H 11th Gen, NVIDIA RTX 2050 4GB, 16GB RAM, 512GB SSD, 144Hz FHD)',
+    name: 'No 12: ASUS TUF Gaming F15 (Intel Core i5-11400H 11th Gen, NVIDIA RTX 2050 4GB, 16GB RAM, 512GB SSD, 144Hz FHD)',
     brand: 'ASUS',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1759,7 +1759,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-asus-tuf-gaming-a15-rtx3050',
     slug: 'asus-tuf-gaming-a15-amd-ryzen-7-7435hs-rtx-3050',
-    name: 'ASUS TUF Gaming A15 (AMD Ryzen 7 7435HS 8-Core, NVIDIA RTX 3050 4GB GPU, 16GB DDR5, 512GB SSD, 144Hz FHD)',
+    name: 'No 13: ASUS TUF Gaming A15 (AMD Ryzen 7 7435HS 8-Core, NVIDIA RTX 3050 4GB GPU, 16GB DDR5, 512GB SSD, 144Hz FHD)',
     brand: 'ASUS',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1824,7 +1824,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-lenovo-loq-i5-12450hx-rtx3050',
     slug: 'lenovo-loq-intel-core-i5-12450hx-rtx-3050-6gb',
-    name: 'Lenovo LOQ (12th Gen Intel Core i5-12450HX, NVIDIA RTX 3050 6GB GPU, 16GB DDR5, 512GB SSD, 144Hz FHD 100% sRGB)',
+    name: 'No 14: Lenovo LOQ (12th Gen Intel Core i5-12450HX, NVIDIA RTX 3050 6GB GPU, 16GB DDR5, 512GB SSD, 144Hz FHD 100% sRGB)',
     brand: 'Lenovo',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1888,7 +1888,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-acer-aspire-lite-i3-1215u',
     slug: 'acer-aspire-lite-intel-core-i3-1215u-8gb-512gb',
-    name: 'Acer Aspire Lite (12th Gen Intel Core i3-1215U, 8GB RAM, 512GB SSD, 15.6-inch FHD, Steel Gray, 1.59kg)',
+    name: 'No 15: Acer Aspire Lite (12th Gen Intel Core i3-1215U, 8GB RAM, 512GB SSD, 15.6-inch FHD, Steel Gray, 1.59kg)',
     brand: 'Acer',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -1951,7 +1951,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-acer-nitro-v15-i5-13420h-rtx4050',
     slug: 'acer-nitro-v-15-intel-core-i5-13420h-rtx-4050',
-    name: 'Acer Nitro V 15 (13th Gen Intel Core i5-13420H, NVIDIA RTX 4050 6GB GPU, 16GB DDR5, 512GB SSD, 15.6" 144Hz FHD IPS)',
+    name: 'No 16: Acer Nitro V 15 (13th Gen Intel Core i5-13420H, NVIDIA RTX 4050 6GB GPU, 16GB DDR5, 512GB SSD, 15.6" 144Hz FHD IPS)',
     brand: 'Acer',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -2015,7 +2015,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-dell-15-i5-1235u',
     slug: 'dell-15-intel-core-i5-1235u-16gb-512gb',
-    name: 'Dell 15 Thin & Light Laptop (12th Gen Intel Core i5-1235U, 16GB RAM, 512GB SSD, 15.6-inch FHD 120Hz, Carbon Black)',
+    name: 'No 17: Dell 15 Thin & Light Laptop (12th Gen Intel Core i5-1235U, 16GB RAM, 512GB SSD, 15.6-inch FHD 120Hz, Carbon Black)',
     brand: 'Dell',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -2078,7 +2078,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-dell-inspiron-3520-i3',
     slug: 'dell-inspiron-3520-intel-core-i3-1215u-8gb-512gb',
-    name: 'Dell Inspiron 3520 (12th Gen Intel Core i3-1215U, 8GB RAM, 512GB SSD, 15.6-inch FHD 120Hz, Platinum Silver)',
+    name: 'No 18: Dell Inspiron 3520 (12th Gen Intel Core i3-1215U, 8GB RAM, 512GB SSD, 15.6-inch FHD 120Hz, Platinum Silver)',
     brand: 'Dell',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -2138,7 +2138,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-samsung-galaxy-book4-i5',
     slug: 'samsung-galaxy-book4-intel-core-i5-1335u-16gb-512gb',
-    name: 'Samsung Galaxy Book4 (13th Gen Intel Core i5-1335U, 16GB LPDDR4x, 512GB SSD, 15.6-inch FHD, Gray, 1.55kg)',
+    name: 'No 19: Samsung Galaxy Book4 (13th Gen Intel Core i5-1335U, 16GB LPDDR4x, 512GB SSD, 15.6-inch FHD, Gray, 1.55kg)',
     brand: 'Samsung',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',
@@ -2202,7 +2202,7 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
   {
     id: 'prod-xiaomi-notebook-pro-120g',
     slug: 'xiaomi-notebook-pro-120g-intel-core-i5-12450h-16gb-512gb',
-    name: 'Xiaomi Notebook Pro 120G (12th Gen Intel Core i5-12450H, NVIDIA MX550, 16GB LPDDR5, 512GB SSD, 14" 2.5K 120Hz)',
+    name: 'No 20: Xiaomi Notebook Pro 120G (12th Gen Intel Core i5-12450H, NVIDIA MX550, 16GB LPDDR5, 512GB SSD, 14" 2.5K 120Hz)',
     brand: 'Xiaomi',
     categoryId: 'cat-computers',
     categoryName: 'Computers & Peripherals',

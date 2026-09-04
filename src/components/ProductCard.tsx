@@ -58,6 +58,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const settings = StorageService.getSettings();
   const ctaText = settings.defaultCtaText || 'Check Price on Amazon';
 
+  const serialMatch = product.name?.match(/^No\s+(\d+)[:.-]?\s*/i);
+  const serialBadge = serialMatch ? `No ${serialMatch[1]}` : null;
+
   return (
     <div
       id={`product-card-${product.id}`}
@@ -87,16 +90,23 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* Overlay Badges */}
         <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
-          {/* Category Tag */}
-          <span className={`px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider backdrop-blur-md rounded-lg shadow-sm ${
-            dark ? 'bg-black/85 text-white border border-zinc-700' : 'bg-slate-900/80 text-white'
-          }`}>
-            {product.categoryName}
-          </span>
+          {/* Category Tag & Serial Badge */}
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {serialBadge && (
+              <span className="px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg shadow-sm bg-amber-400 text-slate-950">
+                {serialBadge}
+              </span>
+            )}
+            <span className={`px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider backdrop-blur-md rounded-lg shadow-sm ${
+              dark ? 'bg-black/85 text-white border border-zinc-700' : 'bg-slate-900/80 text-white'
+            }`}>
+              {product.categoryName}
+            </span>
+          </div>
 
           {/* Editor Score Badge */}
           {product.editorScore && (
-            <div className={`flex items-center gap-1 px-2.5 py-1 backdrop-blur-md rounded-lg text-xs font-bold shadow-sm ${
+            <div className={`flex items-center gap-1 px-2.5 py-1 backdrop-blur-md rounded-lg text-xs font-bold shadow-sm shrink-0 ${
               dark ? 'bg-blue-600/90 text-white border border-blue-400/30' : 'bg-emerald-600/90 text-white'
             }`}>
               <Star className="w-3.5 h-3.5 fill-white" />

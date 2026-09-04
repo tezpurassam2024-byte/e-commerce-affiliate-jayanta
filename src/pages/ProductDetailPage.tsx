@@ -155,6 +155,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                 }
               }}
             />
+            {product.name.match(/^No\s+(\d+)[:.-]?\s*/i) && (
+              <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-amber-400 text-slate-950 rounded-xl font-black text-sm shadow-md">
+                <span>{product.name.match(/^No\s+(\d+)[:.-]?\s*/i)![0].replace(/[:.-]\s*$/, '')}</span>
+              </div>
+            )}
             {product.editorScore && (
               <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 text-white rounded-xl font-extrabold text-sm shadow-md">
                 <Star className="w-4 h-4 fill-white" />
@@ -178,7 +183,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
         {/* Right Column: Title, Quick Verdict & Primary CTA */}
         <div className="lg:col-span-7 space-y-6">
           <div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
+              {product.name.match(/^No\s+(\d+)[:.-]?\s*/i) && (
+                <span className="px-2.5 py-0.5 bg-amber-400 text-slate-950 font-black text-xs rounded-md uppercase tracking-wider shadow-xs">
+                  {product.name.match(/^No\s+(\d+)[:.-]?\s*/i)![0].replace(/[:.-]\s*$/, '')}
+                </span>
+              )}
               <span className="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-bold text-xs rounded-md uppercase tracking-wider">
                 {product.brand}
               </span>

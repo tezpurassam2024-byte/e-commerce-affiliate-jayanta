@@ -203,6 +203,10 @@ function initializeLocalStorage() {
             affiliateUrl: 'https://link.amazon/B0c8hDAk0',
           };
         }
+        // Ensure laptop serialized names (No 1, No 2, etc.) are applied from initialProducts
+        if (init && init.categoryId === 'cat-computers' && init.name.startsWith('No ')) {
+          merged.name = init.name;
+        }
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
