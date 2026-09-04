@@ -1195,9 +1195,9 @@ Communicate effortlessly with the upgraded **12MP Center Stage Camera** featurin
     editorScore: 9.4,
     verdict: 'The definitive all-rounder for office and study. Reliable HP build quality, 16GB RAM out of the box, and full numeric keypad.',
     bestFor: 'College students, accountants, business executives, and WFH professionals seeking dependable daily Windows performance.',
-    asin: 'B0B8K371FL',
-    amazonUrl: 'https://www.amazon.in/dp/B0B8K371FL',
-    affiliateUrl: 'https://www.amazon.in/dp/B0B8K371FL',
+    asin: 'B0c8hDAk0',
+    amazonUrl: 'https://link.amazon/B0c8hDAk0',
+    affiliateUrl: 'https://link.amazon/B0c8hDAk0',
     imageUrl: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80',
     galleryImages: [
       'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80'

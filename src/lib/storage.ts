@@ -190,6 +190,19 @@ function initializeLocalStorage() {
                 affiliateUrl: 'https://link.amazon/B0fYaaDSx',
               };
         }
+        if (
+          merged.id === 'prod-hp-15s-i5-12gen' ||
+          (merged.name && /hp.*15s.*i5/i.test(merged.name)) ||
+          merged.asin === 'B0B8K371FL' ||
+          merged.asin === 'B0c8hDAk0'
+        ) {
+          merged = {
+            ...merged,
+            asin: 'B0c8hDAk0',
+            amazonUrl: 'https://link.amazon/B0c8hDAk0',
+            affiliateUrl: 'https://link.amazon/B0c8hDAk0',
+          };
+        }
         return {
           ...merged,
           imageUrl: normalizeAssetUrl(merged.imageUrl) || merged.imageUrl,
@@ -451,7 +464,12 @@ export const StorageService = {
             cleanSlug === 'macbook-air-m5-midnight' ||
             cleanSlug === 'apple-macbook-air-m1-13-inch' ||
             cleanSlug === 'apple-macbook-air-m1' ||
-            cleanSlug === 'macbook-air-m1'))
+            cleanSlug === 'macbook-air-m1')) ||
+        (p.id === 'prod-hp-15s-i5-12gen' &&
+          (cleanSlug === 'hp-15s-intel-core-i5-1235u-16gb-512gb' ||
+            cleanSlug === 'hp-15s-i5-1235u' ||
+            cleanSlug === 'hp-15s-12th-gen-i5' ||
+            cleanSlug === 'hp-15s-i5'))
     );
   },
 
